@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CyberLage – IT-Security News DACH</title>
+    <description>Die tägliche Sicherheitslage für den DACH-Raum</description>
+    <link>https://cyberlage.io</link>
+    <language>de-de</language>
+    <lastBuildDate>Tue, 26 Mar 2026 11:00:00 +0100</lastBuildDate>
+    <atom:link href="https://cyberlage.io/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>CISA warnt: 7 neue aktiv ausgenutzte Schwachstellen – Apple und CMS betroffen</title>
+      <description>Die US-Cybersicherheitsbehörde CISA hat 7 neue Schwachstellen in den KEV-Katalog aufgenommen. Fünf betreffen Apple-Produkte, zwei die CMS-Systeme Craft CMS und Laravel.</description>
+      <link>https://cyberlage.io/news/cisa-sieben-aktiv-ausgenutzte-schwachstellen</link>
+      <guid>https://cyberlage.io/news/cisa-sieben-aktiv-ausgenutzte-schwachstellen</guid>
+      <pubDate>Thu, 26 Mar 2026 11:00:00 +0100</pubDate>
+      <category>Schwachstellen</category>
+    </item>
+
+    <item>
+      <title>Fortinet: Mehrere kritische Schwachstellen aktiv ausgenutzt – CVSS bis 9.8</title>
+      <description>Fortinet bestätigt aktive Ausnutzung kritischer Schwachstellen in FortiOS, FortiWeb und FortiSIEM. CVSS-Scores bis 9.8. Sofortiges Patchen erforderlich.</description>
+      <link>https://cyberlage.io/news/fortinet-kritische-schwachstellen-aktiv-ausgenutzt</link>
+      <guid>https://cyberlage.io/news/fortinet-kritische-schwachstellen-aktiv-ausgenutzt</guid>
+      <pubDate>Wed, 25 Mar 2026 14:00:00 +0100</pubDate>
+      <category>Schwachstellen</category>
+    </item>
+
+    <item>
+      <title>CVSS 10.0: Polizei klingelt um 4 Uhr morgens bei Admins – Zero-Day in Windchill &amp; FlexPLM</title>
+      <description>Kritische Zero-Day-Lücken in PTC Windchill und FlexPLM mit CVSS 10.0. Landeskriminalämter aus Bayern und Niedersachsen warnten Unternehmen persönlich – teils mitten in der Nacht.</description>
+      <link>https://cyberlage.io/news/windchill-flexplm-zero-day-polizei-warnt-unternehmen</link>
+      <guid>https://cyberlage.io/news/windchill-flexplm-zero-day-polizei-warnt-unternehmen</guid>
+      <pubDate>Mon, 23 Mar 2026 06:00:00 +0100</pubDate>
+      <category>Schwachstellen</category>
+    </item>
+
+    <item>
+      <title>Jede 31. KI-Prompt leakt sensible Daten – 88% der Unternehmen betroffen</title>
+      <description>Neue Studie zeigt: Generative KI wird zum Datenschutzrisiko. Jede 31. Prompt enthält sensible Unternehmensdaten. Security-Teams müssen reagieren.</description>
+      <link>https://cyberlage.io/news/genai-datenleck-risiko-unternehmen</link>
+      <guid>https://cyberlage.io/news/genai-datenleck-risiko-unternehmen</guid>
+      <pubDate>Sun, 22 Mar 2026 14:00:00 +0100</pubDate>
+      <category>KI &amp; Security</category>
+    </item>
+
+    <item>
+      <title>SAP Notfall-Patch: SQL Injection in S/4HANA mit CVSS 9.9</title>
+      <description>SAP hat kritische Sicherheitsupdates veröffentlicht. Eine SQL-Injection in S/4HANA erreicht CVSS 9.9. Tausende DACH-Unternehmen müssen sofort patchen.</description>
+      <link>https://cyberlage.io/news/sap-kritische-schwachstellen-s4hana-cvss-9-9</link>
+      <guid>https://cyberlage.io/news/sap-kritische-schwachstellen-s4hana-cvss-9-9</guid>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0100</pubDate>
+      <category>Schwachstellen</category>
+    </item>
+
+    <item>
+      <title>BSI-Lagebericht: 158.000 neue Malware-Varianten pro Tag im Februar 2026</title>
+      <description>Das BSI meldet 4,43 Millionen neue Schadprogramm-Varianten im Februar 2026 – ein Plus von 7% zum Vormonat. Ransomware bleibt die größte Bedrohung.</description>
+      <link>https://cyberlage.io/news/bsi-158000-neue-malware-varianten-pro-tag</link>
+      <guid>https://cyberlage.io/news/bsi-158000-neue-malware-varianten-pro-tag</guid>
+      <pubDate>Wed, 18 Mar 2026 08:00:00 +0100</pubDate>
+      <category>Kritische Infrastruktur</category>
+    </item>
+
+    <item>
+      <title>Medizintechnik-Riese Stryker von Iran-naher Hackergruppe Handala angegriffen</title>
+      <description>Die iranische Hacktivistengruppe Handala hat ein Administratorkonto in der Microsoft-Umgebung von Stryker Corporation kompromittiert. Auswirkungen auf DACH-Kunden unklar.</description>
+      <link>https://cyberlage.io/news/stryker-cyberangriff-iran-hacktivisten-handala</link>
+      <guid>https://cyberlage.io/news/stryker-cyberangriff-iran-hacktivisten-handala</guid>
+      <pubDate>Tue, 17 Mar 2026 09:00:00 +0100</pubDate>
+      <category>Kritische Infrastruktur</category>
+    </item>
+
+    <item>
+      <title>11% mehr Cyberangriffe auf deutsche Unternehmen – 1.345 Attacken pro Woche</title>
+      <description>Alarmierende Zahlen: Deutsche Unternehmen waren im Februar 2026 durchschnittlich 1.345 Cyberangriffen pro Woche ausgesetzt. Energie, Bildung und Telekommunikation besonders betroffen.</description>
+      <link>https://cyberlage.io/news/cyberangriffe-deutschland-plus-11-prozent-februar-2026</link>
+      <guid>https://cyberlage.io/news/cyberangriffe-deutschland-plus-11-prozent-februar-2026</guid>
+      <pubDate>Sun, 15 Mar 2026 09:00:00 +0100</pubDate>
+      <category>Kritische Infrastruktur</category>
+    </item>
+
+    <item>
+      <title>DATEV-Datenpanne: Gehaltsdaten an falsche Empfänger übermittelt</title>
+      <description>Eine Datenpanne im DATEV-LODAS System führte dazu, dass sensible Gehalts- und Lohndaten an unbefugte Empfänger übermittelt wurden. DSGVO-Meldung erfolgt.</description>
+      <link>https://cyberlage.io/news/datev-datenpanne-gehaltsdaten-2026</link>
+      <guid>https://cyberlage.io/news/datev-datenpanne-gehaltsdaten-2026</guid>
+      <pubDate>Tue, 10 Mar 2026 11:00:00 +0100</pubDate>
+      <category>Datenpannen</category>
+    </item>
+
+    <item>
+      <title>NIS2-Registrierungsfrist abgelaufen: 29.500 Unternehmen betroffen – Was jetzt droht</title>
+      <description>Die BSI-Registrierungsfrist für NIS2 ist am 6. März 2026 abgelaufen. Das Gesetz gilt seit Dezember 2025 ohne Übergangsfrist. Wer jetzt nicht handelt, riskiert Bußgelder.</description>
+      <link>https://cyberlage.io/news/nis2-registrierungsfrist-abgelaufen-was-jetzt</link>
+      <guid>https://cyberlage.io/news/nis2-registrierungsfrist-abgelaufen-was-jetzt</guid>
+      <pubDate>Sat, 07 Mar 2026 08:00:00 +0100</pubDate>
+      <category>NIS2</category>
+    </item>
+
+  </channel>
+</rss>

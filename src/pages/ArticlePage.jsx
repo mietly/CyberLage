@@ -16,9 +16,11 @@ import {
   MessageSquare,
   Send,
   ArrowLeft,
+  Download,
 } from 'lucide-react'
 import RiskBadge from '../components/RiskBadge'
 import NewsCard from '../components/NewsCard'
+import BookmarkButton from '../components/BookmarkButton'
 import { demoArticles, categories } from '../data/demoData'
 
 export default function ArticlePage() {
@@ -206,7 +208,7 @@ export default function ArticlePage() {
         </div>
 
         {/* Share Buttons */}
-        <div className="flex items-center gap-3 mb-12">
+        <div className="flex items-center gap-3 mb-12 no-print">
           <span className="flex items-center gap-1.5 text-sm text-gray-400">
             <Share2 className="w-4 h-4" />
             Teilen:
@@ -239,6 +241,15 @@ export default function ArticlePage() {
           {linkCopied && (
             <span className="text-green-400 text-xs">Link kopiert!</span>
           )}
+          <div className="w-px h-6 bg-gray-700" />
+          <BookmarkButton articleId={article.id} className="p-2 rounded-lg bg-gray-800 border border-gray-700" />
+          <button
+            onClick={() => window.print()}
+            className="p-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-400 hover:text-white hover:border-gray-600 transition-colors"
+            title="Als PDF speichern"
+          >
+            <Download className="w-4 h-4" />
+          </button>
         </div>
 
         {/* Related Articles */}

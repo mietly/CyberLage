@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { KeyRound, ShieldCheck, Fish, Globe, ClipboardCheck, Lock, ArrowRight, Wrench } from 'lucide-react'
+import { KeyRound, ShieldCheck, Fish, Globe, ClipboardCheck, Lock, ArrowRight, Wrench, ShieldAlert, Calendar, BarChart3 } from 'lucide-react'
 
 const tools = [
   {
@@ -61,6 +61,36 @@ const tools = [
     borderColor: 'border-amber-500/20 hover:border-amber-500/40',
     iconBg: 'bg-amber-500/10',
     iconColor: 'text-amber-400',
+  },
+  {
+    title: 'Security Score',
+    description: 'Wie sicher ist dein Unternehmen? 10 Fragen, die zeigen, wo du stehst - mit konkreten Empfehlungen.',
+    icon: BarChart3,
+    to: '/tools/security-score',
+    color: 'from-cyan-500 to-blue-500',
+    borderColor: 'border-cyan-500/20 hover:border-cyan-500/40',
+    iconBg: 'bg-cyan-500/10',
+    iconColor: 'text-cyan-400',
+  },
+  {
+    title: 'Breach Checker',
+    description: 'Wurde meine E-Mail gehackt? Prüfe, ob deine E-Mail in bekannten Datenlecks aufgetaucht ist.',
+    icon: ShieldAlert,
+    to: '/tools/breach-check',
+    color: 'from-rose-500 to-red-500',
+    borderColor: 'border-rose-500/20 hover:border-rose-500/40',
+    iconBg: 'bg-rose-500/10',
+    iconColor: 'text-rose-400',
+  },
+  {
+    title: 'Patch-Kalender',
+    description: 'Wichtige Patch-Termine von Microsoft, SAP, Adobe, Oracle und Fortinet im Überblick.',
+    icon: Calendar,
+    to: '/patch-kalender',
+    color: 'from-indigo-500 to-purple-500',
+    borderColor: 'border-indigo-500/20 hover:border-indigo-500/40',
+    iconBg: 'bg-indigo-500/10',
+    iconColor: 'text-indigo-400',
   },
 ]
 

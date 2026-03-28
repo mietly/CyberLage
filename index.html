@@ -8,10 +8,22 @@
     <meta property="og:title" content="CyberLage – IT-Security News für den DACH-Raum" />
     <meta property="og:description" content="Die tägliche Sicherheitslage für den DACH-Raum. Aktuell. Relevant. Verständlich." />
     <meta property="og:type" content="website" />
+    <link rel="alternate" type="application/rss+xml" title="CyberLage RSS" href="/feed.xml" />
     <title>CyberLage – Die tägliche Sicherheitslage</title>
   </head>
   <body class="bg-gray-950 text-gray-100">
     <div id="root"></div>
+    <script>
+      // Prevent flash of wrong theme
+      (function() {
+        var theme = localStorage.getItem('cyberlage-theme') || 'dark';
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

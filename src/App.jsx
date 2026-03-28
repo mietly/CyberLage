@@ -11,12 +11,19 @@ import PhishingGuide from './pages/tools/PhishingGuide'
 import IPChecker from './pages/tools/IPChecker'
 import DsgvoChecklist from './pages/tools/DsgvoChecklist'
 import PasswordManagerPage from './pages/tools/PasswordManagerPage'
+import SecurityScore from './pages/tools/SecurityScore'
+import BreachChecker from './pages/tools/BreachChecker'
+import PatchCalendar from './pages/PatchCalendar'
 import NIS2Page from './pages/NIS2Page'
 import NewsletterPage from './pages/NewsletterPage'
 import KnowledgePage from './pages/KnowledgePage'
 import CommunityPage from './pages/CommunityPage'
 import AboutPage from './pages/AboutPage'
 import AdminPage from './pages/AdminPage'
+import BookmarksPage from './pages/BookmarksPage'
+import NotificationsPage from './pages/NotificationsPage'
+import SecurityQuiz from './pages/SecurityQuiz'
+import IncidentReporter from './pages/IncidentReporter'
 
 export default function App() {
   return (
@@ -33,12 +40,19 @@ export default function App() {
         <Route path="/tools/ip-check" element={<IPChecker />} />
         <Route path="/tools/dsgvo" element={<DsgvoChecklist />} />
         <Route path="/tools/passwort-manager" element={<PasswordManagerPage />} />
+        <Route path="/tools/security-score" element={<SecurityScore />} />
+        <Route path="/tools/breach-check" element={<BreachChecker />} />
+        <Route path="/patch-kalender" element={<PatchCalendar />} />
         <Route path="/nis2" element={<NIS2Page />} />
         <Route path="/newsletter" element={<NewsletterPage />} />
         <Route path="/knowledge" element={<KnowledgePage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/merkliste" element={<BookmarksPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/benachrichtigungen" element={<NotificationsPage />} />
+        <Route path="/quiz" element={<SecurityQuiz />} />
+        <Route path="/vorfall-melden" element={<IncidentReporter />} />
       </Route>
     </Routes>
   )

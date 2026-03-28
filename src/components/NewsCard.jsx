@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
-import { Clock, Eye } from 'lucide-react'
+import { Clock, Eye, ThumbsUp } from 'lucide-react'
+import UpvoteButton from './UpvoteButton'
 import { formatDistanceToNow } from 'date-fns'
 import { de } from 'date-fns/locale'
 import RiskBadge from './RiskBadge'
+import BookmarkButton from './BookmarkButton'
 
 const categoryLabels = {
   ransomware: 'Ransomware',
@@ -53,6 +55,10 @@ export default function NewsCard({ article }) {
           </span>
           <RiskBadge level={risk_level} />
         </div>
+        {/* Bookmark */}
+        <div className="absolute top-3 right-3">
+          <BookmarkButton articleId={article.id} />
+        </div>
       </div>
 
       {/* Content */}
@@ -75,6 +81,7 @@ export default function NewsCard({ article }) {
             <Eye className="h-3.5 w-3.5" />
             {views?.toLocaleString('de-DE')}
           </span>
+          <UpvoteButton articleId={article.id} initialCount={0} />
         </div>
       </div>
     </Link>

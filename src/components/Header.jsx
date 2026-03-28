@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Shield, Menu, X, AlertTriangle } from 'lucide-react'
+import { Shield, Menu, X, AlertTriangle, Rss, Bookmark } from 'lucide-react'
 import { breakingNews } from '../data/demoData'
+import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { to: '/news', label: 'News' },
@@ -60,7 +61,7 @@ export default function Header() {
               ))}
             </div>
 
-            {/* Threat Level Badge + Mobile Toggle */}
+            {/* Threat Level Badge + Theme Toggle + Mobile Toggle */}
             <div className="flex items-center gap-3">
               <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-500/15 border border-orange-500/30">
                 <AlertTriangle className="h-4 w-4 text-orange-400" />
@@ -68,6 +69,25 @@ export default function Header() {
                   Bedrohungslage: HOCH
                 </span>
               </div>
+
+              <Link
+                to="/merkliste"
+                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+                title="Merkliste"
+              >
+                <Bookmark className="h-4 w-4" />
+              </Link>
+              <a
+                href="/feed.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-gray-400 hover:text-orange-400 hover:bg-gray-800 transition-colors"
+                title="RSS Feed"
+              >
+                <Rss className="h-4 w-4" />
+              </a>
+
+              <ThemeToggle />
 
               {/* Mobile menu button */}
               <button
@@ -101,11 +121,13 @@ export default function Header() {
                   {link.label}
                 </NavLink>
               ))}
-              <div className="flex items-center gap-1.5 px-3 py-2 mt-2">
-                <AlertTriangle className="h-4 w-4 text-orange-400" />
-                <span className="text-xs font-semibold text-orange-400">
-                  Bedrohungslage: HOCH
-                </span>
+              <div className="flex items-center justify-between px-3 py-2 mt-2">
+                <div className="flex items-center gap-1.5">
+                  <AlertTriangle className="h-4 w-4 text-orange-400" />
+                  <span className="text-xs font-semibold text-orange-400">
+                    Bedrohungslage: HOCH
+                  </span>
+                </div>
               </div>
             </div>
           </div>
