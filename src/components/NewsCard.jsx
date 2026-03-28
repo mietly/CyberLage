@@ -1,0 +1,82 @@
+import { Link } from 'react-router-dom'
+import { Clock, Eye } from 'lucide-react'
+import { formatDistanceToNow } from 'date-fns'
+import { de } from 'date-fns/locale'
+import RiskBadge from './RiskBadge'
+
+const categoryLabels = {
+  ransomware: 'Ransomware',
+  phishing: 'Phishing',
+  schwachstellen: 'Schwachstellen',
+  dsgvo: 'DSGVO',
+  nis2: 'NIS2',
+  'ki-security': 'KI & Security',
+  datenpannen: 'Datenpannen',
+  kritis: 'KRITIS',
+}
+
+export default function NewsCard({ article }) {
+  const {
+    slug,
+    title,
+    excerpt,
+    category,
+    risk_level,
+    image,
+    published_at,
+    reading_time,
+    views,
+  } = article
+
+  const timeAgo = formatDistanceToNow(new Date(published_at), {
+    addSuffix: true,
+    locale: de,
+  })
+
+  return (
+    <Link
+      to={`/news/${slug}`}
+      className="group block bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-gray-700 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/5"
+    >
+      {/* Image */}
+      <div className="relative aspect-video overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+        {/* Badges overlay */}
+        <div className="absolute top-3 left-3 flex items-center gap-2">
+          <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-900/80 text-gray-200 backdrop-blur-sm">
+            {categoryLabels[category] || category}
+          </span>
+          <RiskBadge level={risk_level} />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-4">
+        <h3 className="text-white font-semibold text-lg leading-snug mb-2 group-hover:text-red-400 transition-colors line-clamp-2">
+          {title}
+        </h3>
+        <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-2">
+          {excerpt}
+        </p>
+
+        {/* Meta */}
+        <div className="flex items-center gap-4 text-gray-500 text-xs">
+          <span>{timeAgo}</span>
+          <span className="flex items-center gap-1">
+            <Clock className="h-3.5 w-3.5" />
+            {reading_time} Min.
+          </span>
+          <span className="flex items-center gap-1">
+            <Eye className="h-3.5 w-3.5" />
+            {views?.toLocaleString('de-DE')}
+          </span>
+        </div>
+      </div>
+    </Link>
+  )
+}

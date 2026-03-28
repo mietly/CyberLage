@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(mv cyberlage/* cyberlage/.gitignore .)",
+      "Bash(rm -rf cyberlage)",
+      "Bash(ls /Users/davidoberholzner/Desktop/cybersecwebsite/src/pages/*.jsx)",
+      "Bash(ls:*)",
+      "Bash(npx vite:*)",
+      "Bash(node:*)"
+    ]
+  }
+}
