@@ -37,7 +37,7 @@ Eine Polizei-Warnaktion dieses Ausmaßes ist extrem selten und unterstreicht die
     reading_time: 4,
     views: 47800,
     tags: ['Zero-Day', 'CVSS 10.0', 'Windchill', 'FlexPLM', 'PTC', 'LKA'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '2',
@@ -83,7 +83,7 @@ Besonders besorgniserregend: **Jede 31. GenAI-Prompt** birgt ein hohes Risiko de
     reading_time: 5,
     views: 23400,
     tags: ['Statistik', 'DACH', 'KRITIS', 'GenAI', 'Cyberangriffe'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '3',
@@ -130,7 +130,7 @@ Unternehmen die noch nicht registriert sind, sollten dies **sofort nachholen**. 
     reading_time: 6,
     views: 34100,
     tags: ['NIS2', 'BSI', 'Compliance', 'Registrierung', 'Bußgeld'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '4',
@@ -177,7 +177,7 @@ Fortinet ist einer der meistgenutzten Firewall- und VPN-Hersteller in der DACH-R
     reading_time: 5,
     views: 28900,
     tags: ['Fortinet', 'CVE', 'FortiOS', 'FortiWeb', 'Zero-Day'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '5',
@@ -222,7 +222,7 @@ Apple-Geräte sind in DACH-Unternehmen weit verbreitet, besonders im Management.
     reading_time: 4,
     views: 15600,
     tags: ['CISA', 'Apple', 'Craft CMS', 'Laravel', 'KEV'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '6',
@@ -273,7 +273,7 @@ SAP ist das Rückgrat der deutschen Wirtschaft. Nahezu alle DAX-Unternehmen und 
     reading_time: 5,
     views: 31200,
     tags: ['SAP', 'S/4HANA', 'SQL Injection', 'Patch', 'CVE'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '7',
@@ -322,7 +322,7 @@ Im DATEV-LODAS System, das von tausenden Steuerberatern und Unternehmen für die
     reading_time: 4,
     views: 19400,
     tags: ['DATEV', 'Datenpanne', 'DSGVO', 'Gehaltsdaten', 'LODAS'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '8',
@@ -371,7 +371,7 @@ Das BSI bewertet die aktuelle Bedrohungslage als **hoch**. Besondere Gefährdung
     reading_time: 5,
     views: 16800,
     tags: ['BSI', 'Malware', 'KRITIS', 'Lagebericht', 'Ransomware'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '9',
@@ -420,7 +420,7 @@ Wer personenbezogene Daten in GenAI-Tools eingibt, verstößt in den meisten Fä
     reading_time: 5,
     views: 21300,
     tags: ['GenAI', 'Datenschutz', 'DSGVO', 'DLP', 'KI-Sicherheit'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
   {
     id: '10',
@@ -467,7 +467,7 @@ Stryker ist einer der weltweit größten Medizintechnik-Hersteller. Im DACH-Raum
     reading_time: 4,
     views: 12700,
     tags: ['Stryker', 'Handala', 'Iran', 'Medizintechnik', 'KRITIS'],
-    author: 'David Oberholzner',
+    author: 'CyberLage Redaktion',
   },
 ]
 

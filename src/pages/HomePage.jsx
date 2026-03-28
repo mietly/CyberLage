@@ -43,7 +43,7 @@ const dachCards = [
     country: 'Deutschland',
     org: 'BSI',
     alert:
-      'Das BSI warnt vor aktiver Ausnutzung kritischer Schwachstellen in Perimeter-Geraeten. IT-Sicherheitsverantwortliche sollen Patches umgehend einspielen.',
+      'Das BSI warnt vor aktiver Ausnutzung kritischer Schwachstellen in Perimeter-Geräten. IT-Sicherheitsverantwortliche sollen Patches umgehend einspielen.',
     link: 'https://www.bsi.bund.de',
   },
   {
@@ -51,7 +51,7 @@ const dachCards = [
     country: '\u00d6sterreich',
     org: 'CERT.at',
     alert:
-      'CERT.at meldet erhoehte Phishing-Aktivitaeten gegen oesterreichische Bankkunden. Neue Kampagne nutzt taeuschend echte FinanzOnline-Mails.',
+      'CERT.at meldet erhöhte Phishing-Aktivitäten gegen österreichische Bankkunden. Neue Kampagne nutzt täuschend echte FinanzOnline-Mails.',
     link: 'https://www.cert.at',
   },
   {
@@ -291,7 +291,7 @@ export default function HomePage() {
             <div className="flex items-center gap-2 mb-2">
               <Shield className="w-6 h-6 text-red-400" />
               <h2 className="text-2xl font-bold text-white">
-                Woechentlicher Threat Report
+                Wöchentlicher Threat Report
               </h2>
             </div>
             <p className="text-gray-400 mb-6">

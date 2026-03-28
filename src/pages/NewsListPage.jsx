@@ -6,7 +6,7 @@ import { demoArticles, categories } from '../data/demoData'
 const sortOptions = [
   { value: 'newest', label: 'Neueste' },
   { value: 'popular', label: 'Beliebteste' },
-  { value: 'risk', label: 'Hoechstes Risiko' },
+  { value: 'risk', label: 'Höchstes Risiko' },
 ]
 
 const riskOrder = { kritisch: 0, hoch: 1, mittel: 2, niedrig: 3, info: 4 }
@@ -140,7 +140,7 @@ export default function NewsListPage() {
               Keine Ergebnisse gefunden
             </p>
             <p className="text-gray-500 text-sm mt-1">
-              Versuche einen anderen Suchbegriff oder waehle eine andere
+              Versuche einen anderen Suchbegriff oder wähle eine andere
               Kategorie.
             </p>
           </div>

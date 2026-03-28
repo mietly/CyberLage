@@ -26,15 +26,15 @@ export default function ArticlePage() {
   const [comments, setComments] = useState([
     {
       id: 1,
-      author: 'Max Mueller',
+      author: 'Max Müller',
       date: '27.03.2026',
-      text: 'Sehr guter Artikel! Wir haben bei uns im Unternehmen direkt die empfohlenen Massnahmen umgesetzt.',
+      text: 'Sehr guter Artikel! Wir haben bei uns im Unternehmen direkt die empfohlenen Maßnahmen umgesetzt.',
     },
     {
       id: 2,
       author: 'Anna Schmidt',
       date: '27.03.2026',
-      text: 'Danke fuer die schnelle Berichterstattung. Koennt ihr auch ueber die technischen IoCs berichten?',
+      text: 'Danke für die schnelle Berichterstattung. Könnt ihr auch über die technischen IoCs berichten?',
     },
   ])
   const [newComment, setNewComment] = useState('')
@@ -61,7 +61,7 @@ export default function ArticlePage() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white font-semibold text-sm transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Zurueck zu den News
+            Zurück zu den News
           </Link>
         </div>
       </div>
@@ -186,17 +186,17 @@ export default function ArticlePage() {
           <div className="flex items-center gap-2 mb-3">
             <Sparkles className="w-5 h-5 text-orange-400" />
             <h3 className="text-white font-bold text-lg">
-              In 30 Sekunden erklaert
+              In 30 Sekunden erklärt
             </h3>
             <span className="px-2 py-0.5 rounded text-[10px] font-bold text-orange-400 bg-orange-500/15 border border-orange-500/30">
               KI
             </span>
           </div>
           <p className="text-gray-300 leading-relaxed text-sm">
-            {article.excerpt} Die wichtigsten Massnahmen: Systeme umgehend
-            patchen, Netzwerk-Logs auf verdaechtige Aktivitaeten pruefen und
-            Incident-Response-Plaene aktualisieren. Betroffene Organisationen
-            sollten zusaetzlich ihre Backup-Strategien validieren.
+            {article.excerpt} Die wichtigsten Maßnahmen: Systeme umgehend
+            patchen, Netzwerk-Logs auf verdächtige Aktivitäten prüfen und
+            Incident-Response-Pläne aktualisieren. Betroffene Organisationen
+            sollten zusätzlich ihre Backup-Strategien validieren.
           </p>
         </div>
 

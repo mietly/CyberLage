@@ -7,7 +7,13 @@
       "Bash(ls /Users/davidoberholzner/Desktop/cybersecwebsite/src/pages/*.jsx)",
       "Bash(ls:*)",
       "Bash(npx vite:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
