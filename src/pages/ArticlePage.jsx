@@ -23,20 +23,7 @@ import { demoArticles, categories } from '../data/demoData'
 
 export default function ArticlePage() {
   const { slug } = useParams()
-  const [comments, setComments] = useState([
-    {
-      id: 1,
-      author: 'Max Müller',
-      date: '27.03.2026',
-      text: 'Sehr guter Artikel! Wir haben bei uns im Unternehmen direkt die empfohlenen Maßnahmen umgesetzt.',
-    },
-    {
-      id: 2,
-      author: 'Anna Schmidt',
-      date: '27.03.2026',
-      text: 'Danke für die schnelle Berichterstattung. Könnt ihr auch über die technischen IoCs berichten?',
-    },
-  ])
+  const [comments, setComments] = useState([])
   const [newComment, setNewComment] = useState('')
   const [commentAuthor, setCommentAuthor] = useState('')
   const [linkCopied, setLinkCopied] = useState(false)
