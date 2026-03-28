@@ -2,13 +2,10 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
   Shield,
-  User,
   Mail,
   Building2,
-  Megaphone,
   Scale,
   Lock,
-  Globe,
   ExternalLink,
 } from 'lucide-react';
 
@@ -66,7 +63,7 @@ export default function AboutPage() {
             <p className="text-gray-300 leading-relaxed">
               CyberLage wird betrieben von <strong className="text-gray-100">Corelead Solutions</strong>.
               Wir sind ein auf IT-Sicherheit und digitale Transformation spezialisiertes Unternehmen
-              mit Sitz in Österreich.
+              mit Sitz in München, Deutschland.
             </p>
             <a
               href="https://corelead.org"
@@ -76,28 +73,6 @@ export default function AboutPage() {
             >
               corelead.org <ExternalLink className="w-3 h-3" />
             </a>
-          </div>
-        </section>
-
-        {/* Author */}
-        <section className="mb-16">
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-8">
-            <div className="flex items-start gap-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-red-600 to-orange-600 rounded-full flex items-center justify-center shrink-0">
-                <User className="w-10 h-10 text-white" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold mb-1">David Oberholzner</h2>
-                <p className="text-red-400 font-medium mb-1">Herausgeber</p>
-                <p className="text-gray-400 text-sm mb-4">IT Director | NIS2 Experte</p>
-                <p className="text-gray-300 leading-relaxed">
-                  David Oberholzner ist IT Director und NIS2-Experte mit langjähriger Erfahrung in
-                  der IT-Sicherheit. Als Herausgeber von CyberLage bereitet er komplexe
-                  Security-Themen verständlich auf und unterstützt Unternehmen im DACH-Raum bei der
-                  Umsetzung von Sicherheitsmaßnahmen und Compliance-Anforderungen.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -131,32 +106,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Werbung */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-red-600/10 to-orange-600/10 border border-red-500/20 rounded-xl p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <Megaphone className="w-6 h-6 text-orange-400" />
-              <h2 className="text-2xl font-bold">Werbung schalten?</h2>
-            </div>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              Du möchtest dein Security-Produkt oder deine Dienstleistung einer qualifizierten
-              Zielgruppe präsentieren? CyberLage erreicht IT-Entscheider, CISOs und Security-Teams
-              im gesamten DACH-Raum.
-            </p>
-            <p className="text-gray-300 leading-relaxed mb-6">
-              Wir bieten verschiedene Werbeformate an: Sponsored Articles, Newsletter-Sponsoring,
-              Banner und Tool-Listings. Alle Werbeinhalte werden klar als solche gekennzeichnet.
-            </p>
-            <a
-              href="mailto:kontakt@cyberlage.io"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg px-6 py-3 transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-              Anfrage senden
-            </a>
-          </div>
-        </section>
-
         {/* Impressum */}
         <section className="mb-16" id="impressum">
           <div className="bg-gray-900 border border-gray-800 rounded-xl p-8">
@@ -171,8 +120,7 @@ export default function AboutPage() {
               <div>
                 <p className="font-semibold text-gray-100">Medieninhaber und Herausgeber:</p>
                 <p>Corelead Solutions</p>
-                <p>David Oberholzner</p>
-                <p>Österreich</p>
+                <p>München, Deutschland</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-100">Kontakt:</p>
@@ -262,8 +210,7 @@ export default function AboutPage() {
                 <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
                 <p className="mt-2">
                   Corelead Solutions<br />
-                  David Oberholzner<br />
-                  Österreich<br />
+                  München, Deutschland<br />
                   E-Mail: kontakt@cyberlage.io
                 </p>
               </div>
@@ -460,18 +407,18 @@ export default function AboutPage() {
                   13. Zuständige Aufsichtsbehörde
                 </h3>
                 <p>
-                  Österreichische Datenschutzbehörde<br />
-                  Barichgasse 40-42<br />
-                  1030 Wien<br />
-                  E-Mail: dsb@dsb.gv.at<br />
+                  Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br />
+                  Promenade 18<br />
+                  91522 Ansbach<br />
+                  E-Mail: poststelle@lda.bayern.de<br />
                   Web:{' '}
                   <a
-                    href="https://www.dsb.gv.at"
+                    href="https://www.lda.bayern.de"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-red-400 hover:underline"
                   >
-                    www.dsb.gv.at
+                    www.lda.bayern.de
                   </a>
                 </p>
               </div>
