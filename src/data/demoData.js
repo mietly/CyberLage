@@ -1,462 +1,562 @@
 export const demoArticles = [
   {
     id: '1',
-    slug: 'ransomware-angriff-sueddeutscher-klinikverbund',
-    title: 'Ransomware-Angriff legt süddeutschen Klinikverbund lahm',
-    excerpt: 'Ein großer Klinikverbund in Bayern wurde Opfer einer Ransomware-Attacke. Notaufnahmen mussten vorübergehend Patienten umleiten. BSI warnt vor Nachahmer-Attacken.',
-    content: `## Ransomware-Angriff auf Klinikverbund
+    slug: 'windchill-flexplm-zero-day-polizei-warnt-unternehmen',
+    title: 'CVSS 10.0: Polizei klingelt um 4 Uhr morgens bei Admins – Zero-Day in Windchill & FlexPLM',
+    excerpt: 'Kritische Zero-Day-Lücken in PTC Windchill und FlexPLM mit CVSS 10.0. Landeskriminalämter aus Bayern und Niedersachsen warnten Unternehmen persönlich – teils mitten in der Nacht.',
+    content: `## Zero-Day in PTC Windchill & FlexPLM – CVSS 10.0
 
-Ein großer Klinikverbund in Süddeutschland ist Opfer eines schwerwiegenden Ransomware-Angriffs geworden. Die Attacke, die in den frühen Morgenstunden entdeckt wurde, hat weite Teile der IT-Infrastruktur verschlüsselt.
+In der Nacht vom 21. auf den 22. März 2026 kam es zu einer beispiellosen Aktion: Polizeibehörden und Landeskriminalämter aus mehreren Bundesländern rückten aus, um Unternehmensadministratoren persönlich vor kritischen Schwachstellen zu warnen – teilweise bereits um 4 Uhr morgens.
 
-### Was ist passiert?
+### Die Schwachstelle
 
-Die Angreifer nutzten eine bekannte Schwachstelle in der VPN-Lösung des Klinikverbunds, um sich Zugang zum Netzwerk zu verschaffen. Über einen Zeitraum von vermutlich mehreren Wochen bewegten sie sich lateral durch das Netzwerk, bevor sie die Ransomware aktivierten.
+- **Betroffene Software:** PTC Windchill und FlexPLM
+- **Schweregrad:** CVSS 10.0 (Maximum)
+- **Typ:** Remote Code Execution (RCE) durch Deserialisierung nicht vertrauenswürdiger Daten
+- **Authentifizierung:** Nicht erforderlich
 
-### Auswirkungen
+### Warum kam die Polizei?
 
-- Drei von fünf Kliniken mussten auf Notbetrieb umstellen
-- Elektronische Patientenakten sind temporär nicht verfügbar
-- Notaufnahmen leiteten Patienten vorübergehend um
-- OP-Planungen mussten manuell koordiniert werden
+Die Landeskriminalämter aus Bayern, Niedersachsen und weiteren Bundesländern erhielten vom Hersteller PTC Listen betroffener Unternehmen. Aufgrund der extremen Kritikalität (CVSS 10.0) entschied man sich für den unkonventionellen Weg der persönlichen Warnung.
 
-### BSI-Warnung
+### Was IT-Admins jetzt tun müssen
 
-Das BSI hat eine offizielle Warnung herausgegeben und empfiehlt allen Gesundheitseinrichtungen:
+1. Windchill- und FlexPLM-Installationen sofort identifizieren
+2. Verfügbare Patches umgehend einspielen
+3. Systeme vom Internet isolieren, falls Patch nicht sofort möglich
+4. Logs auf verdächtige Aktivitäten prüfen
+5. Incident Response Team informieren
 
-1. VPN-Systeme sofort auf aktuelle Patches prüfen
-2. Netzwerksegmentierung überprüfen
-3. Backup-Strategien testen
-4. Incident Response Pläne aktualisieren
+### Einordnung
 
-### Empfohlene Maßnahmen
-
-Organisationen im Gesundheitssektor sollten ihre Sicherheitsmaßnahmen umgehend überprüfen. Besonders kritisch sind aktuell Schwachstellen in Fortinet FortiOS und Cisco ASA.`,
-    category: 'ransomware',
+Eine Polizei-Warnaktion dieses Ausmaßes ist extrem selten und unterstreicht die Schwere der Lücke. Unternehmen, die PTC-Produkte einsetzen, sollten **sofort** handeln.`,
+    category: 'schwachstellen',
     risk_level: 'kritisch',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
-    published_at: '2026-03-28T08:00:00Z',
-    reading_time: 5,
-    views: 15420,
-    tags: ['Ransomware', 'Gesundheitswesen', 'KRITIS', 'BSI'],
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800',
+    published_at: '2026-03-23T06:00:00Z',
+    reading_time: 4,
+    views: 47800,
+    tags: ['Zero-Day', 'CVSS 10.0', 'Windchill', 'FlexPLM', 'PTC', 'LKA'],
     author: 'David Oberholzner',
   },
   {
     id: '2',
-    slug: 'kritische-sap-schwachstelle-cve-2026-1234',
-    title: 'Kritische SAP-Schwachstelle: CVSS 9.8 – Sofort patchen!',
-    excerpt: 'Eine kritische Schwachstelle in SAP NetWeaver ermöglicht Remote Code Execution ohne Authentifizierung. Tausende DACH-Unternehmen potenziell betroffen.',
-    content: `## Kritische SAP-Schwachstelle CVE-2026-1234
+    slug: 'cyberangriffe-deutschland-plus-11-prozent-februar-2026',
+    title: '11% mehr Cyberangriffe auf deutsche Unternehmen – 1.345 Attacken pro Woche',
+    excerpt: 'Alarmierende Zahlen: Deutsche Unternehmen waren im Februar 2026 durchschnittlich 1.345 Cyberangriffen pro Woche ausgesetzt. Energie, Bildung und Telekommunikation besonders betroffen.',
+    content: `## Cyberangriffe auf Deutschland steigen weiter
 
-SAP hat ein Notfall-Sicherheitsupdate veröffentlicht, das eine kritische Schwachstelle in SAP NetWeaver behebt. Die Schwachstelle ermöglicht es Angreifern, ohne Authentifizierung Code auf dem Server auszuführen.
+Die Zahlen für Februar 2026 sind alarmierend: Deutsche Unternehmen verzeichneten einen Anstieg der Cyberangriffe um **11 Prozent** im Jahresvergleich. Durchschnittlich waren Organisationen **1.345 Angriffen pro Woche** ausgesetzt.
 
-### Details
+### DACH-Vergleich
 
-- **CVE:** CVE-2026-1234
-- **CVSS Score:** 9.8 (Kritisch)
-- **Betroffene Versionen:** SAP NetWeaver 7.50 bis 7.93
-- **Angriffsvektor:** Netzwerk (Remote)
-- **Authentifizierung:** Nicht erforderlich
+| Land | Angriffe/Woche | Trend |
+|------|---------------|-------|
+| Deutschland | 1.345 | +11% |
+| Österreich | ~1.400 | +8% |
+| Schweiz | ~1.200 | -7% |
+| Europa gesamt | 1.764 | steigend |
+| Weltweit | 2.086 | steigend |
 
-### Wer ist betroffen?
+### Am stärksten betroffene Branchen in Deutschland
 
-Da SAP im DACH-Raum besonders stark verbreitet ist, sind potenziell tausende Unternehmen betroffen. Besonders kritisch ist die Lage für:
+1. **Energie & Versorgungsunternehmen** – KRITIS-Sektor im Visier
+2. **Bildung** – Schulen und Universitäten oft unzureichend geschützt
+3. **Bauwesen & Ingenieurwesen** – Zunehmend digitalisiert, aber Sicherheit hinkt hinterher
+4. **Telekommunikation** – Kritische Infrastruktur
+5. **Medien & Unterhaltung** – Hohe Sichtbarkeit, attraktive Ziele
 
-- Unternehmen die SAP NetWeaver öffentlich erreichbar betreiben
-- Organisationen ohne aktuelle Patch-Strategie
-- KRITIS-Betreiber mit SAP-Systemen
+### GenAI als neues Risiko
 
-### Sofortmaßnahmen
+Besonders besorgniserregend: **Jede 31. GenAI-Prompt** birgt ein hohes Risiko der Preisgabe sensibler Daten. 88% der Organisationen, die regelmäßig KI-Tools nutzen, sind davon betroffen.
 
-1. Verfügbaren Patch sofort einspielen
-2. Wenn Patch nicht möglich: Workaround laut SAP Security Note anwenden
-3. Logs auf verdächtige Aktivitäten prüfen
-4. WAF-Regeln aktualisieren`,
-    category: 'schwachstellen',
-    risk_level: 'kritisch',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
-    published_at: '2026-03-27T14:30:00Z',
-    reading_time: 4,
-    views: 23100,
-    tags: ['SAP', 'CVE', 'Patch', 'Remote Code Execution'],
+### Empfehlungen
+
+- Security Awareness für GenAI-Nutzung etablieren
+- DLP-Lösungen (Data Loss Prevention) für KI-Tools implementieren
+- Netzwerksegmentierung verstärken
+- SOC-Kapazitäten aufstocken`,
+    category: 'kritis',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
+    published_at: '2026-03-15T09:00:00Z',
+    reading_time: 5,
+    views: 23400,
+    tags: ['Statistik', 'DACH', 'KRITIS', 'GenAI', 'Cyberangriffe'],
     author: 'David Oberholzner',
   },
   {
     id: '3',
-    slug: 'nis2-umsetzung-deutschland-verzoegert',
-    title: 'NIS2-Umsetzung in Deutschland erneut verzögert – Was Unternehmen jetzt tun müssen',
-    excerpt: 'Die nationale Umsetzung der NIS2-Richtlinie verzögert sich weiter. Trotzdem sollten betroffene Unternehmen jetzt handeln. Ein Überblick über den aktuellen Stand.',
-    content: `## NIS2-Umsetzung in Deutschland verzögert
+    slug: 'nis2-registrierungsfrist-abgelaufen-was-jetzt',
+    title: 'NIS2-Registrierungsfrist abgelaufen: 29.500 Unternehmen betroffen – Was jetzt droht',
+    excerpt: 'Die BSI-Registrierungsfrist für NIS2 ist am 6. März 2026 abgelaufen. Das Gesetz gilt seit Dezember 2025 ohne Übergangsfrist. Wer jetzt nicht handelt, riskiert Bußgelder.',
+    content: `## NIS2 in Deutschland: Registrierungsfrist verstrichen
 
-Die nationale Umsetzung der europäischen NIS2-Richtlinie in Deutschland verzögert sich erneut. Das geplante NIS2-Umsetzungsgesetz (NIS2UmsuCG) konnte nicht wie geplant verabschiedet werden.
+Das NIS2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG) ist seit dem **6. Dezember 2025** in Kraft. Die **BSI-Registrierungsfrist** ist am **6. März 2026** abgelaufen.
 
-### Aktueller Stand
+### Zeitstrahl
 
-- Die EU-Frist für die nationale Umsetzung ist bereits verstrichen
-- Deutschland gehört zu den Ländern, die die Frist nicht eingehalten haben
-- Ein neuer Zeitplan wurde noch nicht offiziell kommuniziert
+- **13. November 2025:** Bundestag verabschiedet NIS2UmsuCG
+- **20. November 2025:** Bundesrat bestätigt
+- **6. Dezember 2025:** Inkrafttreten – **ohne Übergangsfrist**
+- **6. März 2026:** Registrierungsfrist beim BSI abgelaufen
 
-### Warum Unternehmen trotzdem jetzt handeln sollten
+### Wer ist betroffen?
 
-1. **Vorbereitung braucht Zeit:** Die Umsetzung der Anforderungen kann 12-18 Monate dauern
-2. **Rückwirkende Pflichten:** Sobald das Gesetz in Kraft tritt, gelten die Pflichten
-3. **Geschäftspartner verlangen es:** Viele große Unternehmen fordern NIS2-Compliance bereits in Verträgen
-4. **Wettbewerbsvorteil:** Frühe Umsetzung kann als Differenzierungsmerkmal dienen
+Rund **29.500 Unternehmen** in Deutschland müssen die neuen Pflichten erfüllen. Die Registrierung erfolgt über das BSI-Portal MUK (muk.bsi.bund.de).
 
-### Die wichtigsten NIS2-Anforderungen
+### Kernpflichten
 
-- Risikomanagement-Maßnahmen
-- Meldepflichten bei Sicherheitsvorfällen (24h/72h)
-- Supply Chain Security
-- Geschäftsführer-Haftung
-- Regelmäßige Sicherheitsaudits`,
+1. **Registrierung beim BSI** über das MUK-Portal
+2. **Meldepflichten:** 24h-Frühwarnung, 72h-Bericht, 1-Monats-Abschlussbericht
+3. **Risikomanagement** in 10 Bereichen implementieren
+4. **Supply Chain Security** sicherstellen
+5. **MFA** und Verschlüsselung einsetzen
+6. **Backup-Management** etablieren
+
+### Was droht bei Nichteinhaltung?
+
+- Bußgelder bis zu **10 Mio. Euro** oder **2% des weltweiten Jahresumsatzes**
+- **Persönliche Haftung** der Geschäftsführung
+- Mögliche Betriebsuntersagung in schweren Fällen
+
+### Jetzt handeln
+
+Unternehmen die noch nicht registriert sind, sollten dies **sofort nachholen**. Die fehlende Übergangsfrist bedeutet: Die Pflichten gelten bereits seit Tag 1.`,
     category: 'nis2',
-    risk_level: 'mittel',
+    risk_level: 'hoch',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
-    published_at: '2026-03-27T10:00:00Z',
+    published_at: '2026-03-07T08:00:00Z',
     reading_time: 6,
-    views: 18700,
-    tags: ['NIS2', 'Compliance', 'EU', 'Regulierung'],
+    views: 34100,
+    tags: ['NIS2', 'BSI', 'Compliance', 'Registrierung', 'Bußgeld'],
     author: 'David Oberholzner',
   },
   {
     id: '4',
-    slug: 'ki-generierte-phishing-mails-dach',
-    title: 'KI-generierte Phishing-Mails: Neue Welle trifft DACH-Unternehmen',
-    excerpt: 'Security-Forscher warnen vor einer massiven Zunahme KI-generierter Phishing-Mails in deutscher Sprache. Die Qualität ist erschreckend hoch.',
-    content: `## KI-generierte Phishing-Mails auf dem Vormarsch
+    slug: 'fortinet-kritische-schwachstellen-aktiv-ausgenutzt',
+    title: 'Fortinet: Mehrere kritische Schwachstellen aktiv ausgenutzt – CVSS bis 9.8',
+    excerpt: 'Fortinet bestätigt aktive Ausnutzung kritischer Schwachstellen in FortiOS, FortiWeb und FortiSIEM. CVSS-Scores bis 9.8. Sofortiges Patchen erforderlich.',
+    content: `## Kritische Fortinet-Schwachstellen werden aktiv ausgenutzt
 
-Eine neue Generation von Phishing-Mails trifft den DACH-Raum. Die mit KI generierten Nachrichten sind in nahezu perfektem Deutsch verfasst und kaum noch von legitimen Geschäfts-Emails zu unterscheiden.
+Fortinet hat mehrere kritische Sicherheitslücken bestätigt, die aktiv von Angreifern ausgenutzt werden. Betroffen sind zentrale Produkte wie FortiOS, FortiWeb, FortiProxy und FortiSIEM.
 
-### Was ist anders?
+### Die kritischsten Schwachstellen
 
-- Perfekte deutsche Grammatik und Rechtschreibung
-- Kontextbezogene Inhalte (aktuelle Ereignisse, Branchenbezug)
-- Personalisierte Anrede mit korrekten Titeln
-- Gefälschte Absenderadressen die täuschend echt wirken
+#### CVE-2025-59718 & CVE-2025-59719 (CVSS 9.8)
+- **Typ:** Improper Verification of Cryptographic Signature
+- **Betroffen:** FortiOS, FortiWeb, FortiProxy, FortiSwitchManager
+- **Risiko:** Unauthentifizierte Remote Code Execution
 
-### Erkennungsmerkmale
+#### CVE-2025-64446 (CVSS 9.1) – Aktiv ausgenutzt!
+- **Typ:** Relative Path Traversal
+- **Betroffen:** FortiWeb
+- **Risiko:** Administrative Kommandos über manipulierte HTTP/HTTPS-Anfragen
+- **Status:** Fortinet bestätigt Ausnutzung in freier Wildbahn
 
-Trotz der hohen Qualität gibt es Hinweise:
+#### CVE-2025-64155 (CVSS 9.4)
+- **Typ:** OS Command Injection
+- **Betroffen:** FortiSIEM
+- **Risiko:** Unauthentifizierte Code- und Befehlsausführung
 
-1. Ungewöhnliche Dringlichkeit
-2. Links die nicht zum angegebenen Absender passen
-3. Aufforderung Zugangsdaten einzugeben
-4. Unerwartete Anhänge
+### Sofortmaßnahmen
 
-### Empfehlungen
+1. **Alle Fortinet-Produkte** auf neueste Firmware aktualisieren
+2. **FortiWeb** besonders priorisieren (aktive Ausnutzung!)
+3. Management-Interfaces **nicht** aus dem Internet erreichbar machen
+4. Logs auf Indicators of Compromise prüfen
+5. WAF-Regeln und IPS-Signaturen aktualisieren
 
-- Security Awareness Training aktualisieren
-- KI-basierte Email-Security-Lösungen evaluieren
-- Meldeprozesse für verdächtige Mails etablieren
-- Zwei-Faktor-Authentifizierung für alle Konten aktivieren`,
-    category: 'phishing',
-    risk_level: 'hoch',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800',
-    published_at: '2026-03-26T16:00:00Z',
-    reading_time: 4,
-    views: 12340,
-    tags: ['Phishing', 'KI', 'Social Engineering', 'Email Security'],
+### Warum das für den DACH-Raum besonders relevant ist
+
+Fortinet ist einer der meistgenutzten Firewall- und VPN-Hersteller in der DACH-Region. Tausende Unternehmen setzen FortiGate-Firewalls als Perimeter-Schutz ein.`,
+    category: 'schwachstellen',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    published_at: '2026-03-25T14:00:00Z',
+    reading_time: 5,
+    views: 28900,
+    tags: ['Fortinet', 'CVE', 'FortiOS', 'FortiWeb', 'Zero-Day'],
     author: 'David Oberholzner',
   },
   {
     id: '5',
-    slug: 'zero-day-microsoft-exchange-maerz-2026',
-    title: 'Zero-Day in Microsoft Exchange: Aktive Ausnutzung bestätigt',
-    excerpt: 'Microsoft bestätigt eine aktiv ausgenutzte Zero-Day-Schwachstelle in Exchange Server. Ein Patch ist noch nicht verfügbar, aber ein Workaround wurde veröffentlicht.',
-    content: `## Zero-Day in Microsoft Exchange Server
+    slug: 'cisa-sieben-aktiv-ausgenutzte-schwachstellen',
+    title: 'CISA warnt: 7 neue aktiv ausgenutzte Schwachstellen – Apple und CMS betroffen',
+    excerpt: 'Die US-Cybersicherheitsbehörde CISA hat 7 neue Schwachstellen in den KEV-Katalog aufgenommen. Fünf betreffen Apple-Produkte, zwei die CMS-Systeme Craft CMS und Laravel.',
+    content: `## CISA erweitert KEV-Katalog um 7 kritische Schwachstellen
 
-Microsoft hat eine aktiv ausgenutzte Zero-Day-Schwachstelle in Exchange Server bestätigt. Die Schwachstelle wird bereits von einer APT-Gruppe ausgenutzt, die auf europäische Organisationen abzielt.
+Die US-Cybersicherheitsbehörde CISA hat ihren Katalog bekannter, aktiv ausgenutzter Schwachstellen (Known Exploited Vulnerabilities, KEV) um sieben neue Einträge erweitert.
 
-### Technische Details
+### Betroffene Produkte
 
-- **Typ:** Server-Side Request Forgery (SSRF)
-- **Auswirkung:** Zugriff auf interne Systeme über Exchange
-- **Betroffene Versionen:** Exchange Server 2019 CU14 und früher
-- **Patch:** Noch nicht verfügbar
+#### Apple (5 Schwachstellen)
+Fünf der sieben neuen Einträge betreffen Apple-Produkte:
+- iOS und iPadOS
+- macOS
+- Safari WebKit
+- Betroffen sind sowohl aktuelle als auch ältere Versionen
 
-### Workaround
+#### Content Management Systeme (2 Schwachstellen)
+- **Craft CMS** – Kritische Schwachstelle ermöglicht Remote Code Execution
+- **Laravel Livewire** – Schwachstelle in weit verbreitetem PHP-Framework
 
-Microsoft empfiehlt als temporäre Maßnahme:
+### Was bedeutet der KEV-Katalog?
 
-1. URL-Rewrite-Regel auf dem Exchange Server einrichten
-2. Zugriff auf OWA einschränken
-3. Enhanced Monitoring aktivieren
+Der KEV-Katalog der CISA listet Schwachstellen, die **nachweislich aktiv ausgenutzt** werden. US-Bundesbehörden sind verpflichtet, diese innerhalb definierter Fristen zu patchen. Auch für DACH-Unternehmen ist der Katalog ein wichtiger Indikator.
 
-### Was IT-Admins jetzt tun sollten
+### Handlungsempfehlungen
 
-- Workaround sofort implementieren
-- Exchange-Logs auf Indicators of Compromise prüfen
-- Netzwerk-Traffic auf ungewöhnliche Muster überwachen
-- Incident Response Team in Bereitschaft versetzen`,
+1. **Apple-Geräte** sofort auf die neuesten Versionen aktualisieren
+2. **Craft CMS** und **Laravel**-Installationen prüfen und patchen
+3. Asset-Inventar auf betroffene Software überprüfen
+4. Automatisches Patch-Management für Endgeräte sicherstellen
+
+### Relevanz für DACH
+
+Apple-Geräte sind in DACH-Unternehmen weit verbreitet, besonders im Management. Craft CMS wird von vielen Agenturen und Mittelständlern eingesetzt.`,
     category: 'schwachstellen',
-    risk_level: 'kritisch',
+    risk_level: 'hoch',
     image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800',
-    published_at: '2026-03-26T09:00:00Z',
-    reading_time: 5,
-    views: 31200,
-    tags: ['Microsoft', 'Exchange', 'Zero-Day', 'APT'],
+    published_at: '2026-03-26T11:00:00Z',
+    reading_time: 4,
+    views: 15600,
+    tags: ['CISA', 'Apple', 'Craft CMS', 'Laravel', 'KEV'],
     author: 'David Oberholzner',
   },
   {
     id: '6',
-    slug: 'datenpanne-oesterreichischer-versicherer',
-    title: 'Datenpanne bei österreichischem Versicherungskonzern – 500.000 Kunden betroffen',
-    excerpt: 'Einer der größten Versicherer Österreichs meldet eine massive Datenpanne. Persönliche Daten und Vertragsinformationen von 500.000 Kunden wurden kompromittiert.',
-    content: `## Massive Datenpanne bei österreichischem Versicherer
+    slug: 'sap-kritische-schwachstellen-s4hana-cvss-9-9',
+    title: 'SAP Notfall-Patch: SQL Injection in S/4HANA mit CVSS 9.9',
+    excerpt: 'SAP hat kritische Sicherheitsupdates veröffentlicht. Eine SQL-Injection in S/4HANA erreicht CVSS 9.9. Tausende DACH-Unternehmen müssen sofort patchen.',
+    content: `## Kritische SAP-Schwachstellen – Sofort patchen
 
-Ein führender österreichischer Versicherungskonzern hat eine massive Datenpanne gemeldet. Betroffen sind die persönlichen Daten von rund 500.000 Kunden.
+SAP hat mehrere kritische Sicherheitsupdates veröffentlicht, darunter Schwachstellen mit CVSS-Scores nahe dem Maximum.
 
-### Was wurde kompromittiert?
+### Die kritischsten Schwachstellen
 
-- Namen und Adressen
-- Geburtsdaten
-- Versicherungsnummern
-- Vertragsinformationen
-- Teilweise Bankverbindungen
+#### CVE-2026-0501 – CVSS 9.9
+- **Produkt:** SAP S/4HANA
+- **Typ:** SQL Injection
+- **Risiko:** Vollständige Kompromittierung der Datenbank
+- **Authentifizierung:** Niedrig privilegierter Zugang reicht aus
 
-### Ursache
+#### CVE-2026-0500 – CVSS 9.6
+- **Produkt:** SAP Wily Introscope Enterprise Manager
+- **Typ:** Remote Code Execution
+- **Risiko:** Serverübernahme
 
-Nach ersten Erkenntnissen wurde eine unzureichend gesicherte API als Einfallstor genutzt. Die Angreifer konnten über einen Zeitraum von mehreren Wochen Daten abgreifen, bevor der Vorfall entdeckt wurde.
+#### CVE-2025-42880 – CVSS 9.9
+- **Produkt:** SAP Solution Manager
+- **Typ:** Code Injection
+- **Risiko:** Vollständige Systemkontrolle
 
-### Rechtliche Konsequenzen
+### Warum DACH besonders betroffen ist
 
-- Meldung an die österreichische Datenschutzbehörde erfolgt
-- DSGVO-Bußgeld von bis zu 4% des Jahresumsatzes möglich
-- Betroffene Kunden werden informiert
-- Sammelklage wird bereits vorbereitet`,
-    category: 'datenpannen',
-    risk_level: 'hoch',
+SAP ist das Rückgrat der deutschen Wirtschaft. Nahezu alle DAX-Unternehmen und ein Großteil des Mittelstands setzen SAP-Systeme ein. Eine Kompromittierung kann bedeuten:
+
+- Zugriff auf Finanzdaten und Geschäftsgeheimnisse
+- Manipulation von Geschäftsprozessen
+- Datenexfiltration im großen Stil
+
+### Sofortmaßnahmen
+
+1. SAP Security Notes **sofort** prüfen und Patches einspielen
+2. SAP-Systeme mit Internetzugang besonders priorisieren
+3. Datenbankzugriffe auf verdächtige SQL-Muster überwachen
+4. SAP Solution Manager Zugriffe einschränken
+5. Notfall-Change-Prozess für kritische Patches aktivieren`,
+    category: 'schwachstellen',
+    risk_level: 'kritisch',
     image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800',
-    published_at: '2026-03-25T11:00:00Z',
-    reading_time: 4,
-    views: 9870,
-    tags: ['Datenpanne', 'DSGVO', 'Österreich', 'Versicherung'],
+    published_at: '2026-03-20T10:00:00Z',
+    reading_time: 5,
+    views: 31200,
+    tags: ['SAP', 'S/4HANA', 'SQL Injection', 'Patch', 'CVE'],
     author: 'David Oberholzner',
   },
   {
     id: '7',
-    slug: 'bsi-warnung-kritische-infrastruktur',
-    title: 'BSI erhöht Warnstufe: Gezielte Angriffe auf KRITIS-Betreiber',
-    excerpt: 'Das BSI warnt vor einer Zunahme gezielter Cyberangriffe auf Betreiber kritischer Infrastrukturen. Energieversorger und Wasserwerke im Fokus.',
-    content: `## BSI erhöht Warnstufe für KRITIS-Betreiber
+    slug: 'datev-datenpanne-gehaltsdaten-2026',
+    title: 'DATEV-Datenpanne: Gehaltsdaten an falsche Empfänger übermittelt',
+    excerpt: 'Eine Datenpanne im DATEV-LODAS System führte dazu, dass sensible Gehalts- und Lohndaten an unbefugte Empfänger übermittelt wurden. DSGVO-Meldung erfolgt.',
+    content: `## DATEV-Datenpanne betrifft Gehaltsdaten
 
-Das Bundesamt für Sicherheit in der Informationstechnik (BSI) hat seine Warnstufe für Betreiber kritischer Infrastrukturen erhöht. Hintergrund sind vermehrte gezielte Angriffe auf den Energie- und Wassersektor.
+Anfang 2026 wurde eine schwerwiegende Datenpanne im DATEV-LODAS System bekannt. Sensible Lohn- und Gehaltsdaten wurden versehentlich an unbefugte Empfänger übermittelt.
 
-### Bedrohungslage
+### Was ist passiert?
 
-- Zunahme von Spear-Phishing gegen KRITIS-Mitarbeiter
-- Scanning-Aktivitäten auf OT-Systeme deutlich gestiegen
-- Mehrere Vorfälle bei europäischen Energieversorgern
-- Verdacht auf staatlich gesteuerte Akteure
+Im DATEV-LODAS System, das von tausenden Steuerberatern und Unternehmen für die Lohn- und Gehaltsabrechnung genutzt wird, kam es zu einer fehlerhaften Datenübermittlung. Vertrauliche Gehaltsinformationen wurden an nicht autorisierte Empfänger versendet.
 
-### Empfehlungen des BSI
+### Betroffene Daten
 
-1. OT-Netzwerke strikt von IT-Netzwerken trennen
-2. Remote-Zugänge zu OT-Systemen minimieren
-3. Monitoring in OT-Umgebungen verstärken
-4. Notfallpläne für Cyber-Angriffe aktualisieren
-5. Mitarbeiter-Sensibilisierung verstärken`,
-    category: 'kritis',
+- Bruttogehälter und Nettogehälter
+- Steuer- und Sozialversicherungsdaten
+- Personalnummern und Namen
+- Bankverbindungen für Gehaltszahlungen
+
+### DSGVO-Relevanz
+
+- Meldung an zuständige Datenschutzbehörde erfolgt
+- Betroffene Personen müssen informiert werden
+- Art. 33 & 34 DSGVO greifen
+- Mögliche Bußgelder bei unzureichenden technischen Maßnahmen
+
+### Was Unternehmen tun sollten
+
+1. Prüfen, ob eigene Daten betroffen sind
+2. Bei DATEV/Steuerberater nachfragen
+3. Betroffene Mitarbeiter informieren
+4. Vorfall im Verarbeitungsverzeichnis dokumentieren
+5. Eigene Meldepflicht an Aufsichtsbehörde prüfen
+
+### Lehren für alle
+
+- Auch vertrauenswürdige Dienstleister können Datenpannen haben
+- Supply Chain Risk Assessment muss auch Datenverarbeiter umfassen
+- Auftragsverarbeitungsverträge (AVV) regelmäßig prüfen`,
+    category: 'datenpannen',
     risk_level: 'hoch',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800',
-    published_at: '2026-03-25T08:00:00Z',
-    reading_time: 5,
-    views: 14560,
-    tags: ['BSI', 'KRITIS', 'Energiesektor', 'OT-Security'],
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800',
+    published_at: '2026-03-10T11:00:00Z',
+    reading_time: 4,
+    views: 19400,
+    tags: ['DATEV', 'Datenpanne', 'DSGVO', 'Gehaltsdaten', 'LODAS'],
     author: 'David Oberholzner',
   },
   {
     id: '8',
-    slug: 'ki-security-tools-ueberblick-2026',
-    title: 'KI in der Cybersecurity: Die besten Tools 2026 im Überblick',
-    excerpt: 'Künstliche Intelligenz revolutioniert die Cybersecurity. Wir stellen die wichtigsten KI-basierten Security-Tools vor und zeigen, wie sie IT-Teams unterstützen.',
-    content: `## KI-basierte Security-Tools 2026
+    slug: 'bsi-158000-neue-malware-varianten-pro-tag',
+    title: 'BSI-Lagebericht: 158.000 neue Malware-Varianten pro Tag im Februar 2026',
+    excerpt: 'Das BSI meldet 4,43 Millionen neue Schadprogramm-Varianten im Februar 2026 – ein Plus von 7% zum Vormonat. Ransomware bleibt die größte Bedrohung.',
+    content: `## BSI: Malware-Flut nimmt weiter zu
 
-Künstliche Intelligenz hat sich als unverzichtbarer Bestandteil moderner Security-Stacks etabliert. Hier ein Überblick über die wichtigsten Kategorien und Tools.
+Das Bundesamt für Sicherheit in der Informationstechnik (BSI) hat in seinem aktuellen Monatsbericht alarmierende Zahlen veröffentlicht.
 
-### Threat Detection & Response
+### Die Zahlen im Detail
 
-KI-Systeme erkennen Bedrohungen in Echtzeit und können automatisch reagieren:
-- Anomalie-Erkennung im Netzwerkverkehr
-- Verhaltensbasierte Malware-Erkennung
-- Automatisierte Incident Response
+- **4,43 Millionen** neue Schadprogramm-Varianten im Februar 2026
+- **158.000** neue Malware-Varianten **pro Tag**
+- **+7%** im Vergleich zum Januar 2026
+- Trend: Steigend seit Q3/2025
 
-### Email Security
+### KRITIS-Störungen
 
-- Erkennung von KI-generierten Phishing-Mails
-- Kontextbasierte Analyse von Absenderverhalten
-- Echtzeit-URL-Analyse
+Die Meldungen von Störungen bei KRITIS-Betreibern zeigen ein gemischtes Bild:
 
-### Vulnerability Management
+- **Q3/2025:** 187 gemeldete Störungen
+- **Q4/2025:** 159 gemeldete Störungen (-15%)
+- **Spitzenreiter:** Transport & Verkehr mit 47 Störungen
+- Ransomware bleibt Hauptursache
 
-- Automatische Priorisierung von Schwachstellen
-- Vorhersage von Exploit-Wahrscheinlichkeiten
-- Kontextbezogene Patch-Empfehlungen
+### Bedrohungslage
 
-### Worauf achten?
+Das BSI bewertet die aktuelle Bedrohungslage als **hoch**. Besondere Gefährdungen:
 
-- Transparenz der KI-Entscheidungen
-- False-Positive-Rate
-- Integration in bestehende SIEM/SOAR-Systeme
-- DSGVO-Konformität der Datenverarbeitung`,
-    category: 'ki-security',
-    risk_level: 'info',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
-    published_at: '2026-03-24T14:00:00Z',
-    reading_time: 7,
-    views: 8920,
-    tags: ['KI', 'Tools', 'SIEM', 'Automatisierung'],
+1. **Ransomware-as-a-Service:** Professionalisierung der Angreifer
+2. **Spear-Phishing:** Gezielte Angriffe auf KRITIS-Personal
+3. **Scanning-Aktivitäten:** Massives Abtasten von OT-Systemen
+4. **Staatliche Akteure:** Verdacht auf geopolitisch motivierte Angriffe
+
+### Empfehlungen des BSI
+
+- Aktuelle Bedrohungsindikatoren über BSI-Feeds beziehen
+- KRITIS-Betreiber: Registrierung für BSI-IT-Sicherheitsmitteilungen (BITS)
+- Regelmäßige Überprüfung der Sicherheitsarchitektur
+- Incident Response Pläne testen`,
+    category: 'kritis',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800',
+    published_at: '2026-03-18T08:00:00Z',
+    reading_time: 5,
+    views: 16800,
+    tags: ['BSI', 'Malware', 'KRITIS', 'Lagebericht', 'Ransomware'],
     author: 'David Oberholzner',
   },
   {
     id: '9',
-    slug: 'schweizer-unternehmen-ransomware-zahlung',
-    title: 'Schweizer Industrieunternehmen zahlt Millionen-Lösegeld',
-    excerpt: 'Ein großes Schweizer Industrieunternehmen hat nach einem Ransomware-Angriff ein Lösegeld im zweistelligen Millionenbereich gezahlt.',
-    content: `## Millionen-Lösegeld in der Schweiz
+    slug: 'genai-datenleck-risiko-unternehmen',
+    title: 'Jede 31. KI-Prompt leakt sensible Daten – 88% der Unternehmen betroffen',
+    excerpt: 'Neue Studie zeigt: Generative KI wird zum Datenschutzrisiko. Jede 31. Prompt enthält sensible Unternehmensdaten. Security-Teams müssen reagieren.',
+    content: `## GenAI als Datenschutzrisiko
 
-Ein namhaftes Schweizer Industrieunternehmen hat bestätigt, nach einem Ransomware-Angriff ein Lösegeld gezahlt zu haben. Die Summe liegt Berichten zufolge im zweistelligen Millionenbereich.
+Eine aktuelle Studie zeigt ein alarmierendes Bild: **Jede 31. GenAI-Prompt** birgt ein hohes Risiko der Preisgabe sensibler Unternehmensdaten. **88 Prozent** der Organisationen, die regelmäßig KI-Tools nutzen, sind betroffen.
 
-### Hintergrund
+### Das Problem
 
-- Angriff erfolgte über kompromittierte Zugangsdaten eines Dienstleisters
-- Supply-Chain-Angriff als initialer Vektor
-- Produktionsstillstand in mehreren Werken
-- Geschätzter Gesamtschaden übersteigt die Lösegeldsumme deutlich
+Mitarbeiter geben in KI-Tools wie ChatGPT, Copilot und anderen GenAI-Diensten regelmäßig ein:
 
-### Warum wurde gezahlt?
+- Quellcode mit Zugangsdaten und API-Keys
+- Interne Dokumente und Strategiepapiere
+- Kundendaten und personenbezogene Informationen
+- Finanzberichte und Geschäftszahlen
 
-- Backups waren ebenfalls teilweise verschlüsselt
-- Produktionsausfall verursachte höhere Kosten als das Lösegeld
-- Zeitdruck durch Kundenverträge
+### Warum ist das gefährlich?
 
-### Lehren für andere Unternehmen
+- Eingegebene Daten können in Trainingsmodelle einfließen
+- Keine Kontrolle über Datenspeicherung beim Anbieter
+- DSGVO-Verstoß bei personenbezogenen Daten
+- Geschäftsgeheimnisse verlieren ihren Schutz
 
-1. 3-2-1-Backup-Strategie konsequent umsetzen
-2. Backup-Systeme vom Produktionsnetz isolieren
-3. Supply Chain Risk Management etablieren
-4. Cyber-Versicherung prüfen`,
-    category: 'ransomware',
+### Empfohlene Maßnahmen
+
+1. **GenAI-Policy** im Unternehmen etablieren
+2. **DLP-Lösungen** (Data Loss Prevention) für KI-Tools implementieren
+3. **Schulungen** zu sicherem Umgang mit GenAI durchführen
+4. **Interne KI-Lösungen** evaluieren (z.B. lokale LLMs)
+5. Sensible Daten-Klassifizierung einführen
+6. KI-Nutzung monitoren und auditieren
+
+### DSGVO-Aspekt
+
+Wer personenbezogene Daten in GenAI-Tools eingibt, verstößt in den meisten Fällen gegen die DSGVO:
+- Fehlende Rechtsgrundlage (Art. 6 DSGVO)
+- Drittlandtransfer ohne angemessene Garantien
+- Keine Auftragsverarbeitung vereinbart`,
+    category: 'ki-security',
     risk_level: 'hoch',
-    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800',
-    published_at: '2026-03-24T09:00:00Z',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    published_at: '2026-03-22T14:00:00Z',
     reading_time: 5,
-    views: 11230,
-    tags: ['Ransomware', 'Schweiz', 'Industrie', 'Supply Chain'],
+    views: 21300,
+    tags: ['GenAI', 'Datenschutz', 'DSGVO', 'DLP', 'KI-Sicherheit'],
     author: 'David Oberholzner',
   },
   {
     id: '10',
-    slug: 'dsgvo-bussgeld-rekord-deutschland-2026',
-    title: 'Rekordbußgeld: Deutsche Behörde verhängt 15 Mio. Euro DSGVO-Strafe',
-    excerpt: 'Eine deutsche Datenschutzbehörde hat das bisher höchste Bußgeld des Jahres verhängt. Ein Technologieunternehmen muss 15 Millionen Euro zahlen.',
-    content: `## DSGVO-Rekordbußgeld in Deutschland
+    slug: 'stryker-cyberangriff-iran-hacktivisten-handala',
+    title: 'Medizintechnik-Riese Stryker von Iran-naher Hackergruppe Handala angegriffen',
+    excerpt: 'Die iranische Hacktivistengruppe Handala hat ein Administratorkonto in der Microsoft-Umgebung von Stryker Corporation kompromittiert. Auswirkungen auf DACH-Kunden unklar.',
+    content: `## Cyberangriff auf Stryker Corporation
 
-Eine deutsche Landesdatenschutzbehörde hat ein Bußgeld in Höhe von 15 Millionen Euro gegen ein Technologieunternehmen verhängt. Es ist das höchste DSGVO-Bußgeld in Deutschland im Jahr 2026.
+Mitte März 2026 wurde der US-amerikanische Medizintechnik-Konzern Stryker Corporation Opfer eines schwerwiegenden Cyberangriffs. Die Iran-nahe Hacktivistengruppe **Handala** hat die Verantwortung übernommen.
 
-### Grund für das Bußgeld
+### Was ist passiert?
 
-- Unrechtmäßige Verarbeitung personenbezogener Daten
-- Fehlende Rechtsgrundlage für Profiling-Aktivitäten
-- Unzureichende Informationspflichten
-- Mangelhafte Datenschutz-Folgenabschätzung
+- Kompromittierung eines **Administratorkontos** in Strykers Microsoft-Umgebung
+- Zugriff auf interne Systeme und potenziell sensible Daten
+- Handala-Gruppe reklamiert den Angriff für sich
 
-### Was bedeutet das für andere Unternehmen?
+### Wer ist Handala?
 
-Die Behörden werden strenger. Unternehmen sollten:
+Handala ist eine Iran-nahe Hacktivistengruppe, die seit 2024 verstärkt westliche Unternehmen und Organisationen angreift. Die Gruppe ist bekannt für:
 
-1. Datenschutz-Folgenabschätzungen regelmäßig durchführen
-2. Rechtsgrundlagen für alle Verarbeitungen dokumentieren
-3. Informationspflichten vollständig erfüllen
-4. Datenschutzbeauftragte angemessen ausstatten
+- Geopolitisch motivierte Angriffe
+- Fokus auf Gesundheits- und Technologiesektor
+- Veröffentlichung erbeuteter Daten
 
-### Trend: Steigende Bußgelder
+### Relevanz für den DACH-Raum
 
-Die durchschnittliche Bußgeldhöhe in der EU steigt seit Jahren kontinuierlich an. Experten erwarten, dass sich dieser Trend 2026 fortsetzt.`,
-    category: 'dsgvo',
-    risk_level: 'mittel',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800',
-    published_at: '2026-03-23T12:00:00Z',
+Stryker ist einer der weltweit größten Medizintechnik-Hersteller. Im DACH-Raum:
+
+- Zahlreiche Kliniken und Krankenhäuser nutzen Stryker-Produkte
+- Mögliche Auswirkungen auf Lieferketten
+- Patientendaten könnten indirekt betroffen sein
+- KRITIS-Sektor Gesundheit ist besonders sensibel
+
+### Empfehlungen für DACH-Kunden
+
+1. Kommunikation mit Stryker aufnehmen – Status klären
+2. Eigene Systeme mit Stryker-Schnittstellen überprüfen
+3. Zugangsdaten für Stryker-Portale ändern
+4. Monitoring auf verdächtige Aktivitäten verstärken`,
+    category: 'kritis',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800',
+    published_at: '2026-03-17T09:00:00Z',
     reading_time: 4,
-    views: 7650,
-    tags: ['DSGVO', 'Bußgeld', 'Datenschutz', 'Deutschland'],
+    views: 12700,
+    tags: ['Stryker', 'Handala', 'Iran', 'Medizintechnik', 'KRITIS'],
     author: 'David Oberholzner',
   },
 ]
 
 export const demoCVEs = [
   {
-    cve_id: 'CVE-2026-1234',
-    description: 'SAP NetWeaver Remote Code Execution – Unauthentifizierte Angreifer können beliebigen Code auf dem Server ausführen.',
-    cvss_score: 9.8,
-    affected_software: 'SAP NetWeaver 7.50–7.93',
+    cve_id: 'CVE-2026-0501',
+    description: 'SAP S/4HANA SQL Injection – Niedrig privilegierte Angreifer können die vollständige Datenbank kompromittieren.',
+    cvss_score: 9.9,
+    affected_software: 'SAP S/4HANA',
     vendor: 'SAP',
     patch_available: true,
-    workaround: true,
-    published_at: '2026-03-27',
-    advisory_url: 'https://nvd.nist.gov',
+    workaround: false,
+    published_at: '2026-03-18',
+    advisory_url: 'https://www.securityweek.com/saps-january-2026-security-updates-patch-critical-vulnerabilities/',
   },
   {
-    cve_id: 'CVE-2026-5678',
-    description: 'Microsoft Exchange Server SSRF – Ermöglicht Zugriff auf interne Systeme über manipulierte Anfragen.',
-    cvss_score: 9.1,
-    affected_software: 'Microsoft Exchange Server 2019',
-    vendor: 'Microsoft',
-    patch_available: false,
-    workaround: true,
-    published_at: '2026-03-26',
-    advisory_url: 'https://nvd.nist.gov',
-  },
-  {
-    cve_id: 'CVE-2026-9012',
-    description: 'Fortinet FortiOS Heap Overflow – Kritischer Buffer Overflow in SSL-VPN ermöglicht Remote Code Execution.',
-    cvss_score: 9.6,
-    affected_software: 'FortiOS 7.2.x, 7.4.x',
+    cve_id: 'CVE-2025-59718',
+    description: 'Fortinet FortiOS/FortiWeb/FortiProxy – Improper Verification of Cryptographic Signature ermöglicht unauthentifizierte Remote Code Execution.',
+    cvss_score: 9.8,
+    affected_software: 'FortiOS, FortiWeb, FortiProxy, FortiSwitchManager',
     vendor: 'Fortinet',
     patch_available: true,
-    workaround: false,
-    published_at: '2026-03-25',
-    advisory_url: 'https://nvd.nist.gov',
+    workaround: true,
+    published_at: '2026-03-20',
+    advisory_url: 'https://www.securityweek.com/fortinet-patches-critical-authentication-bypass-vulnerabilities/',
   },
   {
-    cve_id: 'CVE-2026-3456',
-    description: 'VMware vCenter Authentication Bypass – Umgehung der Authentifizierung ermöglicht administrativen Zugriff.',
+    cve_id: 'CVE-2026-0500',
+    description: 'SAP Wily Introscope Enterprise Manager – Remote Code Execution ermöglicht vollständige Serverübernahme.',
+    cvss_score: 9.6,
+    affected_software: 'SAP Wily Introscope Enterprise Manager',
+    vendor: 'SAP',
+    patch_available: true,
+    workaround: false,
+    published_at: '2026-03-18',
+    advisory_url: 'https://www.securityweek.com/saps-january-2026-security-updates-patch-critical-vulnerabilities/',
+  },
+  {
+    cve_id: 'CVE-2025-64155',
+    description: 'Fortinet FortiSIEM OS Command Injection – Unauthentifizierte Angreifer können Code und Befehle auf dem System ausführen.',
     cvss_score: 9.4,
-    affected_software: 'VMware vCenter Server 8.x',
-    vendor: 'VMware',
+    affected_software: 'FortiSIEM',
+    vendor: 'Fortinet',
     patch_available: true,
     workaround: true,
-    published_at: '2026-03-24',
-    advisory_url: 'https://nvd.nist.gov',
+    published_at: '2026-03-15',
+    advisory_url: 'https://www.securityweek.com/fortinet-patches-critical-vulnerabilities-in-fortifone-fortisiem/',
   },
   {
-    cve_id: 'CVE-2026-7890',
-    description: 'Linux Kernel Privilege Escalation – Lokale Rechteausweitung über Netfilter-Subsystem.',
-    cvss_score: 7.8,
-    affected_software: 'Linux Kernel 6.x',
-    vendor: 'Linux',
+    cve_id: 'CVE-2025-64446',
+    description: 'Fortinet FortiWeb Path Traversal – Aktiv ausgenutzt! Administrative Befehle über manipulierte HTTP-Anfragen ausführbar.',
+    cvss_score: 9.1,
+    affected_software: 'FortiWeb',
+    vendor: 'Fortinet',
+    patch_available: true,
+    workaround: true,
+    published_at: '2026-03-22',
+    advisory_url: 'https://www.securityweek.com/fortinet-confirms-active-exploitation-of-critical-fortiweb-vulnerability/',
+  },
+  {
+    cve_id: 'CVE-2025-42880',
+    description: 'SAP Solution Manager Code Injection – Ermöglicht vollständige Systemkontrolle über manipulierte Eingaben.',
+    cvss_score: 9.9,
+    affected_software: 'SAP Solution Manager',
+    vendor: 'SAP',
     patch_available: true,
     workaround: false,
-    published_at: '2026-03-23',
-    advisory_url: 'https://nvd.nist.gov',
+    published_at: '2026-03-12',
+    advisory_url: 'https://www.securityweek.com/sap-patches-critical-vulnerabilities-with-december-2025-security-updates/',
   },
 ]
 
 export const topThreats = [
-  { name: 'Ransomware-as-a-Service (RaaS)', level: 'kritisch', description: 'Massive Zunahme von RaaS-Angriffen auf DACH-Unternehmen' },
-  { name: 'KI-gestützte Phishing-Kampagnen', level: 'kritisch', description: 'Perfekt lokalisierte Phishing-Mails in Deutsch' },
-  { name: 'Supply Chain Attacks', level: 'hoch', description: 'Angriffe über Dienstleister und Software-Lieferketten' },
-  { name: 'Zero-Day Exploits in VPN/Firewalls', level: 'hoch', description: 'Aktive Ausnutzung ungepatchter Perimeter-Geräte' },
-  { name: 'Cloud-Fehlkonfigurationen', level: 'mittel', description: 'Offene S3 Buckets und falsch konfigurierte Azure AD' },
+  { name: 'Ransomware-as-a-Service (RaaS)', level: 'kritisch', description: '1.345 Angriffe pro Woche auf deutsche Unternehmen – Tendenz steigend' },
+  { name: 'Zero-Day Exploits (CVSS 10.0)', level: 'kritisch', description: 'PTC Windchill/FlexPLM CVSS 10.0 – Polizei warnt persönlich' },
+  { name: 'GenAI-Datenabfluss', level: 'hoch', description: 'Jede 31. KI-Prompt leakt sensible Daten – 88% der Firmen betroffen' },
+  { name: 'Fortinet-Schwachstellen (aktiv ausgenutzt)', level: 'hoch', description: 'CVE-2025-64446 wird in freier Wildbahn aktiv ausgenutzt' },
+  { name: 'NIS2 Compliance-Risiko', level: 'mittel', description: 'Registrierungsfrist abgelaufen – 29.500 Unternehmen unter Druck' },
 ]
 
 export const breakingNews = [
-  'BSI erhöht Warnstufe für kritische Infrastrukturen auf ORANGE',
-  'Kritische SAP-Schwachstelle CVE-2026-1234 – Sofort patchen!',
-  'Ransomware-Welle trifft Kliniken in Süddeutschland',
-  'Microsoft Exchange Zero-Day wird aktiv ausgenutzt',
-  'NIS2-Umsetzung in Deutschland erneut verschoben',
-  'Neue KI-Phishing-Kampagne zielt auf C-Level im DACH-Raum',
+  'CVSS 10.0: Polizei warnt Admins persönlich vor Windchill/FlexPLM Zero-Day',
+  'Fortinet bestätigt aktive Ausnutzung von FortiWeb-Schwachstelle CVE-2025-64446',
+  'NIS2-Registrierungsfrist am 6. März abgelaufen – Bußgelder drohen',
+  'SAP S/4HANA: SQL Injection mit CVSS 9.9 – Sofort patchen!',
+  '11% mehr Cyberangriffe auf deutsche Unternehmen im Februar 2026',
+  'DATEV-Datenpanne: Gehaltsdaten an falsche Empfänger übermittelt',
+  'BSI meldet 158.000 neue Malware-Varianten pro Tag',
+  'Stryker Corporation von Iran-naher Hackergruppe Handala angegriffen',
 ]
 
 export const categories = [
@@ -473,13 +573,14 @@ export const categories = [
 export const glossaryTerms = [
   { term: 'APT', full: 'Advanced Persistent Threat', description: 'Ein gezielter, langandauernder Cyberangriff, meist von staatlich gesteuerten Gruppen, der darauf abzielt, unbemerkt in Netzwerke einzudringen und dort zu verbleiben.' },
   { term: 'CVSS', full: 'Common Vulnerability Scoring System', description: 'Ein standardisiertes Bewertungssystem für die Schwere von Sicherheitslücken auf einer Skala von 0.0 bis 10.0.' },
-  { term: 'CVE', full: 'Common Vulnerabilities and Exposures', description: 'Ein Katalog öffentlich bekannter Sicherheitslücken und Schwachstellen, jede mit einer eindeutigen Kennung (z.B. CVE-2026-1234).' },
+  { term: 'CVE', full: 'Common Vulnerabilities and Exposures', description: 'Ein Katalog öffentlich bekannter Sicherheitslücken und Schwachstellen, jede mit einer eindeutigen Kennung (z.B. CVE-2025-59718).' },
   { term: 'DSGVO', full: 'Datenschutz-Grundverordnung', description: 'EU-Verordnung zum Schutz personenbezogener Daten. Seit Mai 2018 in Kraft, regelt sie die Verarbeitung personenbezogener Daten durch Unternehmen und Behörden.' },
   { term: 'Firewall', full: '', description: 'Ein Sicherheitssystem, das den Netzwerkverkehr überwacht und filtert. Es entscheidet anhand definierter Regeln, welcher Verkehr erlaubt oder blockiert wird.' },
   { term: 'IoC', full: 'Indicator of Compromise', description: 'Hinweise oder Artefakte, die auf einen Sicherheitsvorfall hindeuten, z.B. verdächtige IP-Adressen, Datei-Hashes oder ungewöhnliche Netzwerkaktivitäten.' },
+  { term: 'KEV', full: 'Known Exploited Vulnerabilities', description: 'Von der CISA gepflegter Katalog bekannter, aktiv ausgenutzter Schwachstellen. Wichtiger Indikator für Patch-Priorisierung.' },
   { term: 'KRITIS', full: 'Kritische Infrastrukturen', description: 'Organisationen und Einrichtungen mit wichtiger Bedeutung für das Gemeinwesen, deren Ausfall dramatische Folgen hätte (Energie, Wasser, Gesundheit, etc.).' },
   { term: 'MFA', full: 'Multi-Faktor-Authentifizierung', description: 'Sicherheitsverfahren, das mindestens zwei verschiedene Faktoren zur Identitätsbestätigung erfordert (z.B. Passwort + SMS-Code).' },
-  { term: 'NIS2', full: 'Network and Information Security Directive 2', description: 'EU-Richtlinie zur Stärkung der Cybersicherheit. Erweitert den Kreis der betroffenen Unternehmen und verschärft die Anforderungen gegenüber NIS1.' },
+  { term: 'NIS2', full: 'Network and Information Security Directive 2', description: 'EU-Richtlinie zur Stärkung der Cybersicherheit. In Deutschland seit 6. Dezember 2025 als NIS2UmsuCG in Kraft. Betrifft ca. 29.500 Unternehmen.' },
   { term: 'Phishing', full: '', description: 'Social-Engineering-Angriff, bei dem Angreifer sich als vertrauenswürdige Quelle ausgeben, um an sensible Daten zu gelangen oder Malware zu verbreiten.' },
   { term: 'Ransomware', full: '', description: 'Schadsoftware, die Daten verschlüsselt und ein Lösegeld für die Entschlüsselung fordert. Häufigste Form: Double Extortion (Verschlüsselung + Datendiebstahl).' },
   { term: 'SIEM', full: 'Security Information and Event Management', description: 'System zur zentralen Sammlung, Analyse und Korrelation von Sicherheitsereignissen aus verschiedenen Quellen in Echtzeit.' },
