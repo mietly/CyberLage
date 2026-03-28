@@ -5,8 +5,48 @@
     <description>Die tägliche Sicherheitslage für den DACH-Raum</description>
     <link>https://cyberlage.io</link>
     <language>de-de</language>
-    <lastBuildDate>Tue, 26 Mar 2026 11:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2026 12:00:00 +0100</lastBuildDate>
     <atom:link href="https://cyberlage.io/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>KI-Phishing erreicht neuen Höhepunkt: IHK-Betrugswelle und Starbucks-Datenleck</title>
+      <description>KI-generierte Phishing-Angriffe erreichen im März 2026 ein neues Level. Gefälschte IHK-Mails fordern IBAN-Änderungen, Starbucks verliert Daten von 900 Mitarbeitern.</description>
+      <link>https://cyberlage.io/news/ki-phishing-maerz-2026-neuer-hoehepunkt</link>
+      <pubDate>Tue, 24 Mar 2026 10:00:00 +0100</pubDate>
+      <category>Phishing &amp; Social Engineering</category>
+    </item>
+
+    <item>
+      <title>BfV und BSI warnen: Staatliche Phishing-Kampagne zielt auf Signal-Konten von Politikern</title>
+      <description>Deutschlands Verfassungsschutz warnt vor gezielten Angriffen auf Signal-Messenger-Konten von Journalisten und Regierungsbeamten. Staatliche Akteure im Verdacht.</description>
+      <link>https://cyberlage.io/news/bfv-warnt-signal-phishing-regierungsbeamte</link>
+      <pubDate>Wed, 19 Mar 2026 12:00:00 +0100</pubDate>
+      <category>Phishing &amp; Social Engineering</category>
+    </item>
+
+    <item>
+      <title>Ransomware legt belgisches Krankenhaus lahm – Patienten müssen verlegt werden</title>
+      <description>AZ Monica in Antwerpen: Ransomware-Angriff zwingt zur Verlegung von Intensivpatienten. Alle Server heruntergefahren, OPs abgesagt.</description>
+      <link>https://cyberlage.io/news/belgisches-krankenhaus-ransomware-patienten-verlegt</link>
+      <pubDate>Wed, 14 Jan 2026 07:00:00 +0100</pubDate>
+      <category>Ransomware &amp; Malware</category>
+    </item>
+
+    <item>
+      <title>Microsoft Patch Tuesday März 2026: 79 Schwachstellen, 2 Zero-Days, 3 kritische Lücken</title>
+      <description>Microsofts März-Patchday behebt 79 Schwachstellen, darunter 2 Zero-Days und eine Excel-Lücke, die Copilot-Datenabfluss ermöglicht.</description>
+      <link>https://cyberlage.io/news/microsoft-patch-tuesday-maerz-2026-zwei-zero-days</link>
+      <pubDate>Tue, 10 Mar 2026 18:00:00 +0100</pubDate>
+      <category>Schwachstellen &amp; Patches</category>
+    </item>
+
+    <item>
+      <title>Android Zero-Day: Qualcomm-Schwachstelle wird gezielt ausgenutzt</title>
+      <description>Google patcht aktiv ausgenutzte Zero-Day-Lücke in Qualcomm-Display-Komponente. Gezielte Angriffe auf Android-Geräte bestätigt.</description>
+      <link>https://cyberlage.io/news/android-qualcomm-zero-day-aktiv-ausgenutzt</link>
+      <pubDate>Thu, 12 Mar 2026 14:00:00 +0100</pubDate>
+      <category>Schwachstellen &amp; Patches</category>
+    </item>
 
     <item>
       <title>CISA warnt: 7 neue aktiv ausgenutzte Schwachstellen – Apple und CMS betroffen</title>

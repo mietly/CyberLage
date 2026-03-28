@@ -469,6 +469,247 @@ Stryker ist einer der weltweit größten Medizintechnik-Hersteller. Im DACH-Raum
     tags: ['Stryker', 'Handala', 'Iran', 'Medizintechnik', 'KRITIS'],
     author: 'CyberLage Redaktion',
   },
+  {
+    id: '11',
+    slug: 'microsoft-patch-tuesday-maerz-2026-zwei-zero-days',
+    title: 'Microsoft Patch Tuesday März 2026: 79 Schwachstellen, 2 Zero-Days, 3 kritische Lücken',
+    excerpt: 'Microsofts März-Patchday behebt 79 Schwachstellen, darunter 2 Zero-Days und eine Excel-Lücke, die Copilot-Datenabfluss ermöglicht. Office-Updates besonders dringend.',
+    content: `## Microsoft Patch Tuesday – März 2026
+
+Microsoft hat am 10. März 2026 insgesamt **79 Sicherheitslücken** behoben, darunter 2 öffentlich bekannte Zero-Day-Schwachstellen und 3 als kritisch eingestufte Lücken.
+
+### Zero-Days
+
+#### CVE-2026-21262 – SQL Server Elevation of Privilege
+- Unzureichende Zugriffskontrolle in SQL Server
+- Ermöglicht Rechteausweitung über das Netzwerk
+- Öffentlich bekannt, bisher keine aktive Ausnutzung
+
+#### CVE-2026-26127 – .NET Denial of Service
+- Out-of-Bounds Read in .NET
+- Ermöglicht Denial-of-Service über das Netzwerk
+- Öffentlich bekannt
+
+### Besonders kritisch: Excel + Copilot
+
+**CVE-2026-26144** – Eine Information-Disclosure-Lücke in Excel, die dazu führen kann, dass der **Copilot Agent Mode Daten über unbeabsichtigte Netzwerkwege exfiltriert**. Dies ermöglicht potenziell Zero-Click-Angriffe.
+
+### Office: Preview Pane reicht aus
+
+Zwei Remote-Code-Execution-Lücken in Office (CVE-2026-26110 und CVE-2026-26113) können bereits über die **Vorschauansicht** im Explorer ausgenutzt werden – kein Öffnen der Datei nötig.
+
+### Aufschlüsselung
+
+- 46 Elevation of Privilege
+- 18 Remote Code Execution
+- 10 Information Disclosure
+- 4 Denial of Service
+- 4 Spoofing
+- 2 Security Feature Bypass
+
+### Empfehlung
+
+Office- und SQL-Server-Updates sofort einspielen. Die Excel/Copilot-Lücke ist besonders für Unternehmen mit Microsoft 365 Copilot relevant.`,
+    category: 'schwachstellen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800',
+    published_at: '2026-03-10T18:00:00Z',
+    reading_time: 5,
+    views: 3850,
+    tags: ['Microsoft', 'Patch Tuesday', 'Zero-Day', 'Office', 'Copilot'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '12',
+    slug: 'ki-phishing-maerz-2026-neuer-hoehepunkt',
+    title: 'KI-Phishing erreicht neuen Höhepunkt: IHK-Betrugswelle und Starbucks-Datenleck',
+    excerpt: 'KI-generierte Phishing-Angriffe erreichen im März 2026 ein neues Level. Gefälschte IHK-Mails fordern IBAN-Änderungen, Starbucks verliert Daten von 900 Mitarbeitern.',
+    content: `## KI-Phishing-Angriffe im März 2026
+
+Der März 2026 markiert einen neuen Höhepunkt bei KI-gestützten Phishing-Angriffen. Zwei Vorfälle zeigen, wie raffiniert die Angreifer geworden sind.
+
+### Starbucks-Datenleck
+
+Zwischen Januar und Februar 2026 verschafften sich Angreifer unbemerkt Zugang zum internen Personalverwaltungssystem von Starbucks. Der Angriff lief **ohne Schadsoftware** ab:
+
+- Täter nutzten gefälschte Login-Portale
+- Mitarbeiter gaben Zugangsdaten preis
+- **900 Angestellte** betroffen
+- Abgeflossene Daten: Sozialversicherungsnummern, Bankverbindungen
+
+### IHK-Betrugswelle in Deutschland
+
+Seit dem 20. März 2026 verbreiten sich massenhaft gefälschte E-Mails:
+
+- Betrüger geben sich als Vertreter der **Bergischen IHK** aus
+- Aufforderung zur Aktualisierung von IBAN-Daten
+- Perfektes Deutsch, korrekte Logos und Formatierung
+- Ziel: Umleitung von Zahlungen
+
+### Warum klassische Erkennung versagt
+
+Laut KnowBe4 erkennen nur **34%** der Mitarbeiter künstlichen Zeitdruck als Warnsignal. KI-Sprachmodelle generieren:
+
+- Fehlerfreie, personalisierte Texte
+- Korrekte Absenderformatierung
+- Branchenspezifische Fachbegriffe
+- Kontextbezogene Dringlichkeit
+
+Klassische Erkennungszeichen wie Rechtschreibfehler sind damit obsolet.
+
+### Empfohlene Gegenmaßnahmen
+
+1. **Zero-Trust-Prinzip** konsequent umsetzen
+2. **Phishing-resistente MFA** (FIDO2/WebAuthn) einführen
+3. **Regelmäßige Phishing-Simulationen** mit realistischen Szenarien
+4. IBAN-Änderungen nur nach telefonischer Rückbestätigung
+5. KI-basierte E-Mail-Security-Lösungen evaluieren`,
+    category: 'phishing',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800',
+    published_at: '2026-03-24T10:00:00Z',
+    reading_time: 5,
+    views: 2740,
+    tags: ['Phishing', 'KI', 'Starbucks', 'IHK', 'Social Engineering'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '13',
+    slug: 'belgisches-krankenhaus-ransomware-patienten-verlegt',
+    title: 'Ransomware legt belgisches Krankenhaus lahm – Patienten müssen verlegt werden',
+    excerpt: 'AZ Monica in Antwerpen: Ransomware-Angriff zwingt zur Verlegung von Intensivpatienten. Alle Server heruntergefahren, OPs abgesagt. Warnung für DACH-Kliniken.',
+    content: `## Ransomware-Angriff auf AZ Monica Krankenhaus
+
+Am 13. Januar 2026 wurde das AZ Monica Krankenhaus in Antwerpen (Belgien) Opfer eines schweren Ransomware-Angriffs. Die Auswirkungen waren dramatisch und zeigen die lebensbedrohliche Dimension von Cyberangriffen auf Gesundheitseinrichtungen.
+
+### Was passiert ist
+
+- Schwere Störung der gesamten IT-Systeme entdeckt
+- **Alle Server** für beide Standorte (Deurne und Antwerpen) präventiv heruntergefahren
+- **7 Intensivpatienten** mussten vom Roten Kreuz in andere Krankenhäuser verlegt werden
+- Operationen abgesagt
+- Massiver Einbruch in der Patientenversorgung
+
+### Auswirkungen
+
+- Kein Zugriff auf elektronische Patientenakten
+- Bildgebung (CT, MRT) nicht verfügbar
+- Laborsysteme offline
+- Notaufnahme auf Papierbetrieb umgestellt
+- Wochenlange Wiederherstellung erwartet
+
+### Lehren für DACH-Kliniken
+
+Dieser Vorfall unterstreicht die Dringlichkeit von IT-Sicherheit im Gesundheitswesen:
+
+1. **Netzwerksegmentierung** zwischen IT und Medizintechnik
+2. **Offline-Backups** für kritische Patientendaten
+3. **Incident Response Pläne** mit medizinischen Notfallszenarien
+4. **NIS2-Compliance** für Gesundheitseinrichtungen priorisieren
+5. **Regelmäßige Übungen** für den Notbetrieb ohne IT
+
+### EU-Aktionsplan
+
+Die EU-Kommission hat einen Aktionsplan zur Cybersicherheit von Krankenhäusern veröffentlicht. DACH-Kliniken sollten diesen als Leitfaden nutzen.`,
+    category: 'ransomware',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800',
+    published_at: '2026-01-14T07:00:00Z',
+    reading_time: 5,
+    views: 4120,
+    tags: ['Ransomware', 'Krankenhaus', 'Belgien', 'KRITIS', 'Gesundheitswesen'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '14',
+    slug: 'bfv-warnt-signal-phishing-regierungsbeamte',
+    title: 'BfV und BSI warnen: Staatliche Phishing-Kampagne zielt auf Signal-Konten von Politikern',
+    excerpt: 'Deutschlands Verfassungsschutz warnt vor gezielten Angriffen auf Signal-Messenger-Konten von Journalisten und Regierungsbeamten. Staatliche Akteure im Verdacht.',
+    content: `## Staatliche Phishing-Kampagne gegen Signal-Nutzer
+
+Das Bundesamt für Verfassungsschutz (BfV) und das BSI warnen gemeinsam vor einer gezielten Phishing-Kampagne, die auf Signal-Messenger-Konten von Journalisten und Regierungsbeamten abzielt.
+
+### Die Angriffsmethode
+
+- Angreifer geben sich als **offizieller Support** oder automatisierte Chatbots aus
+- Kontaktaufnahme direkt über Messenger-Apps
+- Nachrichten beginnen mit **dringender Sicherheitswarnung**
+- Behauptung: Private Daten könnten ohne sofortiges Handeln verloren gehen
+- Opfer werden aufgefordert, **Sicherheits-PINs** oder SMS-Codes zu teilen
+
+### Wer ist betroffen?
+
+- Journalisten (insbesondere investigative Berichterstatter)
+- Regierungsbeamte und Politiker
+- Mitarbeiter von Behörden und Ministerien
+- Aktivisten und NGO-Mitarbeiter
+
+### Einschätzung der Behörden
+
+> "Angesichts der hochrangigen Zielgruppe sind die aktuell bekannten Fälle wahrscheinlich einem **staatlich kontrollierten Cyber-Akteur** zuzurechnen."
+
+Ähnliche Methoden könnten auch gegen **WhatsApp**, Telegram und andere Messenger eingesetzt werden.
+
+### Schutzmaßnahmen
+
+1. **Registrierungssperre** in Signal aktivieren
+2. Niemals Sicherheits-PINs oder Codes teilen
+3. **Verknüpfte Geräte** regelmäßig prüfen
+4. Verdächtige Kontaktanfragen an IT-Sicherheit melden
+5. Signal-Desktop nur auf verwalteten Geräten nutzen`,
+    category: 'phishing',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+    published_at: '2026-03-19T12:00:00Z',
+    reading_time: 4,
+    views: 3560,
+    tags: ['BfV', 'BSI', 'Signal', 'Phishing', 'Staatliche Akteure'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '15',
+    slug: 'android-qualcomm-zero-day-aktiv-ausgenutzt',
+    title: 'Android Zero-Day: Qualcomm-Schwachstelle wird gezielt ausgenutzt',
+    excerpt: 'Google patcht aktiv ausgenutzte Zero-Day-Lücke in Qualcomm-Display-Komponente. Gezielte Angriffe auf Android-Geräte bestätigt.',
+    content: `## Android Sicherheitsupdate – März 2026
+
+Google hat im März-Sicherheitsbulletin für Android eine aktiv ausgenutzte Zero-Day-Schwachstelle in einer Qualcomm-Komponente gepatcht.
+
+### Die Schwachstelle
+
+- **CVE-2026-21385** – Zero-Day in Qualcomm Display-Komponente
+- **Status:** Wird unter "begrenzter, gezielter Ausnutzung" beobachtet
+- **Betroffen:** Android-Geräte mit Qualcomm Snapdragon Prozessoren
+- **Angriffsvektor:** Lokale Rechteausweitung
+
+### Wer ist betroffen?
+
+Nahezu alle Android-Smartphones mit Qualcomm-Chips, darunter:
+
+- Samsung Galaxy S-Serie
+- Google Pixel
+- OnePlus, Xiaomi, Oppo
+- Zahlreiche Mittelklasse-Geräte
+
+### Maßnahmen
+
+1. **Android-Sicherheitsupdate März 2026** sofort installieren
+2. Automatische Updates aktivieren
+3. MDM-Systeme: Patch-Compliance für mobile Geräte erzwingen
+4. Ungemanagte Geräte (BYOD) überprüfen
+
+### Für IT-Admins
+
+Im Unternehmenskontext sollten Mobile Device Management (MDM) Lösungen genutzt werden, um sicherzustellen, dass alle Firmengeräte das aktuelle Sicherheitsupdate erhalten. Besonders bei BYOD-Richtlinien ist die Patch-Kontrolle kritisch.`,
+    category: 'schwachstellen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800',
+    published_at: '2026-03-12T14:00:00Z',
+    reading_time: 3,
+    views: 1890,
+    tags: ['Android', 'Qualcomm', 'Zero-Day', 'Google', 'Mobile Security'],
+    author: 'CyberLage Redaktion',
+  },
 ]
 
 export const demoCVEs = [
@@ -550,13 +791,15 @@ export const topThreats = [
 
 export const breakingNews = [
   'CVSS 10.0: Polizei warnt Admins persönlich vor Windchill/FlexPLM Zero-Day',
+  'Microsoft Patch Tuesday März: 79 Lücken, 2 Zero-Days – Excel/Copilot-Lücke besonders kritisch',
+  'BfV + BSI warnen: Staatliche Akteure greifen Signal-Konten von Politikern an',
+  'IHK-Betrugswelle: KI-generierte Phishing-Mails fordern IBAN-Änderungen',
   'Fortinet bestätigt aktive Ausnutzung von FortiWeb-Schwachstelle CVE-2025-64446',
   'NIS2-Registrierungsfrist am 6. März abgelaufen – Bußgelder drohen',
+  'Belgisches Krankenhaus: Ransomware zwingt zur Verlegung von Intensivpatienten',
+  'Android Zero-Day: Qualcomm-Schwachstelle CVE-2026-21385 aktiv ausgenutzt',
   'SAP S/4HANA: SQL Injection mit CVSS 9.9 – Sofort patchen!',
   '11% mehr Cyberangriffe auf deutsche Unternehmen im Februar 2026',
-  'DATEV-Datenpanne: Gehaltsdaten an falsche Empfänger übermittelt',
-  'BSI meldet 158.000 neue Malware-Varianten pro Tag',
-  'Stryker Corporation von Iran-naher Hackergruppe Handala angegriffen',
 ]
 
 export const categories = [
