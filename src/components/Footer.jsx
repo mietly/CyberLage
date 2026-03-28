@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="text-gray-500 text-sm mt-4">
               CyberLage wird betrieben von{' '}
               <a
-                href="https://corelead.solutions"
+                href="https://corelead.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-400 hover:text-red-300 transition-colors"

@@ -283,7 +283,7 @@ export default function NIS2Check() {
 
               <div className="space-y-3">
                 <a
-                  href="https://nis2.corelead-solutions.de"
+                  href="https://corelead.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-lg bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-500 hover:to-orange-400 text-white font-medium text-sm transition-all"
@@ -292,7 +292,7 @@ export default function NIS2Check() {
                   <ExternalLink className="h-4 w-4" />
                 </a>
                 <a
-                  href="https://corelead-solutions.de"
+                  href="https://corelead.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-lg border border-gray-700 hover:border-gray-600 text-gray-300 font-medium text-sm transition-colors"

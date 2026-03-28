@@ -127,7 +127,7 @@ export default function NIS2Page() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="https://nis2.corelead-solutions.de"
+                href="https://corelead.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-500 hover:to-orange-400 text-white font-medium text-sm transition-all"
@@ -320,7 +320,7 @@ export default function NIS2Page() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="https://nis2.corelead-solutions.de"
+                href="https://corelead.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-500 hover:to-orange-400 text-white font-medium text-sm transition-all"
