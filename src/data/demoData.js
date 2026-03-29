@@ -710,6 +710,193 @@ Im Unternehmenskontext sollten Mobile Device Management (MDM) Lösungen genutzt 
     tags: ['Android', 'Qualcomm', 'Zero-Day', 'Google', 'Mobile Security'],
     author: 'CyberLage Redaktion',
   },
+  {
+    id: '16',
+    slug: 'zoll-deutschlandweite-it-stoerung-haefen-stau',
+    title: 'Deutschlandweite IT-Störung beim Zoll: Häfen lahmgelegt, 7 km LKW-Stau',
+    excerpt: 'Eine massive IT-Störung hat am 24. März das ATLAS-Zollsystem und weitere Bundesbehörden lahmgelegt. An Häfen bildeten sich kilometerlange LKW-Staus. Cyberangriff nicht ausgeschlossen.',
+    content: `## IT-Störung beim deutschen Zoll
+
+Am 24. März 2026 kam es beim deutschen Zoll zu einer deutschlandweiten IT-Störung, die den Logistikverkehr massiv beeinträchtigte.
+
+### Betroffene Systeme
+
+- **ATLAS** – Das zentrale Abfertigungsverfahren für die Zollabwicklung
+- Interne Kommunikationssysteme des Zolls
+- Weitere zollseitige Fachverfahren
+- **Bundeszentralamt für Steuern** (BZSt) – ebenfalls betroffen
+- **Elektronischer Zolltarif** (EZT) – ausgefallen
+
+### Auswirkungen
+
+Die Konsequenzen waren sofort spürbar:
+
+- An mehreren Häfen bildeten sich **kilometerlange LKW-Staus**
+- Am Hafen Bremerhaven: "Verkehr vorm Zolltor steht bis Wulsdorf = **7 km**, nichts geht mehr!"
+- Ladungen konnten nicht abgefertigt werden
+- Lieferketten massiv gestört
+
+### Ursache unklar
+
+Der Zoll lehnte es ab zu bestätigen, ob ein **Cyberangriff** die Ursache der Störung war. Die ITZBund (IT-Dienstleister des Bundes) arbeitete mit Hochdruck an der Behebung.
+
+### Lehren
+
+1. Bundesbehörden-IT ist ein Single Point of Failure für die Logistik
+2. Backup-Prozesse für Zollabfertigung müssen existieren
+3. Transparente Kommunikation bei IT-Vorfällen ist essenziell
+4. KRITIS-Abhängigkeiten von Bundes-IT müssen bewertet werden`,
+    category: 'kritis',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800',
+    published_at: '2026-03-24T15:00:00Z',
+    reading_time: 4,
+    views: 3240,
+    tags: ['Zoll', 'ATLAS', 'IT-Störung', 'KRITIS', 'Bundesbehörde'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '17',
+    slug: 'chinesische-hacker-telekom-infrastruktur',
+    title: 'Chinesische Hacker tief in Telekom-Backbone-Infrastruktur eingenistet',
+    excerpt: 'Sicherheitsforscher haben chinesische Bedrohungsakteure entdeckt, die sich tief in die Backbone-Infrastruktur von Telekommunikationsanbietern eingenistet haben – mit Stealth-Tools für Langzeitzugriff.',
+    content: `## Chinesische APT-Gruppe in Telekom-Infrastruktur
+
+Sicherheitsforscher haben eine beunruhigende Entdeckung gemacht: Chinesisch-verknüpfte Bedrohungsakteure haben sich tief in die Backbone-Infrastruktur von Telekommunikationsanbietern eingenistet.
+
+### Was entdeckt wurde
+
+- **Stealth-Zugriffsmechanismen** tief in Telekom-Kerninfrastruktur platziert
+- Zugang zu kritischen Netzwerkkomponenten
+- Tools für **langfristigen, verdeckten Zugriff**
+- Betrifft Backbone-Systeme, nicht nur Randinfrastruktur
+
+### Betroffene Bereiche
+
+- Telekommunikations-Backbone
+- Kritische Netzwerk-Infrastruktur
+- Potentiell auch angrenzende KRITIS-Sektoren
+
+### Relevanz für DACH
+
+Europäische Telekommunikationsanbieter sind ebenfalls potenzielle Ziele. Im DACH-Raum bedeutet das:
+
+- Deutsche Telekom, Vodafone, Swisscom und A1 sollten ihre Backbone-Infrastruktur überprüfen
+- BSI-Empfehlungen für Telekom-Sicherheit beachten
+- Supply Chain der Netzwerkausrüster evaluieren (Huawei-Debatte bekommt neue Relevanz)
+
+### Empfehlungen für Telekom-Betreiber
+
+1. **Network Detection & Response** in Backbone-Segmenten verstärken
+2. Firmware-Integrität von Core-Routern und Switches verifizieren
+3. Anomalie-Erkennung für Management-Plane-Traffic implementieren
+4. Incident Response Pläne für Backbone-Kompromittierung erstellen
+5. Informationsaustausch mit nationalen CERTs intensivieren`,
+    category: 'kritis',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    published_at: '2026-03-29T08:00:00Z',
+    reading_time: 5,
+    views: 890,
+    tags: ['APT', 'China', 'Telekommunikation', 'Backbone', 'KRITIS'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '18',
+    slug: 'hpe-aoscx-kritische-schwachstelle-cvss-9-8',
+    title: 'HPE AOS-CX: Kritische Schwachstelle erlaubt Admin-Passwort-Reset ohne Authentifizierung',
+    excerpt: 'CVE-2026-23813 mit CVSS 9.8 betrifft HPE Aruba AOS-CX Switches. Angreifer können ohne Authentifizierung Admin-Passwörter zurücksetzen. Patch verfügbar.',
+    content: `## Kritische HPE AOS-CX Schwachstelle
+
+Eine kritische Schwachstelle im Web-Management-Interface von HPE Aruba AOS-CX Switches ermöglicht es Angreifern, ohne Authentifizierung administrative Kontrolle zu übernehmen.
+
+### Details
+
+- **CVE:** CVE-2026-23813
+- **CVSS Score:** 9.8 (Kritisch)
+- **Betroffen:** HPE Aruba AOS-CX Switches – Web-basiertes Management Interface
+- **Angriffsvektor:** Remote, ohne Authentifizierung
+- **Auswirkung:** Admin-Passwort-Reset, vollständige Geräteübernahme
+
+### Risiko
+
+Ein Angreifer kann über das Netzwerk die Authentifizierungskontrollen umgehen und das Administrator-Passwort zurücksetzen. Damit erhält er vollständige Kontrolle über den Switch und kann:
+
+- Netzwerkkonfigurationen ändern
+- Traffic umleiten oder mitlesen
+- Weitere Netzwerksegmente kompromittieren
+- Persistenten Zugang einrichten
+
+### Sofortmaßnahmen
+
+1. **Patch sofort einspielen** – HPE hat ein Update bereitgestellt
+2. Management-Interface **nicht** aus dem Internet erreichbar machen
+3. Management-Zugang auf dediziertes VLAN beschränken
+4. ACLs für Management-Plane implementieren
+5. Logs auf verdächtige Zugriffe prüfen
+
+### DACH-Relevanz
+
+HPE/Aruba Switches sind in vielen DACH-Unternehmen im Einsatz, besonders in Campus-Netzwerken und Rechenzentren.`,
+    category: 'schwachstellen',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800',
+    published_at: '2026-03-29T10:00:00Z',
+    reading_time: 4,
+    views: 620,
+    tags: ['HPE', 'Aruba', 'AOS-CX', 'CVE', 'Switch', 'CVSS 9.8'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '19',
+    slug: 'shadow-ai-223-datenschutz-verstoesse-pro-monat',
+    title: 'Shadow AI: Unternehmen verzeichnen durchschnittlich 223 GenAI-Datenschutzverstöße pro Monat',
+    excerpt: 'Neue Studie zeigt: Mitarbeiter nutzen GenAI-Tools unkontrolliert. Durchschnittlich 223 Datenschutz-Vorfälle pro Monat durch Shadow AI in Unternehmen.',
+    content: `## Shadow AI als wachsendes Unternehmensrisiko
+
+Eine aktuelle Analyse zeigt ein alarmierendes Ausmaß von unkontrollierter KI-Nutzung in Unternehmen: Durchschnittlich **223 GenAI-Datenschutzverstöße pro Monat** werden registriert.
+
+### Das Problem
+
+"Shadow AI" bezeichnet die Nutzung von KI-Tools durch Mitarbeiter ohne Wissen oder Genehmigung der IT-Abteilung:
+
+- Mitarbeiter laden vertrauliche Dokumente in ChatGPT hoch
+- Quellcode mit API-Keys wird in KI-Assistenten eingefügt
+- Kundendaten werden für Analysen an externe KI-Dienste gesendet
+- Personaldaten für HR-Aufgaben an GenAI-Tools weitergegeben
+
+### Zahlen
+
+- **223** durchschnittliche Datenschutz-Verstöße pro Monat und Unternehmen
+- **88%** der Organisationen mit regelmäßiger GenAI-Nutzung betroffen
+- Jede **31. Prompt** enthält potenziell sensible Daten
+- Trend: Stark steigend seit Q4/2025
+
+### DSGVO-Dimension
+
+Jeder dieser Vorfälle kann einen DSGVO-Verstoß darstellen:
+
+- **Art. 6 DSGVO** – Fehlende Rechtsgrundlage
+- **Art. 28 DSGVO** – Keine Auftragsverarbeitung vereinbart
+- **Art. 44 DSGVO** – Unzulässiger Drittlandtransfer
+- **Art. 32 DSGVO** – Unzureichende technische Maßnahmen
+
+### Gegenmaßnahmen
+
+1. **GenAI-Richtlinie** verbindlich einführen
+2. **DLP-Tools** für KI-Plattformen implementieren
+3. **Genehmigte KI-Tools** bereitstellen (Enterprise-Versionen)
+4. **Schulungen** zu Datenschutzrisiken bei KI-Nutzung
+5. **Monitoring** der KI-Tool-Nutzung im Unternehmensnetzwerk`,
+    category: 'ki-security',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    published_at: '2026-03-29T12:00:00Z',
+    reading_time: 5,
+    views: 450,
+    tags: ['Shadow AI', 'GenAI', 'DSGVO', 'DLP', 'Datenschutz'],
+    author: 'CyberLage Redaktion',
+  },
 ]
 
 export const demoCVEs = [
@@ -790,16 +977,16 @@ export const topThreats = [
 ]
 
 export const breakingNews = [
+  'Chinesische Hacker tief in Telekom-Backbone eingenistet – Stealth-Zugriff bestätigt',
+  'HPE AOS-CX: CVSS 9.8 – Admin-Passwort-Reset ohne Authentifizierung möglich',
+  'Shadow AI: 223 Datenschutzverstöße pro Monat in Unternehmen',
+  'Deutschlandweite IT-Störung beim Zoll – Häfen lahmgelegt, 7 km LKW-Stau',
   'CVSS 10.0: Polizei warnt Admins persönlich vor Windchill/FlexPLM Zero-Day',
-  'Microsoft Patch Tuesday März: 79 Lücken, 2 Zero-Days – Excel/Copilot-Lücke besonders kritisch',
   'BfV + BSI warnen: Staatliche Akteure greifen Signal-Konten von Politikern an',
-  'IHK-Betrugswelle: KI-generierte Phishing-Mails fordern IBAN-Änderungen',
   'Fortinet bestätigt aktive Ausnutzung von FortiWeb-Schwachstelle CVE-2025-64446',
   'NIS2-Registrierungsfrist am 6. März abgelaufen – Bußgelder drohen',
-  'Belgisches Krankenhaus: Ransomware zwingt zur Verlegung von Intensivpatienten',
-  'Android Zero-Day: Qualcomm-Schwachstelle CVE-2026-21385 aktiv ausgenutzt',
+  'Microsoft Patch Tuesday März: 79 Lücken, 2 Zero-Days, Excel/Copilot-Lücke',
   'SAP S/4HANA: SQL Injection mit CVSS 9.9 – Sofort patchen!',
-  '11% mehr Cyberangriffe auf deutsche Unternehmen im Februar 2026',
 ]
 
 export const categories = [

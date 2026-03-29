@@ -16,7 +16,11 @@
       "Bash(git commit:*)",
       "WebFetch(domain:www.bleepingcomputer.com)",
       "Bash(git checkout:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(git merge:*)",
+      "Bash(git stash:*)",
+      "WebFetch(domain:borncity.com)",
+      "WebFetch(domain:www.securityweek.com)"
     ]
   }
 }
