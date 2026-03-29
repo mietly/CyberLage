@@ -14,10 +14,10 @@ export default function BookmarkButton({ articleId, className = '' }) {
   return (
     <button
       onClick={handleClick}
-      className={`p-1.5 rounded-lg transition-colors ${
+      className={`p-1.5 transition-colors ${
         bookmarked
-          ? 'text-red-400 bg-red-500/20 hover:bg-red-500/30'
-          : 'text-gray-400 bg-gray-900/60 hover:bg-gray-900/80 hover:text-white backdrop-blur-sm'
+          ? 'text-[#C8A96E]'
+          : 'text-[#3E4148] hover:text-[#7A7D83]'
       } ${className}`}
       title={bookmarked ? 'Lesezeichen entfernen' : 'Lesezeichen setzen'}
       aria-label={bookmarked ? 'Lesezeichen entfernen' : 'Lesezeichen setzen'}

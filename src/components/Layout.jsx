@@ -6,7 +6,7 @@ import CookieBanner from './CookieBanner'
 
 export default function Layout() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-950 text-gray-100">
+    <div className="min-h-screen flex flex-col bg-[#0A0C0F] text-[#E8E6E0]">
       <Header />
       <main className="flex-1">
         <Outlet />

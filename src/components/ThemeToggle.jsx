@@ -7,7 +7,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+      className="p-2 text-[#7A7D83] hover:text-[#C8A96E] transition-colors"
       aria-label={theme === 'dark' ? 'Helles Design aktivieren' : 'Dunkles Design aktivieren'}
       title={theme === 'dark' ? 'Helles Design' : 'Dunkles Design'}
     >

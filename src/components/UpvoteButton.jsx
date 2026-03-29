@@ -17,8 +17,8 @@ export default function UpvoteButton({ articleId, initialCount = 0 }) {
       onClick={handleClick}
       className={`flex items-center gap-1 text-xs transition-colors cursor-pointer ${
         voted
-          ? 'text-red-400'
-          : 'text-gray-500 hover:text-red-400'
+          ? 'text-[#C8A96E]'
+          : 'text-[#3E4148] hover:text-[#7A7D83]'
       }`}
       title={voted ? 'Bereits positiv bewertet' : 'Positiv bewerten'}
       aria-label={voted ? 'Bereits positiv bewertet' : 'Positiv bewerten'}
@@ -27,7 +27,7 @@ export default function UpvoteButton({ articleId, initialCount = 0 }) {
         className="h-3.5 w-3.5"
         fill={voted ? 'currentColor' : 'none'}
       />
-      {count > 0 && <span>{count.toLocaleString('de-DE')}</span>}
+      {count > 0 && <span className="font-mono">{count.toLocaleString('de-DE')}</span>}
     </button>
   )
 }

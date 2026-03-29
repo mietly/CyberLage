@@ -21,21 +21,21 @@ export default function CookieBanner() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4">
-      <div className="max-w-4xl mx-auto bg-gray-900 border border-gray-700 rounded-xl p-4 sm:p-6 shadow-2xl">
+      <div className="max-w-4xl mx-auto bg-[#0F1215] border border-[#1E2228] rounded-sm p-4 sm:p-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <Cookie className="h-6 w-6 text-orange-400 shrink-0 hidden sm:block" />
-          <p className="text-sm text-gray-300 flex-1">
+          <Cookie className="h-6 w-6 text-[#C8A96E] shrink-0 hidden sm:block" />
+          <p className="text-sm text-[#7A7D83] flex-1">
             Diese Website verwendet ausschließlich technisch notwendige Cookies.{' '}
             <Link
               to="/about#datenschutz"
-              className="text-red-400 hover:text-red-300 underline underline-offset-2 transition-colors"
+              className="text-[#C8A96E] hover:text-[#E8E6E0] underline underline-offset-2 transition-colors"
             >
               Mehr erfahren
             </Link>
           </p>
           <button
             onClick={handleAccept}
-            className="shrink-0 px-5 py-2 bg-red-600 hover:bg-red-500 text-white text-sm font-semibold rounded-lg transition-colors"
+            className="shrink-0 px-5 py-2 bg-[#C8A96E] hover:bg-[#C8A96E]/90 text-[#0A0C0F] text-sm font-mono font-semibold uppercase tracking-wider rounded-none transition-colors"
           >
             Verstanden
           </button>

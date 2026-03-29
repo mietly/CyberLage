@@ -45,15 +45,15 @@ function analyzePassword(pw) {
 
   let level, label, color, barColor
   if (score < 3) {
-    level = 0; label = 'Sehr schwach'; color = 'text-red-400'; barColor = 'bg-red-500'
+    level = 0; label = 'Sehr schwach'; color = 'text-[#D97B5A]'; barColor = 'bg-[#D97B5A]'
   } else if (score < 5) {
-    level = 1; label = 'Schwach'; color = 'text-orange-400'; barColor = 'bg-orange-500'
+    level = 1; label = 'Schwach'; color = 'text-[#D97B5A]'; barColor = 'bg-[#D97B5A]'
   } else if (score < 7) {
-    level = 2; label = 'Mittel'; color = 'text-yellow-400'; barColor = 'bg-yellow-500'
+    level = 2; label = 'Mittel'; color = 'text-[#C8A96E]'; barColor = 'bg-[#C8A96E]'
   } else if (score < 8.5) {
-    level = 3; label = 'Stark'; color = 'text-green-400'; barColor = 'bg-green-500'
+    level = 3; label = 'Stark'; color = 'text-[#5A9A6B]'; barColor = 'bg-[#5A9A6B]'
   } else {
-    level = 4; label = 'Sehr stark'; color = 'text-emerald-400'; barColor = 'bg-emerald-500'
+    level = 4; label = 'Sehr stark'; color = 'text-[#5A9A6B]'; barColor = 'bg-[#5A9A6B]'
   }
 
   // Estimated crack time (simplified)
@@ -100,33 +100,33 @@ export default function PasswordChecker() {
   const barWidth = analysis ? Math.min(100, (analysis.level + 1) * 20) : 0
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="min-h-screen bg-[#0A0C0F] text-[#E8E6E0]">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <KeyRound className="h-8 w-8 text-red-500" />
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">
+            <KeyRound className="h-8 w-8 text-[#C8A96E]" />
+            <h1 className="text-3xl font-display text-[#C8A96E]">
               Passwort-Stärke testen
             </h1>
           </div>
-          <p className="text-gray-400">Prüfe wie sicher dein Passwort wirklich ist.</p>
+          <p className="text-[#7A7D83]">Prüfe wie sicher dein Passwort wirklich ist.</p>
         </div>
 
         {/* Privacy Notice */}
-        <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-start gap-3">
-          <ShieldCheck className="h-5 w-5 text-green-400 shrink-0 mt-0.5" />
+        <div className="bg-[#0F1215] border border-[#5A9A6B]/30 rounded-sm p-4 mb-6 flex items-start gap-3">
+          <ShieldCheck className="h-5 w-5 text-[#5A9A6B] shrink-0 mt-0.5" />
           <div>
-            <p className="text-sm font-bold text-green-400">Dein Passwort wird NICHT übertragen!</p>
-            <p className="text-xs text-green-400/70 mt-1">
+            <p className="text-sm font-mono text-[#5A9A6B]">Dein Passwort wird NICHT übertragen!</p>
+            <p className="text-xs text-[#5A9A6B]/70 mt-1">
               Die gesamte Analyse findet lokal in deinem Browser statt. Keinerlei Daten werden an einen Server gesendet.
             </p>
           </div>
         </div>
 
         {/* Input */}
-        <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-6">
-          <label htmlFor="password-input" className="block text-sm font-medium text-gray-300 mb-2">
+        <div className="bg-[#0F1215] border border-[#1E2228] rounded-sm p-6 mb-6">
+          <label htmlFor="password-input" className="block text-sm font-medium text-[#7A7D83] mb-2">
             Passwort eingeben
           </label>
           <div className="relative">
@@ -136,13 +136,13 @@ export default function PasswordChecker() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Dein Passwort hier eingeben..."
-              className="w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-lg text-gray-200 placeholder-gray-500 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30 font-mono"
+              className="w-full px-4 py-3 pr-12 bg-[#0A0C0F] border border-[#1E2228] rounded-none text-lg text-[#E8E6E0] placeholder-[#3E4148] focus:outline-none focus:border-[#C8A96E]/50 focus:ring-1 focus:ring-[#C8A96E]/30 font-mono"
               autoComplete="off"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-500 hover:text-gray-300 transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-[#3E4148] hover:text-[#7A7D83] transition-colors"
               aria-label={showPassword ? 'Passwort verbergen' : 'Passwort anzeigen'}
             >
               {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
@@ -154,29 +154,29 @@ export default function PasswordChecker() {
         {analysis && (
           <>
             {/* Strength Bar */}
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-6">
+            <div className="bg-[#0F1215] border border-[#1E2228] rounded-sm p-6 mb-6">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium text-gray-300">Stärke</span>
-                <span className={`text-sm font-bold ${analysis.color}`}>{analysis.label}</span>
+                <span className="text-sm font-medium text-[#7A7D83]">Stärke</span>
+                <span className={`text-sm font-mono ${analysis.color}`}>{analysis.label}</span>
               </div>
-              <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
+              <div className="h-3 bg-[#0A0C0F] overflow-hidden">
                 <div
-                  className={`h-full rounded-full transition-all duration-500 ${analysis.barColor}`}
+                  className={`h-full transition-all duration-500 ${analysis.barColor}`}
                   style={{ width: `${barWidth}%` }}
                 />
               </div>
               <div className="mt-4 flex items-center gap-2">
-                <Info className="h-4 w-4 text-gray-500 shrink-0" />
-                <p className="text-sm text-gray-400">
+                <Info className="h-4 w-4 text-[#3E4148] shrink-0" />
+                <p className="text-sm text-[#7A7D83]">
                   Geschätzte Crack-Zeit (Brute Force, 10 Mrd. Versuche/s):{' '}
-                  <span className={`font-bold ${analysis.color}`}>{analysis.crackTime}</span>
+                  <span className={`font-mono ${analysis.color}`}>{analysis.crackTime}</span>
                 </p>
               </div>
             </div>
 
             {/* Detail Checks */}
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-6">
-              <h3 className="text-sm font-bold text-gray-300 mb-4">Detail-Analyse</h3>
+            <div className="bg-[#0F1215] border border-[#1E2228] rounded-sm p-6 mb-6">
+              <h3 className="text-sm font-display text-[#7A7D83] mb-4">Detail-Analyse</h3>
               <div className="space-y-2.5">
                 {[
                   { ok: analysis.checks.length8, label: 'Mindestens 8 Zeichen' },
@@ -192,11 +192,11 @@ export default function PasswordChecker() {
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-2.5">
                     {item.ok ? (
-                      <CheckCircle className="h-4 w-4 text-green-400 shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-[#5A9A6B] shrink-0" />
                     ) : (
-                      <XCircle className="h-4 w-4 text-red-400 shrink-0" />
+                      <XCircle className="h-4 w-4 text-[#D97B5A] shrink-0" />
                     )}
-                    <span className={`text-sm ${item.ok ? 'text-gray-300' : 'text-gray-500'}`}>
+                    <span className={`text-sm ${item.ok ? 'text-[#E8E6E0]' : 'text-[#3E4148]'}`}>
                       {item.label}
                     </span>
                   </div>
@@ -206,15 +206,15 @@ export default function PasswordChecker() {
 
             {/* Tips */}
             {analysis.tips.length > 0 && (
-              <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-6">
+              <div className="bg-[#0F1215] border border-[#D97B5A]/30 rounded-sm p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <ShieldAlert className="h-5 w-5 text-orange-400" />
-                  <h3 className="text-sm font-bold text-orange-400">Verbesserungsvorschläge</h3>
+                  <ShieldAlert className="h-5 w-5 text-[#D97B5A]" />
+                  <h3 className="text-sm font-display text-[#D97B5A]">Verbesserungsvorschläge</h3>
                 </div>
                 <ul className="space-y-2">
                   {analysis.tips.map((tip, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-orange-300/80">
-                      <span className="text-orange-400 mt-0.5">-</span>
+                    <li key={i} className="flex items-start gap-2 text-sm text-[#D97B5A]/80">
+                      <span className="text-[#D97B5A] mt-0.5">-</span>
                       {tip}
                     </li>
                   ))}

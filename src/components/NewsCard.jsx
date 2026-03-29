@@ -38,7 +38,7 @@ export default function NewsCard({ article }) {
   return (
     <Link
       to={`/news/${slug}`}
-      className="group block bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-gray-700 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/5"
+      className="group block bg-transparent border border-[#1E2228] rounded-none overflow-hidden hover:border-l-2 hover:border-l-[#C8A96E] transition-all duration-300"
     >
       {/* Image */}
       <div className="relative aspect-video overflow-hidden">
@@ -50,7 +50,7 @@ export default function NewsCard({ article }) {
         />
         {/* Badges overlay */}
         <div className="absolute top-3 left-3 flex items-center gap-2">
-          <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-900/80 text-gray-200 backdrop-blur-sm">
+          <span className="tag-editorial font-mono text-xs uppercase tracking-wider px-2 py-0.5 border border-[#7A7D83]/50 text-[#E8E6E0] bg-[#0A0C0F]/80">
             {categoryLabels[category] || category}
           </span>
           <RiskBadge level={risk_level} />
@@ -63,15 +63,15 @@ export default function NewsCard({ article }) {
 
       {/* Content */}
       <div className="p-4">
-        <h3 className="text-white font-semibold text-lg leading-snug mb-2 group-hover:text-red-400 transition-colors line-clamp-2">
+        <h3 className="font-display text-[#E8E6E0] text-lg leading-snug mb-2 group-hover:text-[#C8A96E] transition-colors line-clamp-2">
           {title}
         </h3>
-        <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-2">
+        <p className="text-[#7A7D83] text-sm leading-relaxed mb-3 line-clamp-2">
           {excerpt}
         </p>
 
         {/* Meta */}
-        <div className="flex items-center gap-4 text-gray-500 text-xs">
+        <div className="flex items-center gap-4 font-mono text-[#7A7D83] text-xs">
           <span>{timeAgo}</span>
           <span className="flex items-center gap-1">
             <Clock className="h-3.5 w-3.5" />

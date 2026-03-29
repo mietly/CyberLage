@@ -81,32 +81,30 @@ export default function CyberBot() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-500/25 transition-all duration-300 hover:scale-105"
+          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-sm bg-[#C8A96E] hover:bg-[#C8A96E]/90 text-[#0A0C0F] transition-all duration-300"
           aria-label="CyberBot öffnen"
         >
           <Bot className="h-6 w-6" />
-          {/* Pulse ring */}
-          <span className="absolute inset-0 rounded-full bg-red-500 animate-ping opacity-25" />
         </button>
       )}
 
       {/* Chat Window */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[500px] max-h-[calc(100vh-4rem)] flex flex-col bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden">
+        <div className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[500px] max-h-[calc(100vh-4rem)] flex flex-col bg-[#0F1215] border border-[#1E2228] rounded-sm overflow-hidden">
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700 shrink-0">
+          <div className="flex items-center justify-between px-4 py-3 bg-[#0A0C0F] border-b border-[#1E2228] shrink-0">
             <div className="flex items-center gap-2">
-              <Bot className="h-5 w-5 text-red-400" />
+              <Bot className="h-5 w-5 text-[#C8A96E]" />
               <div>
-                <h3 className="text-white text-sm font-semibold leading-tight">
+                <h3 className="text-[#E8E6E0] text-sm font-semibold leading-tight">
                   CyberBot
                 </h3>
-                <p className="text-gray-400 text-xs">Dein Security-Assistent</p>
+                <p className="text-[#7A7D83] text-xs">Dein Security-Assistent</p>
               </div>
             </div>
             <button
               onClick={() => setOpen(false)}
-              className="p-1 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+              className="p-1 text-[#7A7D83] hover:text-[#E8E6E0] transition-colors"
               aria-label="Chat schließen"
             >
               <X className="h-5 w-5" />
@@ -121,10 +119,10 @@ export default function CyberBot() {
                 className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[85%] px-3 py-2 rounded-xl text-sm leading-relaxed ${
+                  className={`max-w-[85%] px-3 py-2 rounded-sm text-sm leading-relaxed ${
                     msg.role === 'user'
-                      ? 'bg-red-600 text-white rounded-br-sm'
-                      : 'bg-gray-800 text-gray-200 rounded-bl-sm'
+                      ? 'bg-[#1E2228] text-[#E8E6E0]'
+                      : 'bg-[#0A0C0F] text-[#E8E6E0]'
                   }`}
                 >
                   {msg.content}
@@ -134,21 +132,21 @@ export default function CyberBot() {
 
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-gray-800 text-gray-400 px-3 py-2 rounded-xl rounded-bl-sm text-sm">
+                <div className="bg-[#0A0C0F] text-[#7A7D83] px-3 py-2 rounded-sm text-sm">
                   <span className="flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" />
-                    <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:150ms]" />
-                    <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:300ms]" />
+                    <span className="w-1.5 h-1.5 bg-[#7A7D83] rounded-full animate-bounce" />
+                    <span className="w-1.5 h-1.5 bg-[#7A7D83] rounded-full animate-bounce [animation-delay:150ms]" />
+                    <span className="w-1.5 h-1.5 bg-[#7A7D83] rounded-full animate-bounce [animation-delay:300ms]" />
                   </span>
                 </div>
               </div>
             )}
 
             {limitReached && (
-              <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-3 text-center">
-                <Lock className="h-5 w-5 text-orange-400 mx-auto mb-1" />
-                <p className="text-orange-400 text-sm font-semibold">Anmeldung nötig</p>
-                <p className="text-gray-400 text-xs mt-1">
+              <div className="bg-transparent border border-[#C8A96E]/30 rounded-sm p-3 text-center">
+                <Lock className="h-5 w-5 text-[#C8A96E] mx-auto mb-1" />
+                <p className="text-[#C8A96E] text-sm font-semibold">Anmeldung nötig</p>
+                <p className="text-[#7A7D83] text-xs mt-1">
                   Du hast dein Limit von {maxFreeQuestions} kostenlosen Fragen erreicht.
                   Melde dich an, um unbegrenzt zu fragen.
                 </p>
@@ -165,7 +163,7 @@ export default function CyberBot() {
                 <button
                   key={q}
                   onClick={() => sendMessage(q)}
-                  className="px-2.5 py-1 rounded-full text-xs bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700 transition-colors"
+                  className="px-2.5 py-1 rounded-none text-xs font-mono bg-transparent text-[#7A7D83] hover:text-[#C8A96E] border border-[#1E2228] hover:border-[#C8A96E]/30 transition-colors"
                 >
                   {q}
                 </button>
@@ -174,7 +172,7 @@ export default function CyberBot() {
           )}
 
           {/* Input */}
-          <div className="px-4 py-3 border-t border-gray-700 shrink-0">
+          <div className="px-4 py-3 border-t border-[#1E2228] shrink-0">
             <div className="flex items-center gap-2">
               <input
                 type="text"
@@ -187,19 +185,19 @@ export default function CyberBot() {
                     ? 'Limit erreicht - bitte anmelden'
                     : 'Frage stellen...'
                 }
-                className="flex-1 px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-colors disabled:opacity-50"
+                className="flex-1 px-3 py-2 rounded-none bg-[#0A0C0F] border border-[#1E2228] text-[#E8E6E0] placeholder-[#3E4148] text-sm focus:outline-none focus:border-[#C8A96E]/50 transition-colors disabled:opacity-50"
               />
               <button
                 onClick={() => sendMessage()}
                 disabled={limitReached || loading || !input.trim()}
-                className="p-2 rounded-lg bg-red-600 hover:bg-red-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="p-2 rounded-sm bg-[#C8A96E] hover:bg-[#C8A96E]/90 text-[#0A0C0F] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Nachricht senden"
               >
                 <Send className="h-4 w-4" />
               </button>
             </div>
             {!limitReached && (
-              <p className="text-gray-500 text-xs mt-1.5 text-center">
+              <p className="text-[#3E4148] text-xs mt-1.5 text-center font-mono">
                 {maxFreeQuestions - questionCount} von {maxFreeQuestions} kostenlosen Fragen übrig
               </p>
             )}

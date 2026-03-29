@@ -55,10 +55,10 @@ export default function NewsletterSignup() {
 
   if (status === 'success') {
     return (
-      <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-6 text-center">
-        <CheckCircle className="h-10 w-10 text-green-400 mx-auto mb-3" />
-        <p className="text-green-400 font-semibold">Erfolgreich angemeldet!</p>
-        <p className="text-gray-400 text-sm mt-1">
+      <div className="border border-[#5A9A6B]/30 rounded-sm p-6 text-center">
+        <CheckCircle className="h-10 w-10 text-[#5A9A6B] mx-auto mb-3" />
+        <p className="text-[#5A9A6B] font-semibold">Erfolgreich angemeldet!</p>
+        <p className="text-[#7A7D83] text-sm mt-1">
           Du erhältst ab sofort jeden Montag unser Security-Briefing.
         </p>
       </div>
@@ -66,12 +66,12 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+    <div className="border border-[#1E2228] rounded-sm p-6">
       <div className="flex items-center gap-2 mb-2">
-        <Mail className="h-5 w-5 text-red-400" />
-        <h3 className="text-white font-semibold">Security-Newsletter</h3>
+        <Mail className="h-5 w-5 text-[#C8A96E]" />
+        <h3 className="text-[#E8E6E0] font-semibold">Security-Newsletter</h3>
       </div>
-      <p className="text-gray-400 text-sm mb-4">
+      <p className="text-[#7A7D83] text-sm mb-4">
         Jeden Montag in deinem Postfach: Die wichtigsten Security-News der Woche.
       </p>
 
@@ -82,13 +82,13 @@ export default function NewsletterSignup() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="deine@email.de"
           required
-          className="w-full px-4 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-colors"
+          className="w-full px-4 py-2.5 rounded-none bg-[#0A0C0F] border border-[#1E2228] text-[#E8E6E0] placeholder-[#3E4148] text-sm focus:outline-none focus:border-[#C8A96E]/50 transition-colors"
         />
 
         <select
           value={role}
           onChange={(e) => setRole(e.target.value)}
-          className="w-full px-4 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500 transition-colors"
+          className="w-full px-4 py-2.5 rounded-none bg-[#0A0C0F] border border-[#1E2228] text-[#7A7D83] text-sm focus:outline-none focus:border-[#C8A96E]/50 transition-colors"
         >
           {roles.map((r) => (
             <option key={r.value} value={r.value}>
@@ -100,14 +100,14 @@ export default function NewsletterSignup() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full px-4 py-2.5 rounded-lg bg-red-600 hover:bg-red-500 text-white font-semibold text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full px-4 py-2.5 rounded-none bg-[#C8A96E] hover:bg-[#C8A96E]/90 text-[#0A0C0F] font-mono font-semibold text-sm uppercase tracking-wider transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === 'loading' ? 'Wird angemeldet...' : 'Jetzt anmelden'}
         </button>
       </form>
 
       {status === 'error' && (
-        <div className="flex items-center gap-2 mt-3 text-red-400 text-sm">
+        <div className="flex items-center gap-2 mt-3 text-[#D97B5A] text-sm">
           <AlertCircle className="h-4 w-4 shrink-0" />
           <span>{errorMsg}</span>
         </div>

@@ -14,7 +14,9 @@
       "WebSearch",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "WebFetch(domain:www.bleepingcomputer.com)"
+      "WebFetch(domain:www.bleepingcomputer.com)",
+      "Bash(git checkout:*)",
+      "Bash(npm run:*)"
     ]
   }
 }

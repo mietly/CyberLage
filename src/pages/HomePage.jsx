@@ -25,16 +25,16 @@ const heroDate = new Date(heroArticle.published_at).toLocaleDateString('de-DE', 
 })
 
 function cvssColor(score) {
-  if (score >= 9.0) return 'text-red-400 bg-red-500/20'
-  if (score >= 7.0) return 'text-orange-400 bg-orange-500/20'
-  if (score >= 4.0) return 'text-yellow-400 bg-yellow-500/20'
-  return 'text-green-400 bg-green-500/20'
+  if (score >= 9.0) return 'text-[#D97B5A] bg-[#D97B5A]/10'
+  if (score >= 7.0) return 'text-[#C8A96E] bg-[#C8A96E]/10'
+  if (score >= 4.0) return 'text-[#C8A96E] bg-[#C8A96E]/10'
+  return 'text-[#5A9A6B] bg-[#5A9A6B]/10'
 }
 
 function threatLevelBg(level) {
-  if (level === 'kritisch') return 'bg-red-500/15 border-red-500/30 text-red-400'
-  if (level === 'hoch') return 'bg-orange-500/15 border-orange-500/30 text-orange-400'
-  return 'bg-yellow-500/15 border-yellow-500/30 text-yellow-400'
+  if (level === 'kritisch') return 'border-[#D97B5A]/30 text-[#D97B5A]'
+  if (level === 'hoch') return 'border-[#D97B5A]/30 text-[#D97B5A]'
+  return 'border-[#C8A96E]/30 text-[#C8A96E]'
 }
 
 const dachCards = [
@@ -66,39 +66,41 @@ const dachCards = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-950">
+    <div className="min-h-screen bg-[#0A0C0F]">
       {/* ==================== HERO SECTION ==================== */}
       <section className="relative overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-red-500/10 via-transparent to-transparent" />
+        {/* Background — subtle dark overlay only */}
+        <div className="absolute inset-0 bg-[#0A0C0F]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                <span className="text-sm text-gray-400">{heroDate}</span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse">
-                  <AlertTriangle className="w-3.5 h-3.5" />
+                <span className="font-mono text-sm text-[#7A7D83]">{heroDate}</span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none text-xs font-mono uppercase tracking-wider border border-[#D97B5A]/40 text-[#D97B5A]">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D97B5A] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D97B5A]"></span>
+                  </span>
                   Bedrohungslage: HOCH
                 </span>
               </div>
 
-              <span className="inline-block text-xs font-semibold text-red-400 uppercase tracking-wider mb-3">
+              <span className="inline-block text-xs font-mono uppercase tracking-wider text-[#C8A96E] mb-3 border-b border-[#C8A96E]/30 pb-1">
                 Top-Thema
               </span>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#E8E6E0] leading-tight mb-4">
                 {heroArticle.title}
               </h1>
 
-              <p className="text-lg text-gray-400 leading-relaxed mb-8 max-w-xl">
+              <p className="text-lg text-[#7A7D83] leading-relaxed mb-8 max-w-xl">
                 {heroArticle.excerpt}
               </p>
 
               <Link
                 to={`/news/${heroArticle.slug}`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 hover:bg-red-500 text-white font-semibold transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-[#C8A96E] text-[#0A0C0F] font-mono uppercase tracking-wider text-sm font-semibold hover:bg-[#C8A96E]/90 transition-colors"
               >
                 Jetzt lesen
                 <ArrowRight className="w-4 h-4" />
@@ -106,13 +108,13 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:block">
-              <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-red-500/10">
+              <div className="relative rounded-sm overflow-hidden">
                 <img
                   src={heroArticle.image}
                   alt={heroArticle.title}
                   className="w-full h-80 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent" />
+                <div className="absolute inset-0 bg-[#0A0C0F]/60" />
                 <div className="absolute bottom-4 left-4">
                   <RiskBadge level={heroArticle.risk_level} />
                 </div>
@@ -125,12 +127,12 @@ export default function HomePage() {
       {/* ==================== NEWS GRID ==================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="font-display text-2xl sm:text-3xl text-[#E8E6E0]">
             Aktuelle Sicherheitsnews
           </h2>
           <Link
             to="/news"
-            className="hidden sm:inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-sm font-medium transition-colors"
+            className="hidden sm:inline-flex items-center gap-1 text-[#C8A96E] hover:text-[#C8A96E]/80 font-mono uppercase tracking-wider text-xs transition-colors"
           >
             Alle News anzeigen
             <ChevronRight className="w-4 h-4" />
@@ -146,7 +148,7 @@ export default function HomePage() {
         <div className="mt-8 text-center sm:hidden">
           <Link
             to="/news"
-            className="inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-sm font-medium transition-colors"
+            className="inline-flex items-center gap-1 text-[#C8A96E] hover:text-[#C8A96E]/80 font-mono uppercase tracking-wider text-xs transition-colors"
           >
             Alle News anzeigen
             <ChevronRight className="w-4 h-4" />
@@ -158,10 +160,10 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Top Risiken */}
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <div className="border border-[#1E2228] rounded-sm p-6">
             <div className="flex items-center gap-2 mb-6">
-              <TrendingUp className="w-5 h-5 text-red-400" />
-              <h2 className="text-xl font-bold text-white">
+              <TrendingUp className="w-5 h-5 text-[#C8A96E]" />
+              <h2 className="font-display text-xl text-[#E8E6E0]">
                 Top 5 Bedrohungen diese Woche
               </h2>
             </div>
@@ -170,19 +172,19 @@ export default function HomePage() {
               {topThreats.map((threat, idx) => (
                 <div
                   key={idx}
-                  className={`flex items-start gap-4 p-4 rounded-lg border ${threatLevelBg(threat.level)}`}
+                  className={`flex items-start gap-4 p-4 rounded-none border ${threatLevelBg(threat.level)}`}
                 >
-                  <span className="text-2xl font-extrabold opacity-40 leading-none mt-0.5">
+                  <span className="font-mono text-2xl font-bold text-[#C8A96E] opacity-60 leading-none mt-0.5">
                     {idx + 1}
                   </span>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold text-white text-sm">
+                      <span className="font-semibold text-[#E8E6E0] text-sm">
                         {threat.name}
                       </span>
                       <RiskBadge level={threat.level} />
                     </div>
-                    <p className="text-gray-400 text-xs">{threat.description}</p>
+                    <p className="text-[#7A7D83] text-xs">{threat.description}</p>
                   </div>
                 </div>
               ))}
@@ -190,52 +192,52 @@ export default function HomePage() {
           </div>
 
           {/* CVE Widget */}
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <div className="border border-[#1E2228] rounded-sm p-6">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
-                <Bug className="w-5 h-5 text-red-400" />
-                <h2 className="text-xl font-bold text-white">
+                <Bug className="w-5 h-5 text-[#C8A96E]" />
+                <h2 className="font-display text-xl text-[#E8E6E0]">
                   Kritische Schwachstellen aktuell
                 </h2>
               </div>
               <Link
                 to="/schwachstellen"
-                className="text-red-400 hover:text-red-300 text-xs font-medium flex items-center gap-1 transition-colors"
+                className="text-[#C8A96E] hover:text-[#C8A96E]/80 font-mono uppercase tracking-wider text-xs flex items-center gap-1 transition-colors"
               >
                 Alle anzeigen
                 <ChevronRight className="w-3 h-3" />
               </Link>
             </div>
 
-            <div className="space-y-3">
+            <div className="divide-y divide-[#1E2228]">
               {demoCVEs.map((cve) => (
                 <div
                   key={cve.cve_id}
-                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 border border-gray-800 hover:border-gray-700 transition-colors"
+                  className="flex items-center gap-4 py-3 hover:border-l-2 hover:border-l-[#C8A96E] hover:pl-3 transition-all"
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm font-mono font-bold text-white">
+                      <span className="text-sm font-mono font-bold text-[#C8A96E]">
                         {cve.cve_id}
                       </span>
                       <span
-                        className={`px-2 py-0.5 rounded text-xs font-bold ${cvssColor(cve.cvss_score)}`}
+                        className={`px-2 py-0.5 rounded-none text-xs font-mono font-bold ${cvssColor(cve.cvss_score)}`}
                       >
                         {cve.cvss_score}
                       </span>
                     </div>
-                    <p className="text-gray-400 text-xs truncate">
+                    <p className="text-[#7A7D83] text-xs truncate">
                       {cve.description}
                     </p>
                   </div>
                   <div className="shrink-0">
                     {cve.patch_available ? (
-                      <span className="inline-flex items-center gap-1 text-green-400 text-xs">
+                      <span className="inline-flex items-center gap-1 text-[#5A9A6B] text-xs font-mono">
                         <CheckCircle className="w-3.5 h-3.5" />
                         Patch
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 text-red-400 text-xs">
+                      <span className="inline-flex items-center gap-1 text-[#D97B5A] text-xs font-mono">
                         <XCircle className="w-3.5 h-3.5" />
                         Kein Patch
                       </span>
@@ -250,7 +252,7 @@ export default function HomePage() {
 
       {/* ==================== DACH SECTION ==================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
+        <h2 className="font-display text-2xl sm:text-3xl text-[#E8E6E0] mb-8">
           Was bewegt die DACH-Region?
         </h2>
 
@@ -258,23 +260,23 @@ export default function HomePage() {
           {dachCards.map((card) => (
             <div
               key={card.org}
-              className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-colors"
+              className="border border-[#1E2228] rounded-sm p-6 hover:border-l-2 hover:border-l-[#C8A96E] transition-colors"
             >
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">{card.flag}</span>
                 <div>
-                  <h3 className="text-white font-bold">{card.org}</h3>
-                  <span className="text-gray-500 text-xs">{card.country}</span>
+                  <h3 className="text-[#E8E6E0] font-semibold">{card.org}</h3>
+                  <span className="text-[#7A7D83] text-xs font-mono">{card.country}</span>
                 </div>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-[#7A7D83] text-sm leading-relaxed mb-4">
                 {card.alert}
               </p>
               <a
                 href={card.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-sm font-medium transition-colors"
+                className="inline-flex items-center gap-1 text-[#C8A96E] hover:text-[#C8A96E]/80 text-sm font-mono uppercase tracking-wider transition-colors"
               >
                 Zum {card.org}
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -286,15 +288,15 @@ export default function HomePage() {
 
       {/* ==================== NEWSLETTER ==================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-br from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-8 lg:p-12">
+        <div className="border border-[#1E2228] rounded-sm p-8 lg:p-12">
           <div className="max-w-2xl mx-auto">
             <div className="flex items-center gap-2 mb-2">
-              <Shield className="w-6 h-6 text-red-400" />
-              <h2 className="text-2xl font-bold text-white">
+              <Shield className="w-6 h-6 text-[#C8A96E]" />
+              <h2 className="font-display text-2xl text-[#E8E6E0]">
                 Wöchentlicher Threat Report
               </h2>
             </div>
-            <p className="text-gray-400 mb-6">
+            <p className="text-[#7A7D83] mb-6">
               Erhalte jeden Montag die wichtigsten Cyberbedrohungen, CVEs und
               Compliance-Updates direkt in dein Postfach -- kostenlos und auf
               Deutsch.

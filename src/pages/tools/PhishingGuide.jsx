@@ -146,34 +146,34 @@ export default function PhishingGuide() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="min-h-screen bg-[#0A0C0F] text-[#E8E6E0]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <Fish className="h-8 w-8 text-yellow-500" />
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-orange-400 bg-clip-text text-transparent">
+            <Fish className="h-8 w-8 text-[#C8A96E]" />
+            <h1 className="text-3xl font-display text-[#C8A96E]">
               Phishing erkennen
             </h1>
           </div>
-          <p className="text-gray-400">Trainiere dein Auge: Erkennst du die Phishing-Mails?</p>
+          <p className="text-[#7A7D83]">Trainiere dein Auge: Erkennst du die Phishing-Mails?</p>
         </div>
 
         {/* Score */}
         <div className="flex items-center gap-4 mb-6">
-          <div className="flex items-center gap-2 bg-gray-900 border border-gray-800 rounded-lg px-4 py-2">
-            <Trophy className="h-4 w-4 text-yellow-400" />
-            <span className="text-sm text-gray-300">
-              Punkte: <span className="font-bold text-white">{totalCorrect}</span> / {totalAnswered}
+          <div className="flex items-center gap-2 bg-[#0F1215] border border-[#1E2228] rounded-none px-4 py-2">
+            <Trophy className="h-4 w-4 text-[#C8A96E]" />
+            <span className="text-sm font-mono text-[#7A7D83]">
+              Punkte: <span className="font-bold text-[#E8E6E0]">{totalCorrect}</span> / {totalAnswered}
             </span>
           </div>
-          <span className="text-xs text-gray-500">
+          <span className="text-xs font-mono text-[#3E4148]">
             Beispiel {currentExample + 1} von {phishingExamples.length}
           </span>
           {totalAnswered > 0 && (
             <button
               onClick={restart}
-              className="ml-auto flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+              className="ml-auto flex items-center gap-1 text-xs text-[#3E4148] hover:text-[#7A7D83] transition-colors"
             >
               <RotateCcw className="h-3 w-3" />
               Neustart
@@ -182,31 +182,31 @@ export default function PhishingGuide() {
         </div>
 
         {/* Email Preview */}
-        <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden mb-6">
+        <div className="bg-[#0F1215] border border-[#1E2228] rounded-sm overflow-hidden mb-6">
           {/* Email Header */}
-          <div className="border-b border-gray-800 px-5 py-4">
+          <div className="border-b border-[#1E2228] px-5 py-4">
             <div className="flex items-center gap-2 mb-2">
-              <Mail className="h-4 w-4 text-gray-500" />
-              <span className="text-xs text-gray-500">E-Mail</span>
+              <Mail className="h-4 w-4 text-[#3E4148]" />
+              <span className="text-xs font-mono text-[#3E4148]">E-Mail</span>
             </div>
             <div className="space-y-1.5">
               <div className="flex items-start gap-2">
-                <span className="text-xs text-gray-500 w-12 shrink-0 mt-0.5">Von:</span>
+                <span className="text-xs text-[#3E4148] w-12 shrink-0 mt-0.5">Von:</span>
                 <div>
-                  <span className="text-sm font-medium text-gray-200">{example.senderDisplay}</span>
-                  <span className="text-xs text-gray-500 ml-2">&lt;{example.sender}&gt;</span>
+                  <span className="text-sm font-medium text-[#E8E6E0]">{example.senderDisplay}</span>
+                  <span className="text-xs font-mono text-[#3E4148] ml-2">&lt;{example.sender}&gt;</span>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs text-gray-500 w-12 shrink-0">Betreff:</span>
-                <span className="text-sm font-medium text-gray-200">{example.subject}</span>
+                <span className="text-xs text-[#3E4148] w-12 shrink-0">Betreff:</span>
+                <span className="text-sm font-medium text-[#E8E6E0]">{example.subject}</span>
               </div>
             </div>
           </div>
 
           {/* Email Body */}
           <div className="px-5 py-5">
-            <pre className="text-sm text-gray-300 whitespace-pre-wrap font-sans leading-relaxed">
+            <pre className="text-sm text-[#E8E6E0] whitespace-pre-wrap font-sans leading-relaxed">
               {example.body}
             </pre>
           </div>
@@ -217,14 +217,14 @@ export default function PhishingGuide() {
           <div className="flex gap-4 mb-6">
             <button
               onClick={() => handleAnswer(true)}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 font-medium text-sm hover:bg-red-500/20 transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-none border border-[#D97B5A]/30 text-[#D97B5A] font-mono text-sm hover:border-[#D97B5A] transition-colors"
             >
               <AlertTriangle className="h-5 w-5" />
               Ja, das ist Phishing!
             </button>
             <button
               onClick={() => handleAnswer(false)}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-green-500/10 border border-green-500/30 text-green-400 font-medium text-sm hover:bg-green-500/20 transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-none border border-[#5A9A6B]/30 text-[#5A9A6B] font-mono text-sm hover:border-[#5A9A6B] transition-colors"
             >
               <CheckCircle className="h-5 w-5" />
               Nein, das ist echt
@@ -235,44 +235,44 @@ export default function PhishingGuide() {
         {/* Result / Explanation */}
         {isRevealed && (
           <div
-            className={`rounded-xl border p-5 mb-6 ${
+            className={`rounded-sm border p-5 mb-6 ${
               wasCorrect
-                ? 'bg-green-500/10 border-green-500/30'
-                : 'bg-red-500/10 border-red-500/30'
+                ? 'bg-[#5A9A6B]/10 border-[#5A9A6B]/30'
+                : 'bg-[#D97B5A]/10 border-[#D97B5A]/30'
             }`}
           >
             <div className="flex items-center gap-2 mb-3">
               {wasCorrect ? (
                 <>
-                  <CheckCircle className="h-5 w-5 text-green-400" />
-                  <span className="font-bold text-green-400">Richtig!</span>
+                  <CheckCircle className="h-5 w-5 text-[#5A9A6B]" />
+                  <span className="font-display text-[#5A9A6B]">Richtig!</span>
                 </>
               ) : (
                 <>
-                  <XCircle className="h-5 w-5 text-red-400" />
-                  <span className="font-bold text-red-400">Leider falsch!</span>
+                  <XCircle className="h-5 w-5 text-[#D97B5A]" />
+                  <span className="font-display text-[#D97B5A]">Leider falsch!</span>
                 </>
               )}
             </div>
 
-            <p className="text-sm text-gray-300 mb-4">
+            <p className="text-sm text-[#E8E6E0] mb-4">
               Diese E-Mail ist{' '}
-              <span className={`font-bold ${example.isPhishing ? 'text-red-400' : 'text-green-400'}`}>
+              <span className={`font-mono ${example.isPhishing ? 'text-[#D97B5A]' : 'text-[#5A9A6B]'}`}>
                 {example.isPhishing ? 'Phishing' : 'echt / legitim'}
               </span>
               .
             </p>
 
-            <h4 className="text-sm font-bold text-gray-300 mb-2">
+            <h4 className="text-sm font-display text-[#7A7D83] mb-2">
               {example.isPhishing ? 'Red Flags:' : 'Erkennungsmerkmale:'}
             </h4>
             <ul className="space-y-1.5">
               {example.redFlags.map((flag, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
+                <li key={i} className="flex items-start gap-2 text-sm text-[#7A7D83]">
                   {example.isPhishing ? (
-                    <AlertTriangle className="h-4 w-4 text-red-400 shrink-0 mt-0.5" />
+                    <AlertTriangle className="h-4 w-4 text-[#D97B5A] shrink-0 mt-0.5" />
                   ) : (
-                    <CheckCircle className="h-4 w-4 text-green-400 shrink-0 mt-0.5" />
+                    <CheckCircle className="h-4 w-4 text-[#5A9A6B] shrink-0 mt-0.5" />
                   )}
                   {flag}
                 </li>
@@ -286,14 +286,14 @@ export default function PhishingGuide() {
           <button
             onClick={goPrev}
             disabled={currentExample === 0}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-gray-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+            className="px-4 py-2 rounded-none text-sm font-mono text-[#7A7D83] hover:text-[#E8E6E0] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
           >
             Vorheriges Beispiel
           </button>
           {currentExample < phishingExamples.length - 1 && (
             <button
               onClick={goNext}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium bg-yellow-600 hover:bg-yellow-500 text-white transition-colors"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-none text-sm font-mono uppercase tracking-wider bg-[#C8A96E] text-[#0A0C0F] transition-colors"
             >
               Nächstes Beispiel
               <ArrowRight className="h-4 w-4" />
@@ -302,44 +302,44 @@ export default function PhishingGuide() {
         </div>
 
         {/* Tips Section */}
-        <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <div className="bg-[#0F1215] border border-[#1E2228] rounded-sm p-6">
           <div className="flex items-center gap-2 mb-4">
-            <Lightbulb className="h-5 w-5 text-yellow-400" />
-            <h3 className="text-lg font-bold text-white">Tipps zum Erkennen von Phishing</h3>
+            <Lightbulb className="h-5 w-5 text-[#C8A96E]" />
+            <h3 className="text-lg font-display text-[#E8E6E0]">Tipps zum Erkennen von Phishing</h3>
           </div>
 
-          <div className="space-y-4 text-sm text-gray-300">
+          <div className="space-y-4 text-sm text-[#E8E6E0]">
             <div>
-              <h4 className="font-bold text-gray-200 mb-1">1. Absender-Adresse prüfen</h4>
-              <p className="text-gray-400">
+              <h4 className="font-display text-[#E8E6E0] mb-1">1. Absender-Adresse prüfen</h4>
+              <p className="text-[#7A7D83]">
                 Schau dir immer die vollständige E-Mail-Adresse an, nicht nur den Anzeigenamen.
                 Achte auf verdächtige Domains wie "sparkasse-online.com" statt "sparkasse.de".
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-gray-200 mb-1">2. Dringlichkeit hinterfragen</h4>
-              <p className="text-gray-400">
+              <h4 className="font-display text-[#E8E6E0] mb-1">2. Dringlichkeit hinterfragen</h4>
+              <p className="text-[#7A7D83]">
                 Phishing-Mails setzen fast immer auf Zeitdruck. "Sofort handeln", "Konto wird gesperrt",
                 "Innerhalb von 24 Stunden" - solche Formulierungen sind ein starkes Warnsignal.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-gray-200 mb-1">3. Links vor dem Klicken prüfen</h4>
-              <p className="text-gray-400">
+              <h4 className="font-display text-[#E8E6E0] mb-1">3. Links vor dem Klicken prüfen</h4>
+              <p className="text-[#7A7D83]">
                 Fahre mit der Maus über Links (ohne zu klicken) und prüfe die Ziel-URL.
                 Stimmt die Domain nicht mit dem angeblichen Absender überein, ist es wahrscheinlich Phishing.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-gray-200 mb-1">4. Persönliche Anrede</h4>
-              <p className="text-gray-400">
+              <h4 className="font-display text-[#E8E6E0] mb-1">4. Persönliche Anrede</h4>
+              <p className="text-[#7A7D83]">
                 Seriöse Unternehmen sprechen dich in der Regel mit deinem Namen an.
                 "Sehr geehrter Kunde" oder "Lieber Nutzer" können auf Phishing hindeuten.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-gray-200 mb-1">5. Im Zweifel: Direkt beim Absender nachfragen</h4>
-              <p className="text-gray-400">
+              <h4 className="font-display text-[#E8E6E0] mb-1">5. Im Zweifel: Direkt beim Absender nachfragen</h4>
+              <p className="text-[#7A7D83]">
                 Bist du unsicher, kontaktiere das Unternehmen über die offizielle Website oder Telefonnummer -
                 niemals über Links oder Kontaktdaten aus der verdächtigen E-Mail.
               </p>
