@@ -1,4 +1,5 @@
-// Vercel Serverless Function – Newsletter Signup + Bestätigungsmail via Resend
+// Vercel Serverless Function – Newsletter Signup + Bestätigungsmail via Resend + Supabase
+import { createClient } from '@supabase/supabase-js'
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -86,6 +87,24 @@ export default async function handler(req, res) {
   } else {
     mailError = 'Kein Resend API Key konfiguriert'
     console.warn('Newsletter: RESEND_API_KEY nicht gesetzt, keine Mail versendet')
+  }
+
+  // Save subscriber to Supabase
+  const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_SERVICE_KEY || process.env.VITE_SUPABASE_ANON_KEY
+
+  if (supabaseUrl && supabaseKey) {
+    try {
+      const supabase = createClient(supabaseUrl, supabaseKey)
+      const { error: dbError } = await supabase
+        .from('newsletter_subscribers')
+        .upsert([{ email, role: role || null, confirmed: true }], { onConflict: 'email' })
+      if (dbError) console.error('Supabase save error:', dbError)
+    } catch (e) {
+      console.error('Supabase exception:', e.message)
+    }
+  } else {
+    console.warn('Supabase nicht konfiguriert, Subscriber nur per Mail bestaetigt')
   }
 
   return res.status(200).json({

@@ -24,6 +24,7 @@ import BookmarksPage from './pages/BookmarksPage'
 import NotificationsPage from './pages/NotificationsPage'
 import SecurityQuiz from './pages/SecurityQuiz'
 import IncidentReporter from './pages/IncidentReporter'
+import UnsubscribePage from './pages/UnsubscribePage'
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
         <Route path="/benachrichtigungen" element={<NotificationsPage />} />
         <Route path="/quiz" element={<SecurityQuiz />} />
         <Route path="/vorfall-melden" element={<IncidentReporter />} />
+        <Route path="/abmelden" element={<UnsubscribePage />} />
       </Route>
     </Routes>
   )

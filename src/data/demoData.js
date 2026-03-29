@@ -897,6 +897,1139 @@ Jeder dieser Vorfälle kann einen DSGVO-Verstoß darstellen:
     tags: ['Shadow AI', 'GenAI', 'DSGVO', 'DLP', 'Datenschutz'],
     author: 'CyberLage Redaktion',
   },
+  {
+    id: '20',
+    slug: 'log4j-2x-neue-schwachstelle-entdeckt',
+    title: 'Log4j 2.x: Neue kritische Schwachstelle entdeckt – Erinnerungen an Log4Shell',
+    excerpt: 'Sicherheitsforscher haben eine neue Schwachstelle in Apache Log4j 2.x identifiziert. Unternehmen sollten umgehend prüfen, ob sie betroffen sind.',
+    content: `## Neue Log4j-Schwachstelle sorgt für Unruhe
+
+Knapp vier Jahre nach der verheerenden **Log4Shell-Schwachstelle** (CVE-2021-44228) sorgt eine neue Sicherheitslücke in Apache Log4j 2.x erneut für Alarm in der IT-Sicherheitscommunity.
+
+## Technische Details
+
+- **Betroffene Versionen:** Log4j 2.0 bis 2.23.0
+- **Angriffsvektor:** Remote Code Execution über manipulierte Log-Nachrichten
+- **CVSS-Score:** 8.1 (Hoch)
+- **Patch verfügbar:** Ja, ab Version 2.23.1
+
+Die Schwachstelle erlaubt es Angreifern, über speziell präparierte Eingaben beliebigen Code auf betroffenen Systemen auszuführen. Im Gegensatz zu Log4Shell erfordert die Ausnutzung jedoch bestimmte Konfigurationsvoraussetzungen.
+
+## Betroffene Systeme
+
+Besonders gefährdet sind:
+
+1. **Java-basierte Webanwendungen** mit Log4j-Abhängigkeit
+2. **Microservice-Architekturen** mit zentralem Logging
+3. **Legacy-Systeme**, die seit Log4Shell nicht aktualisiert wurden
+
+## Empfohlene Maßnahmen
+
+- Sofortige Aktualisierung auf Log4j **2.23.1 oder höher**
+- Überprüfung aller Anwendungen auf Log4j-Abhängigkeiten mittels **Software Bill of Materials (SBOM)**
+- Netzwerk-Monitoring auf verdächtige JNDI-Lookups aktivieren
+- **WAF-Regeln** für bekannte Exploit-Muster aktualisieren
+
+Das BSI stuft die Bedrohungslage als **geschäftskritisch** ein und empfiehlt sofortiges Handeln.`,
+    category: 'schwachstellen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800',
+    published_at: '2025-11-05T09:00:00Z',
+    reading_time: 4,
+    views: 2870,
+    tags: ['Log4j', 'Schwachstelle', 'RCE', 'Java', 'BSI'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '21',
+    slug: 'blackcat-alphv-takedown-fbi',
+    title: 'FBI gelingt Takedown der Ransomware-Gruppe BlackCat/ALPHV',
+    excerpt: 'In einer koordinierten internationalen Operation hat das FBI die Infrastruktur der berüchtigten Ransomware-Gruppe BlackCat/ALPHV zerschlagen.',
+    content: `## BlackCat/ALPHV: Ende einer Ära
+
+Das **Federal Bureau of Investigation (FBI)** hat in einer koordinierten Aktion mit internationalen Strafverfolgungsbehörden die Infrastruktur der Ransomware-Gruppe **BlackCat/ALPHV** erfolgreich zerschlagen.
+
+## Die Operation
+
+- **Beteiligte Behörden:** FBI, Europol, BKA, NCA (UK)
+- **Beschlagnahmte Server:** Über 40 Command-and-Control-Server
+- **Entschlüsselungstools:** Für mehr als 500 Opfer bereitgestellt
+- **Geschätzter Schaden:** Über 300 Millionen USD weltweit
+
+## Wer war BlackCat/ALPHV?
+
+BlackCat/ALPHV war eine der **gefährlichsten Ransomware-as-a-Service (RaaS)** Gruppen weltweit:
+
+1. Aktiv seit Ende 2021
+2. Erste Ransomware vollständig in **Rust** programmiert
+3. Über 1.000 Opfer in mehr als 60 Ländern
+4. Bekannt für **Triple Extortion** – Verschlüsselung, Datendiebstahl und DDoS-Drohungen
+
+## Auswirkungen auf die Bedrohungslandschaft
+
+Experten warnen jedoch vor voreiligem Optimismus:
+
+- Ehemalige Affiliates werden sich **neuen Gruppen** anschließen
+- Die Ransomware-Codebasis könnte **geleakt oder weiterverkauft** werden
+- Historisch zeigt sich: Nach jedem Takedown entstehen **Nachfolger-Gruppen**
+
+## Lehren für Unternehmen
+
+Trotz des Erfolgs sollten Unternehmen ihre **Ransomware-Schutzmaßnahmen** nicht lockern. Regelmäßige Backups, Netzwerksegmentierung und Incident-Response-Pläne bleiben essenziell.`,
+    category: 'ransomware',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800',
+    published_at: '2025-11-12T14:00:00Z',
+    reading_time: 5,
+    views: 2650,
+    tags: ['BlackCat', 'ALPHV', 'FBI', 'Ransomware', 'Takedown', 'Europol'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '22',
+    slug: 'deutsche-stadtwerke-ransomware-betroffen',
+    title: 'Deutsche Stadtwerke von Ransomware betroffen – Versorgung zeitweise gefährdet',
+    excerpt: 'Mehrere Stadtwerke in Süddeutschland wurden Opfer eines koordinierten Ransomware-Angriffs. Die Strom- und Wasserversorgung war zeitweise beeinträchtigt.',
+    content: `## Koordinierter Angriff auf kommunale Versorger
+
+Ein **koordinierter Ransomware-Angriff** hat mehrere Stadtwerke in Süddeutschland getroffen und die Versorgungssicherheit zeitweise gefährdet. Das Bundesamt für Sicherheit in der Informationstechnik (BSI) hat die Warnstufe **Rot** ausgerufen.
+
+## Betroffene Infrastruktur
+
+- **3 Stadtwerke** in Baden-Württemberg und Bayern betroffen
+- **Strom-, Gas- und Wasserversorgung** zeitweise auf Notbetrieb
+- **IT-Systeme** vollständig verschlüsselt
+- **Abrechnungssysteme** über 2 Wochen nicht verfügbar
+
+## Ablauf des Angriffs
+
+1. **Initialer Zugang** über kompromittierte VPN-Zugangsdaten eines Dienstleisters
+2. **Lateral Movement** über gemeinsam genutzte Verwaltungssoftware
+3. **Verschlüsselung** aller erreichbaren Systeme am Wochenende
+4. **Lösegeldforderung:** 2,5 Millionen Euro in Bitcoin
+
+## Reaktion der Behörden
+
+Das BSI hat ein **Krisenteam** vor Ort entsandt. Die betroffenen Stadtwerke konnten die Versorgung durch Umstellung auf **manuelle Steuerung** aufrechterhalten. Die Ermittlungen des BKA laufen.
+
+## KRITIS-Dimension
+
+Der Vorfall unterstreicht die **Verwundbarkeit kritischer Infrastrukturen** in Deutschland. Experten fordern seit langem eine bessere Absicherung kommunaler IT-Systeme und verpflichtende Sicherheitsaudits für KRITIS-Betreiber.`,
+    category: 'kritis',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+    published_at: '2025-11-19T07:30:00Z',
+    reading_time: 5,
+    views: 2980,
+    tags: ['KRITIS', 'Stadtwerke', 'Ransomware', 'BSI', 'Versorgungssicherheit'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '23',
+    slug: 'dsgvo-bussgeld-meta-1-2-milliarden',
+    title: 'DSGVO-Rekordstrafe: Meta muss 1,2 Milliarden Euro zahlen',
+    excerpt: 'Die irische Datenschutzbehörde DPC hat gegen Meta eine Rekordstrafe von 1,2 Milliarden Euro wegen illegaler Datenübertragungen in die USA verhängt.',
+    content: `## Historische Strafe gegen Meta
+
+Die irische **Data Protection Commission (DPC)** hat gegen Meta Platforms Ireland eine DSGVO-Strafe in Höhe von **1,2 Milliarden Euro** verhängt – die höchste Geldbuße in der Geschichte der Datenschutz-Grundverordnung.
+
+## Hintergrund
+
+- **Verstoß:** Illegale Übermittlung personenbezogener Daten von EU-Bürgern in die USA
+- **Betroffene Nutzer:** Geschätzt 400 Millionen EU-Facebook-Nutzer
+- **Zeitraum:** Seit Ungültigkeitserklärung des Privacy Shield (Schrems II)
+- **Rechtsgrundlage:** Art. 46 Abs. 1 DSGVO – Übermittlung auf Grundlage geeigneter Garantien
+
+## Bedeutung für Unternehmen
+
+Das Urteil hat weitreichende Konsequenzen für alle Unternehmen, die Daten in Drittländer übertragen:
+
+1. **Standardvertragsklauseln (SCCs)** allein reichen nicht aus
+2. **Transfer Impact Assessments** sind zwingend erforderlich
+3. Unternehmen müssen die **Rechtslage im Zielland** genau prüfen
+4. Bei Zweifeln ist eine **Datenlokalisierung in der EU** zu bevorzugen
+
+## Reaktion von Meta
+
+Meta hat angekündigt, gegen die Entscheidung **Berufung einzulegen**. Das Unternehmen verweist auf das neue **EU-US Data Privacy Framework**, das zwischenzeitlich in Kraft getreten sei.
+
+## Fazit
+
+Die Strafe sendet ein **klares Signal**: Die DSGVO wird durchgesetzt, auch gegen die größten Tech-Konzerne der Welt.`,
+    category: 'dsgvo',
+    risk_level: 'mittel',
+    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800',
+    published_at: '2025-12-03T10:00:00Z',
+    reading_time: 4,
+    views: 2340,
+    tags: ['DSGVO', 'Meta', 'Bußgeld', 'Datentransfer', 'DPC'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '24',
+    slug: 'bsi-lagebericht-2025-veroeffentlicht',
+    title: 'BSI Lagebericht 2025: Bedrohungslage auf Rekordniveau',
+    excerpt: 'Das BSI hat den Lagebericht zur IT-Sicherheit in Deutschland 2025 veröffentlicht. Die Bedrohungslage erreicht ein neues Allzeithoch.',
+    content: `## BSI-Lagebericht 2025: Die wichtigsten Ergebnisse
+
+Das **Bundesamt für Sicherheit in der Informationstechnik (BSI)** hat den jährlichen Lagebericht zur IT-Sicherheit in Deutschland veröffentlicht. Die Zahlen sind alarmierend.
+
+## Zentrale Erkenntnisse
+
+- **Täglich 553.000 neue Schadprogramm-Varianten** (plus 18% gegenüber 2024)
+- **Ransomware** bleibt die größte Bedrohung für Unternehmen
+- **KI-gestützte Angriffe** nehmen signifikant zu
+- **Kritische Infrastrukturen** verstärkt im Visier staatlicher Akteure
+
+## Ransomware-Statistiken
+
+1. Durchschnittliche **Ausfallzeit** nach Ransomware-Angriff: 23 Tage
+2. Durchschnittliches **Lösegeld**: 4,2 Millionen Euro
+3. **72% der Opfer** zahlten kein Lösegeld (Verbesserung gegenüber Vorjahr)
+4. **Mittelstand** weiterhin bevorzugtes Ziel
+
+## Neue Bedrohungen
+
+Das BSI hebt besonders hervor:
+
+- **Deepfake-basierte Angriffe** auf Führungskräfte
+- **Supply-Chain-Kompromittierungen** über Open-Source-Pakete
+- **Shadow AI** als neuer Risikofaktor in Unternehmen
+- Zunehmende **Professionalisierung** der Cyberkriminalität
+
+## Empfehlungen des BSI
+
+Das BSI empfiehlt Unternehmen unter anderem **Zero-Trust-Architekturen**, regelmäßige **Penetrationstests** und die Umsetzung des **IT-Grundschutzes**. Besonders betont wird die Notwendigkeit der **NIS2-Compliance** für betroffene Unternehmen.`,
+    category: 'kritis',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+    published_at: '2025-12-10T08:00:00Z',
+    reading_time: 5,
+    views: 2560,
+    tags: ['BSI', 'Lagebericht', 'Ransomware', 'KRITIS', 'Bedrohungslage'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '25',
+    slug: 'deepfake-ceo-betrug-schweizer-firma',
+    title: 'Deepfake CEO-Betrug: Schweizer Firma verliert 3 Millionen CHF',
+    excerpt: 'Cyberkriminelle nutzten KI-generierte Deepfake-Videos des CEOs, um einen Finanzmitarbeiter einer Schweizer Firma zu einer Überweisung von 3 Mio. CHF zu bewegen.',
+    content: `## KI-gestützter Betrug auf neuem Niveau
+
+Eine **Schweizer Industriefirma** ist Opfer eines ausgeklügelten Deepfake-Betrugs geworden. Kriminelle nutzten KI-generierte Videos und Stimmen des CEOs, um einen Finanzmitarbeiter zu einer Überweisung von **3 Millionen Schweizer Franken** zu veranlassen.
+
+## Ablauf des Angriffs
+
+1. Angreifer sammelten **öffentlich verfügbare Videos** und Audiomaterial des CEOs
+2. Mittels KI wurde ein **täuschend echtes Deepfake-Video** erstellt
+3. In einem vermeintlichen **Videocall** wies der „CEO" eine dringende Überweisung an
+4. Der Mitarbeiter führte die Transaktion aus – das Geld war innerhalb von **Minuten** auf ausländischen Konten
+
+## Warum der Betrug funktionierte
+
+- **Videoqualität** war überzeugend – Mimik und Lippenbewegungen stimmten
+- Die **Stimme** war nahezu identisch mit der des echten CEOs
+- Der Anruf kam zu einem **plausiblen Zeitpunkt** (CEO war auf Geschäftsreise)
+- Es wurde **Zeitdruck** aufgebaut: „vertrauliche Übernahme"
+
+## Schutzmaßnahmen
+
+Unternehmen sollten folgende Maßnahmen implementieren:
+
+- **Vier-Augen-Prinzip** für alle Überweisungen über einem Schwellenwert
+- **Codewort-System** für telefonische Freigaben
+- **Schulungen** zu Deepfake-Erkennung für Finanzabteilungen
+- **Verifizierung** über einen zweiten, unabhängigen Kommunikationskanal
+
+Die Schweizer Bundespolizei ermittelt. Experten rechnen mit einer **starken Zunahme** solcher Angriffe durch immer bessere KI-Modelle.`,
+    category: 'phishing',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800',
+    published_at: '2025-12-15T11:00:00Z',
+    reading_time: 5,
+    views: 2180,
+    tags: ['Deepfake', 'CEO-Fraud', 'KI', 'Social Engineering', 'Schweiz'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '26',
+    slug: 'nis2-umsetzungsgesetz-bundestag-verabschiedet',
+    title: 'NIS2-Umsetzungsgesetz im Bundestag verabschiedet',
+    excerpt: 'Der Deutsche Bundestag hat das NIS2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG) verabschiedet. Rund 29.500 Unternehmen sind betroffen.',
+    content: `## NIS2UmsuCG: Deutschland setzt EU-Richtlinie um
+
+Der **Deutsche Bundestag** hat das NIS2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG) verabschiedet. Damit wird die EU-Richtlinie NIS2 in nationales Recht überführt.
+
+## Was ändert sich?
+
+- **29.500 Unternehmen** in Deutschland neu von Cybersicherheitspflichten betroffen
+- **Meldepflichten** für Sicherheitsvorfälle innerhalb von 24 Stunden
+- **Bußgelder** bis zu 10 Millionen Euro oder 2% des Jahresumsatzes
+- **Persönliche Haftung** der Geschäftsleitung für Cybersicherheit
+
+## Betroffene Sektoren
+
+Das Gesetz unterscheidet zwischen **besonders wichtigen** und **wichtigen Einrichtungen**:
+
+1. Energie, Transport, Bankwesen, Gesundheit
+2. Digitale Infrastruktur und IT-Dienste
+3. Lebensmittelproduktion und -verteilung
+4. Abfallwirtschaft, Post- und Kurierdienste
+5. Chemie, Forschung und Herstellung
+
+## Zeitplan
+
+- **Registrierungspflicht:** Innerhalb von 3 Monaten nach Inkrafttreten
+- **Umsetzung der Sicherheitsmaßnahmen:** 12 Monate nach Inkrafttreten
+- **Erste Audits:** Ab 18 Monaten nach Inkrafttreten
+
+## Was Unternehmen jetzt tun sollten
+
+- Prüfen, ob das eigene Unternehmen **unter NIS2 fällt**
+- **Risikoanalyse** der aktuellen IT-Sicherheitsmaßnahmen durchführen
+- **Incident-Response-Prozesse** etablieren oder überarbeiten
+- **Budget** für Cybersicherheit erhöhen`,
+    category: 'nis2',
+    risk_level: 'mittel',
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800',
+    published_at: '2025-11-28T10:00:00Z',
+    reading_time: 5,
+    views: 2750,
+    tags: ['NIS2', 'NIS2UmsuCG', 'Bundestag', 'Compliance', 'KRITIS'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '27',
+    slug: 'microsoft-copilot-security-risiken',
+    title: 'Microsoft Copilot: Sicherheitsforscher warnen vor Datenabfluss-Risiken',
+    excerpt: 'Sicherheitsforscher haben mehrere Wege identifiziert, über die Microsoft Copilot sensible Unternehmensdaten preisgeben kann.',
+    content: `## Copilot als Sicherheitsrisiko?
+
+Sicherheitsforscher haben mehrere **kritische Schwachstellen** in der Art und Weise identifiziert, wie **Microsoft Copilot** auf Unternehmensdaten zugreift und diese verarbeitet. Die Ergebnisse werfen Fragen zur Sicherheit KI-gestützter Assistenten auf.
+
+## Identifizierte Risiken
+
+- **Übermäßige Datenexposition:** Copilot kann auf alle Daten zugreifen, auf die der Nutzer Zugriff hat – auch auf solche, die er nicht kennt
+- **Prompt Injection:** Angreifer können über manipulierte Dokumente Copilot-Antworten beeinflussen
+- **Datenlecks in Chats:** Copilot kann vertrauliche Informationen in geteilten Chatverläufen preisgeben
+- **Fehlende Granularität:** Keine feingranulare Kontrolle, welche Daten Copilot nutzen darf
+
+## Demonstrierte Angriffsszenarien
+
+1. **Versteckte Anweisungen** in SharePoint-Dokumenten steuern Copilot-Ausgaben
+2. Copilot fasst **vertrauliche E-Mails** zusammen, auf die der Nutzer eigentlich keinen Zugriff haben sollte
+3. **Prompt-Exfiltration** – Sensible Daten werden über Copilot-Antworten nach außen geleitet
+
+## Microsofts Reaktion
+
+Microsoft hat die Berichte **bestätigt** und arbeitet an Verbesserungen:
+
+- **Sensitivity Labels** werden stärker in Copilot integriert
+- Neue **Admin-Kontrollen** zur Einschränkung des Datenzugriffs
+- Verbesserte **Audit-Logs** für Copilot-Aktivitäten
+
+## Empfehlungen
+
+Unternehmen sollten vor dem Copilot-Rollout ihre **Berechtigungsstrukturen** grundlegend überprüfen und das **Prinzip der minimalen Berechtigung** konsequent umsetzen.`,
+    category: 'ki-security',
+    risk_level: 'mittel',
+    image: 'https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=800',
+    published_at: '2025-12-20T09:30:00Z',
+    reading_time: 5,
+    views: 1980,
+    tags: ['Microsoft', 'Copilot', 'KI', 'Datenschutz', 'Prompt Injection'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '28',
+    slug: 'kritische-cisco-ios-xe-schwachstelle',
+    title: 'Kritische Cisco IOS XE Schwachstelle: Über 50.000 Geräte kompromittiert',
+    excerpt: 'Eine kritische Schwachstelle in Cisco IOS XE wird aktiv ausgenutzt. Weltweit sind über 50.000 Netzwerkgeräte betroffen.',
+    content: `## Massive Ausnutzung der Cisco IOS XE Schwachstelle
+
+Eine **kritische Schwachstelle** in Cisco IOS XE (CVSS 10.0) wird weltweit aktiv und massiv ausgenutzt. Sicherheitsforscher haben bereits über **50.000 kompromittierte Geräte** identifiziert.
+
+## Technische Details
+
+- **CVE:** CVE-2026-1001
+- **CVSS-Score:** 10.0 (Kritisch)
+- **Angriffsvektor:** Unauthentifizierter Zugriff über Web UI
+- **Betroffene Systeme:** Alle Cisco-Geräte mit IOS XE und aktiviertem Web UI
+
+Die Schwachstelle ermöglicht Angreifern, ohne Authentifizierung ein **privilegiertes Benutzerkonto** auf betroffenen Geräten anzulegen und so vollständige Kontrolle zu erlangen.
+
+## Ausmaß der Kompromittierung
+
+1. **50.000+** Geräte weltweit bereits kompromittiert
+2. **Deutschland:** Geschätzt 3.500 betroffene Systeme
+3. Betroffen sind **Router, Switches und Firewalls** in Unternehmensnetzwerken
+4. Angreifer installieren **Backdoors** für persistenten Zugang
+
+## Sofortmaßnahmen
+
+Cisco empfiehlt dringend:
+
+- **Web UI sofort deaktivieren** auf allen betroffenen Geräten
+- Prüfung auf **unbekannte Benutzerkonten** (insbesondere mit Privilege Level 15)
+- **Forensische Analyse** der Geräte-Logs
+- Patchen auf die **neueste IOS XE Version**
+
+## BSI-Warnung
+
+Das BSI hat eine **dringende Warnung** herausgegeben und stuft die Bedrohung als **geschäftskritisch** ein. Unternehmen sollten umgehend prüfen, ob ihre Cisco-Infrastruktur betroffen ist.`,
+    category: 'schwachstellen',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    published_at: '2026-01-08T07:00:00Z',
+    reading_time: 4,
+    views: 1850,
+    tags: ['Cisco', 'IOS XE', 'Schwachstelle', 'CVSS 10.0', 'BSI'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '29',
+    slug: 'quishing-qr-code-phishing-nimmt-zu',
+    title: 'Quishing: QR-Code-Phishing nimmt um 300% zu',
+    excerpt: 'QR-Code-basiertes Phishing (Quishing) hat sich im letzten Quartal verdreifacht. Besonders betroffen: Parkautomaten, Restaurants und gefälschte Behördenpost.',
+    content: `## Quishing: Die neue Phishing-Welle
+
+**QR-Code-Phishing**, auch bekannt als „Quishing", verzeichnet einen alarmierenden Anstieg von **300 Prozent** im Vergleich zum Vorquartal. Die Methode ist besonders tückisch, da QR-Codes von herkömmlichen E-Mail-Filtern nicht erkannt werden.
+
+## Häufige Angriffsvektoren
+
+- **Gefälschte Strafzettel** mit QR-Code zur „Online-Bezahlung"
+- **Manipulierte Parkautomaten** – QR-Code-Aufkleber über echtem Code
+- **Phishing-E-Mails** mit QR-Code statt Link (umgeht URL-Scanner)
+- **Gefälschte Behördenpost** mit QR-Code für angebliche Steuerrückerstattung
+
+## Warum Quishing so effektiv ist
+
+1. QR-Codes werden von **E-Mail-Sicherheitslösungen** oft nicht gescannt
+2. Nutzer prüfen **QR-Code-Ziele** selten vor dem Scannen
+3. Mobile Geräte haben oft **weniger Sicherheitssoftware** als PCs
+4. QR-Codes wirken **vertrauenswürdig** – man kennt sie vom Restaurant oder Amt
+
+## Aktuelle Fälle in der DACH-Region
+
+- **München:** Gefälschte Parkautomaten-QR-Codes in der Innenstadt
+- **Wien:** Phishing-Briefe im Design der Finanzamts
+- **Zürich:** Manipulierte QR-Codes in Restaurant-Speisekarten
+
+## Schutzmaßnahmen
+
+- **URL immer prüfen**, bevor Daten eingegeben werden
+- QR-Code-Scanner nutzen, die die **Ziel-URL anzeigen** vor dem Öffnen
+- **Multi-Faktor-Authentifizierung** für alle Online-Konten aktivieren
+- Mitarbeiter in **Security-Awareness-Schulungen** über Quishing informieren`,
+    category: 'phishing',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=800',
+    published_at: '2026-01-14T10:30:00Z',
+    reading_time: 4,
+    views: 1720,
+    tags: ['Quishing', 'QR-Code', 'Phishing', 'Social Engineering', 'DACH'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '30',
+    slug: 'datenpanne-deutsches-gesundheitsportal',
+    title: 'Datenpanne bei deutschem Gesundheitsportal: 800.000 Patientendaten betroffen',
+    excerpt: 'Ein großes deutsches Gesundheitsportal meldet eine schwerwiegende Datenpanne. Sensible Patientendaten von 800.000 Nutzern waren über Wochen frei zugänglich.',
+    content: `## Massive Datenpanne im Gesundheitswesen
+
+Ein führendes deutsches **Gesundheitsportal** hat eine schwerwiegende Datenpanne gemeldet. Über einen Zeitraum von mehreren Wochen waren sensible **Patientendaten von 800.000 Nutzern** ohne Authentifizierung über eine offene API abrufbar.
+
+## Betroffene Daten
+
+- **Vollständige Namen** und Geburtsdaten
+- **Krankenversicherungsnummern**
+- **Diagnosen und Behandlungsverläufe**
+- **Medikationspläne**
+- Teilweise **Laborergebnisse** und Arztbriefe
+
+## Ursache
+
+Die Datenpanne wurde durch eine **fehlerhafte API-Konfiguration** nach einem Software-Update verursacht:
+
+1. Ein neuer API-Endpunkt wurde **ohne Authentifizierung** deployt
+2. Die **Autorisierungsprüfung** wurde versehentlich deaktiviert
+3. Automatisierte Sicherheitstests hatten den Fehler **nicht erkannt**
+4. Ein Sicherheitsforscher meldete die Lücke nach **3 Wochen**
+
+## Rechtliche Konsequenzen
+
+- **Meldung an die Datenschutzbehörde** innerhalb von 72 Stunden erfolgt
+- Alle betroffenen Nutzer wurden **individuell informiert**
+- Die Datenschutzbehörde hat ein **Bußgeldverfahren** eingeleitet
+- Es drohen Strafen von bis zu **20 Millionen Euro** oder 4% des Jahresumsatzes
+
+## Lehren
+
+Der Vorfall zeigt die Notwendigkeit von **automatisierten API-Sicherheitstests**, regelmäßigen **Penetrationstests** und konsequentem **Security-by-Design** bei Software-Updates.`,
+    category: 'datenpannen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
+    published_at: '2026-01-20T08:00:00Z',
+    reading_time: 5,
+    views: 1640,
+    tags: ['Datenpanne', 'Gesundheitswesen', 'API', 'DSGVO', 'Patientendaten'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '31',
+    slug: 'ransomware-angriff-oesterreichische-gemeinde',
+    title: 'Ransomware-Angriff auf österreichische Gemeinde: Bürgerservices wochenlang lahmgelegt',
+    excerpt: 'Eine Gemeinde in Oberösterreich wurde Opfer eines schweren Ransomware-Angriffs. Sämtliche digitalen Bürgerservices sind seit zwei Wochen nicht verfügbar.',
+    content: `## Gemeinde in Oberösterreich lahmgelegt
+
+Eine **mittelgroße Gemeinde in Oberösterreich** mit rund 25.000 Einwohnern wurde Opfer eines Ransomware-Angriffs. Seit zwei Wochen sind nahezu alle **digitalen Verwaltungsdienste** nicht verfügbar.
+
+## Auswirkungen
+
+- **Meldewesen** komplett offline – keine An- und Abmeldungen möglich
+- **Baugenehmigungen** können nicht bearbeitet werden
+- **Standesamt** arbeitet wieder mit Papierformularen
+- **E-Mail-Kommunikation** der gesamten Verwaltung ausgefallen
+- **Finanzabteilung** kann keine Zahlungen verarbeiten
+
+## Angriffsdetails
+
+- **Ransomware-Gruppe:** Vermutlich LockBit-Nachfolger
+- **Lösegeldforderung:** 500.000 Euro in Monero
+- **Verschlüsselte Systeme:** Server, Backup-Systeme, Arbeitsplatzrechner
+- **Einfallstor:** Phishing-E-Mail an einen Verwaltungsmitarbeiter
+
+## Reaktion
+
+Die Gemeinde hat mit Unterstützung des **österreichischen CERT** und externer IT-Forensiker reagiert:
+
+1. Sofortige **Trennung** aller Systeme vom Netzwerk
+2. **Krisenstab** unter Leitung des Bürgermeisters eingerichtet
+3. Kommunikation über **private Mobiltelefone** der Mitarbeiter
+4. **Wiederherstellung** aus älteren, nicht kompromittierten Backups
+
+## Kosten
+
+Die geschätzten Gesamtkosten für Wiederherstellung, Forensik und entgangene Produktivität belaufen sich auf **über 2 Millionen Euro** – ein Vielfaches der Lösegeldforderung. Die Gemeinde hat das Lösegeld **nicht bezahlt**.`,
+    category: 'ransomware',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=800',
+    published_at: '2026-01-25T09:00:00Z',
+    reading_time: 5,
+    views: 1530,
+    tags: ['Ransomware', 'Österreich', 'Gemeinde', 'Verwaltung', 'LockBit'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '32',
+    slug: 'eu-ai-act-auswirkungen-cybersecurity',
+    title: 'EU AI Act tritt in Kraft: Was bedeutet das für die Cybersicherheit?',
+    excerpt: 'Mit dem Inkrafttreten des EU AI Acts ergeben sich neue Anforderungen an die Sicherheit von KI-Systemen. Ein Überblick über die wichtigsten Cybersecurity-Aspekte.',
+    content: `## EU AI Act und Cybersicherheit
+
+Der **EU AI Act** ist offiziell in Kraft getreten und bringt weitreichende Regulierungen für KI-Systeme mit sich. Besonders relevant sind die **Cybersecurity-Anforderungen** für Hochrisiko-KI-Systeme.
+
+## Neue Sicherheitsanforderungen
+
+- **Robustheit:** KI-Systeme müssen gegen Adversarial Attacks geschützt sein
+- **Datenintegrität:** Trainingsdaten müssen vor Manipulation geschützt werden
+- **Logging:** Alle KI-Entscheidungen müssen nachvollziehbar protokolliert werden
+- **Zugangskontrolle:** Strenge Authentifizierung für KI-Management-Interfaces
+
+## Klassifizierung der Risikogruppen
+
+1. **Inakzeptables Risiko:** Verboten (z.B. Social Scoring, biometrische Massenüberwachung)
+2. **Hohes Risiko:** Strenge Auflagen (z.B. KI in Medizin, Justiz, Personalwesen)
+3. **Begrenztes Risiko:** Transparenzpflichten (z.B. Chatbots, Deepfakes)
+4. **Minimales Risiko:** Keine besonderen Auflagen
+
+## Auswirkungen auf IT-Sicherheitsteams
+
+Security-Teams müssen sich auf neue Aufgaben einstellen:
+
+- **KI-spezifische Penetrationstests** (Adversarial Testing)
+- **Model Security** – Schutz von KI-Modellen vor Diebstahl und Manipulation
+- **Data Poisoning Detection** – Erkennung von Trainingsdaten-Manipulation
+- **AI Supply Chain Security** – Überprüfung von vortrainierten Modellen
+
+## Fristen
+
+Unternehmen haben je nach Risikokategorie **6 bis 24 Monate** Zeit, die Anforderungen umzusetzen. Verstöße können mit Bußgeldern von bis zu **35 Millionen Euro** oder 7% des Jahresumsatzes geahndet werden.`,
+    category: 'ki-security',
+    risk_level: 'mittel',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    published_at: '2026-02-03T10:00:00Z',
+    reading_time: 5,
+    views: 1380,
+    tags: ['EU AI Act', 'KI', 'Regulierung', 'Compliance', 'Cybersecurity'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '33',
+    slug: 'supply-chain-angriff-npm-pakete',
+    title: 'Supply-Chain-Angriff über NPM-Pakete: Tausende Entwickler betroffen',
+    excerpt: 'Angreifer haben populäre NPM-Pakete kompromittiert und Backdoors eingeschleust. Über 15.000 Entwicklungsprojekte sind potenziell betroffen.',
+    content: `## Massive Supply-Chain-Attacke über NPM
+
+Ein **koordinierter Supply-Chain-Angriff** über kompromittierte NPM-Pakete hat die JavaScript-Entwicklergemeinde erschüttert. Mindestens **12 populäre Pakete** wurden mit Schadcode versehen.
+
+## Betroffene Pakete
+
+- Pakete mit insgesamt **über 45 Millionen wöchentlichen Downloads**
+- Betroffen sind sowohl **direkte Abhängigkeiten** als auch **transitive Dependencies**
+- Der Schadcode war in **minifizierten Dateien** versteckt
+- **15.000+** Projekte potenziell kompromittiert
+
+## Angriffsvektor
+
+Die Angreifer nutzten eine Kombination aus Methoden:
+
+1. **Account Takeover** – Übernahme von Maintainer-Konten ohne MFA
+2. **Typosquatting** – Pakete mit ähnlichen Namen wie populäre Libraries
+3. **Dependency Confusion** – Ausnutzung privater vs. öffentlicher Registry-Konflikte
+
+## Schadfunktionen
+
+Der eingeschleuste Code hatte folgende Funktionen:
+
+- **Exfiltration** von Umgebungsvariablen (API-Keys, Tokens)
+- **Cryptocurrency-Mining** auf Build-Servern
+- **Backdoor-Installation** für persistenten Zugang
+- **Credential Harvesting** aus .env-Dateien und SSH-Keys
+
+## Gegenmaßnahmen
+
+- **npm audit** auf allen Projekten ausführen
+- **Lockfiles** auf unerwartete Änderungen prüfen
+- **SBOM** (Software Bill of Materials) erstellen und pflegen
+- **Sigstore/npm Provenance** für vertrauenswürdige Pakete nutzen
+- **Private NPM Registry** mit Sicherheitsscanning einsetzen`,
+    category: 'schwachstellen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800',
+    published_at: '2026-02-07T11:00:00Z',
+    reading_time: 5,
+    views: 1290,
+    tags: ['Supply Chain', 'NPM', 'JavaScript', 'Backdoor', 'SBOM'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '34',
+    slug: 'kritis-wasserwerk-norddeutschland-angegriffen',
+    title: 'KRITIS-Alarm: Wasserwerk in Norddeutschland Ziel eines Cyberangriffs',
+    excerpt: 'Ein Wasserwerk in Norddeutschland wurde Ziel eines gezielten Cyberangriffs auf die Steuerungstechnik. Das BSI spricht von einem "ernsten Vorfall".',
+    content: `## Angriff auf Wasserversorgung
+
+Ein **Wasserwerk in Norddeutschland** wurde Ziel eines gezielten Cyberangriffs auf die **industrielle Steuerungstechnik (ICS/SCADA)**. Das BSI stuft den Vorfall als einen der **schwersten Angriffe auf deutsche KRITIS** ein.
+
+## Was passierte?
+
+- Angreifer erlangten Zugriff auf die **SCADA-Steuerung** des Wasserwerks
+- **Chlordosierung** und **Pumpsteuerung** wurden manipuliert
+- Die Manipulation wurde durch das **Alarmsystem** rechtzeitig erkannt
+- **Keine Gefährdung** der Trinkwasserversorgung dank manueller Überbrückung
+
+## Attribution
+
+Erste Analysen deuten auf einen **staatlich unterstützten Akteur** hin:
+
+1. Verwendete Tools stimmen mit **bekannten APT-Gruppen** überein
+2. Angriff erfolgte über **kompromittierte Fernwartungszugänge**
+3. Die eingesetzte **Malware** war speziell für ICS-Systeme entwickelt
+4. **Mehrmonatige Vorbereitungsphase** wurde nachgewiesen
+
+## BSI-Reaktion
+
+Das BSI hat sofort reagiert:
+
+- **Krisenteam** vor Ort zur forensischen Analyse
+- **Warnmeldung** an alle Wasserversorger in Deutschland
+- Empfehlung zur **sofortigen Überprüfung** aller Fernwartungszugänge
+- **Sonderlagebericht** an die Bundesregierung
+
+## Konsequenzen
+
+Der Vorfall hat die Debatte um die **Cybersicherheit kritischer Infrastrukturen** neu entfacht. Experten fordern verpflichtende **OT-Security-Audits** und eine Trennung von IT- und OT-Netzwerken bei allen KRITIS-Betreibern.`,
+    category: 'kritis',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1504972997617-48207f7a3cce?w=800',
+    published_at: '2026-02-12T06:30:00Z',
+    reading_time: 5,
+    views: 1450,
+    tags: ['KRITIS', 'Wasserwerk', 'ICS', 'SCADA', 'BSI', 'APT'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '35',
+    slug: 'dsgvo-neue-standardvertragsklauseln-2026',
+    title: 'DSGVO: Neue Standardvertragsklauseln 2026 – Was Unternehmen wissen müssen',
+    excerpt: 'Die EU-Kommission hat aktualisierte Standardvertragsklauseln (SCCs) für internationale Datentransfers veröffentlicht. Die Übergangsfrist beträgt 12 Monate.',
+    content: `## Neue SCCs für internationalen Datentransfer
+
+Die **EU-Kommission** hat aktualisierte **Standardvertragsklauseln (SCCs)** für die Übermittlung personenbezogener Daten in Drittländer veröffentlicht. Die neuen Klauseln ersetzen die bisherige Version und müssen innerhalb von **12 Monaten** implementiert werden.
+
+## Wichtige Änderungen
+
+- **Erweiterte Prüfpflichten:** Datenexporteure müssen die Rechtslage im Zielland dokumentieren
+- **Neue Module:** Zusätzliches Modul für Cloud-Processing-Szenarien
+- **KI-Bezug:** Spezifische Klauseln für KI-Trainingsdaten
+- **Technische Maßnahmen:** Konkretere Anforderungen an Verschlüsselung und Pseudonymisierung
+
+## Wer ist betroffen?
+
+Praktisch jedes Unternehmen, das Daten international transferiert:
+
+1. Nutzung von **US-Cloud-Diensten** (AWS, Azure, Google Cloud)
+2. **Internationale Konzerne** mit Datenflüssen zwischen Tochtergesellschaften
+3. Unternehmen mit **Outsourcing** in Drittländer
+4. **E-Commerce-Unternehmen** mit internationalen Kunden
+
+## Handlungsempfehlungen
+
+- **Bestandsaufnahme** aller internationalen Datentransfers durchführen
+- **Transfer Impact Assessments** aktualisieren
+- Bestehende SCCs auf die **neuen Klauseln** umstellen
+- **Datenschutzbeauftragte** in den Umstellungsprozess einbinden
+- **Dokumentation** gemäß Rechenschaftspflicht aktualisieren
+
+## Fristen
+
+Die Übergangsfrist beträgt **12 Monate** ab Veröffentlichung. Unternehmen sollten jedoch frühzeitig mit der Umstellung beginnen, da der Prozess erfahrungsgemäß mehrere Monate in Anspruch nimmt.`,
+    category: 'dsgvo',
+    risk_level: 'mittel',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
+    published_at: '2026-02-14T09:00:00Z',
+    reading_time: 4,
+    views: 1180,
+    tags: ['DSGVO', 'SCCs', 'Datentransfer', 'EU-Kommission', 'Compliance'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '36',
+    slug: 'passkeys-vs-passwoerter-stand-2026',
+    title: 'Passkeys vs. Passwörter: Der Stand 2026',
+    excerpt: 'Passkeys gewinnen an Verbreitung, doch Passwörter dominieren weiterhin. Ein Überblick über den aktuellen Stand der passwortlosen Authentifizierung.',
+    content: `## Passkeys: Revolution oder langsame Evolution?
+
+Zwei Jahre nach dem branchenweiten Push für **Passkeys** ziehen wir Bilanz: Wo stehen wir bei der **passwortlosen Authentifizierung** im Jahr 2026?
+
+## Aktuelle Verbreitung
+
+- **35% der großen Webdienste** unterstützen Passkeys (Verdopplung gegenüber 2024)
+- **12% der Nutzer** verwenden aktiv Passkeys
+- **Google, Apple, Microsoft** haben Passkeys als Standard-Option implementiert
+- In Unternehmen liegt die Adoptionsrate bei erst **8%**
+
+## Vorteile von Passkeys
+
+1. **Phishing-resistent** – kein Geheimnis, das weitergegeben werden kann
+2. **Kein Passwort-Reuse** – jeder Dienst erhält einen einzigartigen Key
+3. **Einfache Nutzung** – biometrische Bestätigung statt Passwort-Eingabe
+4. **Kryptografisch sicher** – basiert auf FIDO2/WebAuthn-Standard
+
+## Herausforderungen
+
+Trotz der Vorteile gibt es weiterhin Hürden:
+
+- **Account Recovery** bei Geräteverlust ist komplex
+- **Cross-Platform-Sync** funktioniert nicht zwischen allen Ökosystemen
+- **Legacy-Systeme** unterstützen keine Passkeys
+- **Nutzerakzeptanz** wächst nur langsam
+
+## Empfehlung für Unternehmen
+
+- Passkeys als **zusätzliche Authentifizierungsoption** anbieten
+- **Hybridstrategie:** Passkeys und starke Passwörter parallel unterstützen
+- **Schulungen** für Mitarbeiter zur Passkey-Nutzung durchführen
+- **FIDO2-kompatible Hardware-Token** für Hochsicherheitsbereiche einsetzen
+
+Die Zukunft gehört den Passkeys, aber der Übergang wird noch **mehrere Jahre** dauern.`,
+    category: 'ki-security',
+    risk_level: 'info',
+    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800',
+    published_at: '2026-02-18T10:00:00Z',
+    reading_time: 4,
+    views: 1050,
+    tags: ['Passkeys', 'FIDO2', 'WebAuthn', 'Authentifizierung', 'Passwörter'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '37',
+    slug: 'schweizer-nationalbank-warnt-cyber-risiken',
+    title: 'Schweizer Nationalbank warnt vor systemischen Cyber-Risiken im Finanzsektor',
+    excerpt: 'Die SNB hat in ihrem Stabilitätsbericht erstmals Cyberangriffe als systemisches Risiko für den Schweizer Finanzplatz eingestuft.',
+    content: `## SNB: Cyberrisiken als systemische Gefahr
+
+Die **Schweizerische Nationalbank (SNB)** hat in ihrem Stabilitätsbericht erstmals **Cyberangriffe als systemisches Risiko** für den Schweizer Finanzplatz klassifiziert. Die Warnung kommt nach einer Reihe von Vorfällen im Bankensektor.
+
+## Kernaussagen des Berichts
+
+- Cyberangriffe auf Schweizer Finanzinstitute haben sich **2025 verdoppelt**
+- **Ransomware und DDoS** sind die häufigsten Angriffsformen
+- Die **Vernetzung** der Finanzinstitute erhöht das systemische Risiko
+- Ein erfolgreicher Angriff auf eine Großbank könnte **Kettenreaktionen** auslösen
+
+## Identifizierte Schwachstellen
+
+1. **Legacy-Systeme** bei mittelgroßen Banken mit veralteter Software
+2. **Drittanbieter-Risiken** durch gemeinsam genutzte IT-Dienstleister
+3. **Unzureichende Incident-Response** bei kleineren Instituten
+4. **Mangel an Cybersecurity-Fachkräften** im Finanzsektor
+
+## Geforderte Maßnahmen
+
+Die SNB fordert von den Finanzinstituten:
+
+- **Regelmäßige Stresstests** für Cyber-Szenarien
+- **Verbesserung der Resilienz** durch redundante Systeme
+- **Informationsaustausch** über Bedrohungen zwischen Instituten
+- **Investitionen** in Cybersicherheit proportional zum Risikoprofil
+
+## Internationale Einordnung
+
+Die Warnung der SNB reiht sich in eine globale Entwicklung ein. Auch die **EZB** und die **Bank of England** haben zuletzt verstärkt vor Cyberrisiken im Finanzsektor gewarnt. Experten sprechen von einem **Paradigmenwechsel** in der Finanzaufsicht.`,
+    category: 'kritis',
+    risk_level: 'mittel',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800',
+    published_at: '2026-02-21T08:30:00Z',
+    reading_time: 5,
+    views: 980,
+    tags: ['SNB', 'Finanzsektor', 'Schweiz', 'Systemisches Risiko', 'Banken'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '38',
+    slug: 'emotet-comeback-neue-variante-umgeht-edr',
+    title: 'Emotet-Comeback: Neue Variante umgeht führende EDR-Lösungen',
+    excerpt: 'Die totgeglaubte Malware Emotet ist mit einer neuen, hochentwickelten Variante zurück. Die neue Version kann führende EDR-Lösungen umgehen.',
+    content: `## Emotet ist zurück – gefährlicher als je zuvor
+
+Die als zerschlagen geglaubte **Malware Emotet** ist mit einer neuen, hochentwickelten Variante zurückgekehrt. Sicherheitsforscher warnen: Die neue Version kann **führende Endpoint Detection and Response (EDR) Lösungen** umgehen.
+
+## Neue Fähigkeiten
+
+- **Polymorphe Verschlüsselung:** Jede Instanz hat einen einzigartigen Code-Fingerabdruck
+- **Living-off-the-Land:** Nutzung legitimer Windows-Tools zur Tarnung
+- **EDR-Evasion:** Erkennung und gezielte Umgehung von Sicherheitslösungen
+- **Fileless Execution:** Vollständige Ausführung im Arbeitsspeicher
+
+## Verbreitungsmethoden
+
+1. **E-Mail-Thread-Hijacking** – Einklinken in bestehende E-Mail-Konversationen
+2. **OneNote-Anhänge** mit eingebetteten Skripten
+3. **Kompromittierte Websites** als Delivery-Infrastruktur
+4. **Makro-freie Office-Dokumente** mit DDE-Exploits
+
+## Bedrohungspotenzial
+
+Emotet dient als **Türöffner** für weitere Schadsoftware:
+
+- **Ransomware-Gruppen** nutzen Emotet-Infektionen als initialen Zugang
+- **Banking-Trojaner** werden nachgeladen
+- **Credential Stealer** sammeln Zugangsdaten
+- Das Botnet kann für **DDoS-Angriffe** genutzt werden
+
+## Schutzmaßnahmen
+
+- **EDR-Lösungen** auf die neueste Version aktualisieren
+- **PowerShell Logging** und **AMSI** aktivieren
+- **E-Mail-Filter** für verdächtige Anhänge verschärfen
+- **Netzwerk-Monitoring** auf bekannte Emotet-IoCs konfigurieren
+- **Threat Hunting** proaktiv nach Emotet-Artefakten durchführen`,
+    category: 'ransomware',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
+    published_at: '2026-01-18T07:00:00Z',
+    reading_time: 5,
+    views: 1680,
+    tags: ['Emotet', 'Malware', 'EDR', 'Botnet', 'Comeback'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '39',
+    slug: 'schwachstelle-ivanti-vpn-massiv-ausgenutzt',
+    title: 'Schwachstelle in Ivanti VPN wird massiv ausgenutzt – BSI warnt',
+    excerpt: 'Eine kritische Schwachstelle in Ivanti Connect Secure VPN wird weltweit aktiv ausgenutzt. Das BSI hat eine dringende Warnung herausgegeben.',
+    content: `## Ivanti VPN: Kritische Schwachstelle unter Beschuss
+
+Eine **kritische Schwachstelle** in Ivanti Connect Secure (ehemals Pulse Connect Secure) wird weltweit **massiv und aktiv ausgenutzt**. Das BSI hat eine dringende Warnung an alle Nutzer der VPN-Lösung herausgegeben.
+
+## Schwachstellen-Details
+
+- **CVE:** CVE-2026-0188
+- **CVSS-Score:** 9.8 (Kritisch)
+- **Typ:** Authentication Bypass + Remote Code Execution
+- **Betroffene Versionen:** Connect Secure 22.x bis 22.7R2.3
+
+## Ausmaß der Angriffe
+
+Die Ausnutzung hat ein **besorgniserregendes Ausmaß** erreicht:
+
+1. **Über 4.000 kompromittierte Systeme** weltweit identifiziert
+2. **Deutschland:** Mindestens 380 betroffene Organisationen
+3. Mehrere **APT-Gruppen** nutzen die Schwachstelle aktiv
+4. Angreifer installieren **persistente Webshells** für langfristigen Zugang
+
+## Besondere Gefahr
+
+Die Schwachstelle ist besonders kritisch, weil:
+
+- **VPN-Gateways** den direkten Zugang zum internen Netzwerk ermöglichen
+- Bestehende **Patches nicht ausreichen** – kompromittierte Systeme müssen neu aufgesetzt werden
+- Angreifer **Logs löschen** und Spuren verwischen
+- Standardmäßige **Integritätsprüfungen** die Kompromittierung nicht erkennen
+
+## Sofortmaßnahmen
+
+- **Factory Reset** aller Ivanti Connect Secure Appliances
+- Neuinstallation mit der **aktuellsten Firmware**
+- Alle **VPN-Zugangsdaten** zurücksetzen
+- **Forensische Analyse** des internen Netzwerks auf laterale Bewegungen
+- Überprüfung aller Systeme auf **bekannte Webshells**`,
+    category: 'schwachstellen',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800',
+    published_at: '2026-01-28T06:00:00Z',
+    reading_time: 5,
+    views: 1560,
+    tags: ['Ivanti', 'VPN', 'Schwachstelle', 'BSI', 'APT', 'Webshell'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '40',
+    slug: 'security-awareness-70-prozent-phishing',
+    title: 'Studie: 70% der Mitarbeiter fallen auf Phishing-Simulationen herein',
+    excerpt: 'Eine groß angelegte Studie unter DACH-Unternehmen zeigt: 70% der Mitarbeiter klicken auf simulierte Phishing-E-Mails. Besonders gefährdet: Führungskräfte.',
+    content: `## Erschreckende Phishing-Studie im DACH-Raum
+
+Eine **umfassende Studie** unter 500 DACH-Unternehmen offenbart ein alarmierendes Bild: **70 Prozent der Mitarbeiter** fallen auf professionell gestaltete Phishing-Simulationen herein.
+
+## Zentrale Ergebnisse
+
+- **70%** der Mitarbeiter klicken auf Phishing-Links
+- **45%** geben daraufhin tatsächlich Zugangsdaten ein
+- **Führungskräfte** sind mit 82% überdurchschnittlich anfällig
+- Unternehmen mit regelmäßigem Training senken die Rate auf **15%**
+
+## Erfolgreichste Phishing-Methoden
+
+1. **IT-Support-Mails:** „Ihr Passwort läuft ab" (85% Klickrate)
+2. **Paketbenachrichtigungen:** „Ihr Paket konnte nicht zugestellt werden" (72% Klickrate)
+3. **Chef-Mails:** Dringende Anweisung vom Vorgesetzten (68% Klickrate)
+4. **HR-Mails:** „Ihre Gehaltsabrechnung für Januar" (65% Klickrate)
+
+## Warum Führungskräfte besonders gefährdet sind
+
+- **Zeitdruck** – weniger Zeit für sorgfältige Prüfung
+- **Viele E-Mails** – geringere Aufmerksamkeit pro Mail
+- **Autoritätserwartung** – weniger Misstrauen gegenüber „wichtigen" Mails
+- **Geringere Teilnahme** an Security-Awareness-Trainings
+
+## Effektive Gegenmaßnahmen
+
+- **Regelmäßige Phishing-Simulationen** (mindestens quartalsweise)
+- **Gamification** der Security-Awareness-Programme
+- **Spezielle Schulungen** für C-Level und Führungskräfte
+- **Positive Verstärkung** statt Bestrafung bei Fehlverhalten
+- **Phishing-Meldeprozess** einfach und niedrigschwellig gestalten`,
+    category: 'phishing',
+    risk_level: 'mittel',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
+    published_at: '2026-02-24T10:00:00Z',
+    reading_time: 4,
+    views: 920,
+    tags: ['Phishing', 'Security Awareness', 'Studie', 'DACH', 'Training'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '41',
+    slug: 'datenpanne-deutscher-cloud-anbieter-2-mio',
+    title: 'Datenpanne bei deutschem Cloud-Anbieter: 2 Millionen Datensätze betroffen',
+    excerpt: 'Ein deutscher Cloud-Anbieter meldet eine schwerwiegende Datenpanne. Kundendaten von über 2 Millionen Nutzern wurden durch eine Fehlkonfiguration exponiert.',
+    content: `## Großflächige Datenpanne bei deutschem Cloud-Provider
+
+Ein **mittelständischer deutscher Cloud-Anbieter** hat eine schwerwiegende Datenpanne gemeldet. Durch eine **Fehlkonfiguration** waren Kundendaten von über **2 Millionen Nutzern** über mehrere Tage öffentlich zugänglich.
+
+## Betroffene Daten
+
+- **Unternehmensnamen** und Ansprechpartner
+- **E-Mail-Adressen** und Telefonnummern
+- **Rechnungsdaten** und Bankverbindungen (teilweise)
+- **API-Schlüssel** und Zugangstokens
+- **Konfigurationsdaten** gehosteter Anwendungen
+
+## Ursache der Datenpanne
+
+Die Datenpanne wurde durch eine **fehlerhafte Migration** auf eine neue Speicherinfrastruktur verursacht:
+
+1. Ein **Storage Bucket** wurde während der Migration versehentlich öffentlich zugänglich
+2. **Zugriffskontrollen** wurden beim Migrationsskript nicht korrekt übernommen
+3. Das **Monitoring** erkannte die Fehlkonfiguration **nicht automatisch**
+4. Ein externer Sicherheitsforscher meldete das Problem nach **4 Tagen**
+
+## Reaktion des Anbieters
+
+- Sofortige **Schließung** der offenen Schnittstelle
+- **Benachrichtigung** aller betroffenen Kunden innerhalb von 48 Stunden
+- **Meldung** an die zuständige Datenschutzbehörde
+- Beauftragung einer **externen forensischen Analyse**
+- **Kostenlose Kreditüberwachung** für betroffene Privatkunden
+
+## Konsequenzen für den Markt
+
+Der Vorfall stellt das Argument der **Datensouveränität** durch deutsche Cloud-Anbieter auf die Probe. Experten betonen, dass nicht der Standort, sondern die **Sicherheitsprozesse** entscheidend sind.`,
+    category: 'datenpannen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800',
+    published_at: '2026-03-03T08:00:00Z',
+    reading_time: 5,
+    views: 680,
+    tags: ['Datenpanne', 'Cloud', 'Fehlkonfiguration', 'DSGVO', 'API'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '42',
+    slug: 'zero-trust-leitfaden-mittelstand',
+    title: 'Zero Trust Architecture: Praxisleitfaden für den Mittelstand',
+    excerpt: 'Zero Trust ist das Sicherheitsmodell der Zukunft, doch die Umsetzung scheint komplex. Ein praxisorientierter Leitfaden für mittelständische Unternehmen.',
+    content: `## Zero Trust für den Mittelstand
+
+**Zero Trust Architecture (ZTA)** gilt als das Sicherheitsmodell der Zukunft, doch viele mittelständische Unternehmen scheuen die vermeintliche Komplexität. Dabei lässt sich Zero Trust auch **schrittweise und pragmatisch** einführen.
+
+## Grundprinzipien
+
+- **Never trust, always verify** – Kein implizites Vertrauen, auch nicht im internen Netzwerk
+- **Least Privilege** – Minimale Berechtigungen für jeden Nutzer und Dienst
+- **Assume Breach** – Davon ausgehen, dass das Netzwerk bereits kompromittiert ist
+- **Mikrosegmentierung** – Netzwerk in kleine, isolierte Bereiche aufteilen
+
+## Schrittweise Einführung
+
+1. **Phase 1 – Identität:** Multi-Faktor-Authentifizierung für alle Nutzer einführen
+2. **Phase 2 – Geräte:** Nur verwaltete und konforme Geräte zulassen
+3. **Phase 3 – Netzwerk:** Mikrosegmentierung der wichtigsten Bereiche
+4. **Phase 4 – Anwendungen:** Zugriff auf Basis von Identität statt Netzwerkzugehörigkeit
+5. **Phase 5 – Daten:** Klassifizierung und kontextbasierter Zugriff auf Daten
+
+## Kosten und ROI
+
+- **Einstiegskosten:** Ab 50.000 Euro für ein Unternehmen mit 200 Mitarbeitern
+- **ROI:** Durchschnittlich 40% Reduktion der Kosten durch Sicherheitsvorfälle
+- **Amortisation:** Typischerweise innerhalb von 18-24 Monaten
+
+## Empfohlene Technologien
+
+- **Identity Provider** mit bedingtem Zugriff (Azure AD, Okta)
+- **Endpoint Detection and Response (EDR)**
+- **Software Defined Perimeter (SDP)**
+- **SASE/SSE** für Cloud-basierte Sicherheit
+
+Zero Trust ist kein Produkt, sondern eine **Strategie** – und sie lässt sich auch im Mittelstand umsetzen.`,
+    category: 'ki-security',
+    risk_level: 'info',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800',
+    published_at: '2026-02-26T09:00:00Z',
+    reading_time: 6,
+    views: 870,
+    tags: ['Zero Trust', 'Mittelstand', 'Leitfaden', 'MFA', 'Mikrosegmentierung'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '43',
+    slug: 'cyberangriff-schweizer-spital-ops-verschoben',
+    title: 'Cyberangriff auf Schweizer Spital: Operationen mussten verschoben werden',
+    excerpt: 'Ein Kantonsspital in der Schweiz wurde Opfer eines Ransomware-Angriffs. Nicht-dringende Operationen mussten verschoben, Patienten umgeleitet werden.',
+    content: `## Ransomware legt Schweizer Kantonsspital lahm
+
+Ein **Kantonsspital in der Deutschschweiz** wurde Opfer eines schweren Ransomware-Angriffs. Der Vorfall hat den Spitalbetrieb massiv beeinträchtigt und wirft erneut Fragen zur **Cybersicherheit im Gesundheitswesen** auf.
+
+## Auswirkungen auf den Betrieb
+
+- **Nicht-dringende Operationen** für mindestens eine Woche verschoben
+- **Notaufnahme** auf Notbetrieb umgestellt – nur lebensbedrohliche Fälle
+- **Patientenakten** nicht digital zugänglich – Rückgriff auf Papier
+- **Medizinische Geräte** teilweise nicht nutzbar
+- Patienten wurden an **umliegende Spitäler** umgeleitet
+
+## Angriffsdetails
+
+- **Ransomware-Gruppe:** Verdacht auf Royal/BlackSuit
+- **Einfallstor:** Kompromittierter Citrix-Zugang eines Arztes
+- **Verschlüsselte Systeme:** Klinikinformationssystem, Bildarchiv (PACS), E-Mail
+- **Lösegeldforderung:** Nicht öffentlich bekannt
+
+## Reaktion
+
+1. Sofortige **Abschaltung** aller IT-Systeme
+2. **Krisenstab** mit Spitalleitung, IT und externen Experten
+3. **MELANI/NCSC** (Schweizer Cybersicherheitszentrum) eingeschaltet
+4. **Staatsanwaltschaft** hat Ermittlungen aufgenommen
+5. Kommunikation über **Mobilfunk und Papier**
+
+## Gesundheitswesen im Visier
+
+Der Vorfall reiht sich in eine **Serie von Angriffen auf Gesundheitseinrichtungen** in der DACH-Region ein. Experten warnen seit Jahren vor der unzureichenden IT-Sicherheit in Krankenhäusern. Die **Patientensicherheit** steht dabei unmittelbar auf dem Spiel.`,
+    category: 'ransomware',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800',
+    published_at: '2026-03-07T07:00:00Z',
+    reading_time: 5,
+    views: 580,
+    tags: ['Ransomware', 'Spital', 'Schweiz', 'Gesundheitswesen', 'KRITIS'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '44',
+    slug: 'nis2-registrierung-schritt-fuer-schritt',
+    title: 'NIS2-Registrierung: So geht es Schritt für Schritt',
+    excerpt: 'Die NIS2-Registrierungsfrist läuft. Dieser Leitfaden erklärt Schritt für Schritt, wie betroffene Unternehmen sich beim BSI registrieren müssen.',
+    content: `## NIS2-Registrierung: Der praktische Leitfaden
+
+Die **NIS2-Registrierungspflicht** ist in Kraft und betroffene Unternehmen müssen sich beim BSI registrieren. Dieser Leitfaden führt Sie **Schritt für Schritt** durch den Prozess.
+
+## Schritt 1: Betroffenheit prüfen
+
+Zunächst muss geklärt werden, ob Ihr Unternehmen unter NIS2 fällt:
+
+- **Besonders wichtige Einrichtungen:** Ab 250 Mitarbeitern ODER 50 Mio. Euro Umsatz in relevanten Sektoren
+- **Wichtige Einrichtungen:** Ab 50 Mitarbeitern ODER 10 Mio. Euro Umsatz in relevanten Sektoren
+- **Unabhängig von Größe:** DNS-Dienste, TLD-Registries, qualifizierte Vertrauensdienste
+
+## Schritt 2: Registrierung beim BSI
+
+1. Portal aufrufen unter **nis2-registrierung.bsi.bund.de**
+2. **Unternehmenskonto** anlegen mit ELSTER-Zertifikat
+3. **Stammdaten** des Unternehmens erfassen
+4. **Sektor und Teilsektor** auswählen
+5. **Kontaktperson** für Sicherheitsvorfälle benennen
+6. **24/7-Erreichbarkeit** für Meldungen sicherstellen
+
+## Schritt 3: Pflichten nach Registrierung
+
+Nach der Registrierung gelten folgende Pflichten:
+
+- **Sicherheitsmaßnahmen** gemäß dem Stand der Technik implementieren
+- **Meldepflicht:** Erhebliche Sicherheitsvorfälle innerhalb von 24 Stunden melden
+- **Risikomanagement:** Regelmäßige Risikoanalysen durchführen
+- **Lieferkettensicherheit:** Cybersicherheit bei Zulieferern prüfen
+
+## Häufige Fehler vermeiden
+
+- **Fristversäumnis:** Die Registrierungsfrist ist verbindlich
+- **Falsche Einstufung:** Im Zweifel die höhere Kategorie wählen
+- **Fehlende Kontaktperson:** 24/7-Erreichbarkeit muss gewährleistet sein
+- **Unvollständige Angaben:** Alle Pflichtfelder sorgfältig ausfüllen
+
+Bei Fragen bietet das BSI eine **Hotline und FAQ-Seite** für NIS2-Registrierungen an.`,
+    category: 'nis2',
+    risk_level: 'info',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800',
+    published_at: '2026-03-10T09:00:00Z',
+    reading_time: 5,
+    views: 490,
+    tags: ['NIS2', 'Registrierung', 'BSI', 'Compliance', 'Leitfaden'],
+    author: 'CyberLage Redaktion',
+  },
 ]
 
 export const demoCVEs = [
