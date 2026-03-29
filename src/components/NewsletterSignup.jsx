@@ -24,9 +24,10 @@ export default function NewsletterSignup() {
     setErrorMsg('')
 
     try {
+      // 1. Save to Supabase (if configured)
       if (isSupabaseConfigured()) {
         const { error } = await supabase
-          .from('subscribers')
+          .from('newsletter_subscribers')
           .insert([{ email, role: role || null }])
 
         if (error) {
@@ -35,12 +36,28 @@ export default function NewsletterSignup() {
             setStatus('error')
             return
           }
-          throw error
+          console.error('Supabase save error:', error)
+          // Continue anyway — mail is more important
         }
-      } else {
-        // Demo fallback -- simulate a short delay
-        await new Promise((resolve) => setTimeout(resolve, 500))
-        console.log('Newsletter signup (demo):', { email, role })
+      }
+
+      // 2. Send confirmation mail via serverless function
+      try {
+        const res = await fetch('/api/newsletter-signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, role: role || null }),
+        })
+        const data = await res.json()
+
+        if (data.mailSent) {
+          console.log(`Newsletter: Mail gesendet an ${email}`)
+        } else {
+          console.warn(`Newsletter: Mail-Fehler: ${data.mailError}`)
+        }
+      } catch (mailErr) {
+        // Mail failure should not block signup
+        console.error('Newsletter: Mail-Versand fehlgeschlagen:', mailErr.message)
       }
 
       setStatus('success')
