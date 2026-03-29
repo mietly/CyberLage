@@ -304,3 +304,34 @@ html:not(.dark) .text-white { color: #1A1A1A; }
 html:not(.dark) .placeholder-gray-500::placeholder { color: #9A9A9A; }
 html:not(.dark) ::-webkit-scrollbar-track { background: #F5F5F0; }
 html:not(.dark) ::-webkit-scrollbar-thumb { background: #D5D5D0; }
+
+/* Light mode: Article prose WCAG AA compliant */
+html:not(.dark) .article-prose { color: #1f2937; }
+html:not(.dark) .article-prose h2 { color: #1f2937; border-bottom-color: #A8894E; }
+html:not(.dark) .article-prose h3 { color: #374151; }
+html:not(.dark) .article-prose h4 { color: #92783E; }
+html:not(.dark) .article-prose p { color: #374151; }
+html:not(.dark) .article-prose strong { color: #111827; }
+html:not(.dark) .article-prose a { color: #92783E; }
+html:not(.dark) .article-prose a:hover { color: #111827; }
+html:not(.dark) .article-prose ul li { color: #374151; }
+html:not(.dark) .article-prose ul li::before { color: #92783E; }
+html:not(.dark) .article-prose ol li { color: #374151; }
+html:not(.dark) .article-prose ol li::marker { color: #92783E; }
+html:not(.dark) .article-prose blockquote { color: #1f2937; background: #F5F5F0; border-left-color: #A8894E; }
+html:not(.dark) .article-prose code { color: #92783E; background: #F5F5F0; border-color: #D5D5D0; }
+html:not(.dark) .article-prose pre { background: #F5F5F0; border-color: #D5D5D0; }
+html:not(.dark) .article-prose pre code { color: #1f2937; }
+html:not(.dark) .article-prose th { color: #6b7280; border-color: #D5D5D0; }
+html:not(.dark) .article-prose td { color: #374151; border-color: #D5D5D0; }
+html:not(.dark) .article-prose hr { border-top-color: #D5D5D0; }
+
+/* Light mode: General text contrast fixes */
+html:not(.dark) .text-\[\#3E4148\] { color: #6b7280; }
+html:not(.dark) .font-display { color: inherit; }
+html:not(.dark) .bg-\[\#0F1215\] { background-color: #F5F5F0; }
+html:not(.dark) .bg-\[\#0A0C0F\] { background-color: #FFFFFF; }
+html:not(.dark) .border-\[\#C8A96E\] { border-color: #92783E; }
+html:not(.dark) .text-\[\#C8A96E\] { color: #7A6530; }
+html:not(.dark) .text-\[\#D97B5A\] { color: #B8613E; }
+html:not(.dark) .text-\[\#5A9A6B\] { color: #3D7A4E; }
