@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import {
@@ -189,9 +189,50 @@ export default function ArticlePage() {
           </p>
         </div>
 
+        {/* Table of Contents */}
+        {(() => {
+          const headings = (article.content.match(/^#{2,3}\s.+$/gm) || []).map((h) => {
+            const level = h.startsWith('### ') ? 3 : 2
+            const text = h.replace(/^#{2,3}\s/, '')
+            const id = text.toLowerCase().replace(/[^a-zäöüß0-9]+/gi, '-').replace(/-+$/, '')
+            return { level, text, id }
+          })
+          if (headings.length < 3) return null
+          return (
+            <nav className="bg-[#0F1215] border border-[#1E2228] rounded-sm p-5 mb-8">
+              <p className="font-mono text-xs uppercase tracking-wider text-[#3E4148] mb-3">Inhalt</p>
+              <ul className="space-y-1.5">
+                {headings.map((h, i) => (
+                  <li key={i} style={{ paddingLeft: h.level === 3 ? '1rem' : 0 }}>
+                    <a
+                      href={`#${h.id}`}
+                      className="text-sm text-[#7A7D83] hover:text-[#C8A96E] transition-colors"
+                    >
+                      {h.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )
+        })()}
+
         {/* Article Content */}
-        <article className="prose prose-invert max-w-none mb-10 prose-headings:font-display prose-headings:text-[#E8E6E0] prose-p:text-[#7A7D83] prose-li:text-[#7A7D83] prose-strong:text-[#E8E6E0] prose-a:text-[#C8A96E] hover:prose-a:text-[#C8A96E]/80">
-          <ReactMarkdown>{article.content}</ReactMarkdown>
+        <article className="article-prose mb-10">
+          <ReactMarkdown
+            components={{
+              h2: ({ children }) => {
+                const id = String(children).toLowerCase().replace(/[^a-zäöüß0-9]+/gi, '-').replace(/-+$/, '')
+                return <h2 id={id}>{children}</h2>
+              },
+              h3: ({ children }) => {
+                const id = String(children).toLowerCase().replace(/[^a-zäöüß0-9]+/gi, '-').replace(/-+$/, '')
+                return <h3 id={id}>{children}</h3>
+              },
+            }}
+          >
+            {article.content}
+          </ReactMarkdown>
         </article>
 
         {/* Tags */}
