@@ -43,21 +43,24 @@ export default function NewsletterSignup() {
 
       // 2. Send confirmation mail via serverless function
       try {
-        const res = await fetch('/api/newsletter-signup', {
+        const apiUrl = import.meta.env.PROD ? '/api/newsletter-signup' : '/api/newsletter-signup'
+        const res = await fetch(apiUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, role: role || null }),
         })
         const data = await res.json()
+        console.log('Newsletter API response:', data)
 
         if (data.mailSent) {
           console.log(`Newsletter: Mail gesendet an ${email}`)
         } else {
-          console.warn(`Newsletter: Mail-Fehler: ${data.mailError}`)
+          console.warn(`Newsletter: Mail nicht gesendet. Grund: ${data.mailError}`)
+          console.warn('Prüfe: RESEND_API_KEY (nicht VITE_RESEND_API_KEY) in Vercel Environment Variables')
         }
       } catch (mailErr) {
-        // Mail failure should not block signup
-        console.error('Newsletter: Mail-Versand fehlgeschlagen:', mailErr.message)
+        console.error('Newsletter: API-Aufruf fehlgeschlagen:', mailErr.message)
+        console.error('Prüfe: Ist die Serverless Function /api/newsletter-signup deployed?')
       }
 
       setStatus('success')
