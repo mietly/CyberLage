@@ -1,5 +1,251 @@
 export const demoArticles = [
   {
+    id: '45',
+    slug: 'vmware-aria-operations-rce-aktiv-ausgenutzt',
+    title: 'VMware Aria Operations: Kritische RCE-Schwachstelle wird aktiv ausgenutzt',
+    excerpt: 'CISA warnt: CVE-2026-22719 in VMware Aria Operations ermöglicht unauthentifizierte Remote Code Execution. Angreifer nutzen die Lücke bereits aktiv aus. Sofort patchen oder Workaround anwenden.',
+    content: `## VMware Aria Operations – Aktive Ausnutzung bestätigt
+
+Die CISA hat die Schwachstelle **CVE-2026-22719** in VMware Aria Operations in ihren KEV-Katalog (Known Exploited Vulnerabilities) aufgenommen. Die Lücke wird aktiv ausgenutzt.
+
+### Technische Details
+
+- **CVE:** CVE-2026-22719
+- **CVSS Score:** 8.1 (Important)
+- **Typ:** Command Injection → Remote Code Execution
+- **Betroffen:** VMware Aria Operations (Enterprise-Monitoring)
+- **Authentifizierung:** Nicht erforderlich
+- **Bedingung:** Schwachstelle greift während der support-assisted Product Migration
+
+### Was können Angreifer tun?
+
+Ein unauthentifizierter Angreifer kann **beliebige Befehle ausführen**, was zu einer vollständigen Serverübernahme führen kann. Da Aria Operations als zentrale Monitoring-Plattform eingesetzt wird, hat eine Kompromittierung weitreichende Folgen:
+
+- Zugriff auf Monitoring-Daten aller überwachten Systeme
+- Laterale Bewegung im Netzwerk
+- Manipulation von Alerts und Dashboards
+- Persistenter Zugang zur gesamten Infrastruktur
+
+### Patch & Workaround
+
+- **Patch:** Seit 24. Februar 2026 verfügbar – sofort einspielen
+- **Workaround:** Script \`aria-ops-rce-workaround.sh\` deaktiviert verwundbare Migrations-Komponenten
+- **CISA-Frist:** Bundesbehörden mussten bis 24. März patchen
+
+### Sofortmaßnahmen
+
+1. VMware Aria Operations Version prüfen
+2. **Patch sofort einspielen** oder Workaround-Script ausführen
+3. Netzwerk-Logs auf verdächtige Aktivitäten gegen Aria Operations prüfen
+4. Management-Interface nicht aus dem Internet erreichbar machen
+5. Monitoring auf IoCs von CISA prüfen`,
+    category: 'schwachstellen',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    published_at: '2026-03-30T07:00:00Z',
+    reading_time: 4,
+    views: 340,
+    tags: ['VMware', 'Aria Operations', 'CVE', 'CISA', 'RCE', 'KEV'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '46',
+    slug: 'oracle-notfall-patch-identity-manager-cvss-9-8',
+    title: 'Oracle Notfall-Patch: Kritische Identity Manager Schwachstelle – CVSS 9.8',
+    excerpt: 'Oracle veröffentlicht außerplanmäßigen Notfall-Patch für CVE-2026-21992 im Identity Manager. Unauthentifizierte Remote Code Execution möglich.',
+    content: `## Oracle Identity Manager – Notfall-Patch
+
+Oracle hat einen außerplanmäßigen Notfall-Patch für eine kritische Schwachstelle im **Identity Manager** veröffentlicht. Die Schwachstelle erlaubt Remote Code Execution ohne Authentifizierung.
+
+### Details
+
+- **CVE:** CVE-2026-21992
+- **CVSS Score:** 9.8 (Kritisch)
+- **Betroffen:** Oracle Identity Manager, Oracle Web Services Manager
+- **Angriffsvektor:** Netzwerk, ohne Authentifizierung
+- **Auswirkung:** Vollständige Systemübernahme
+
+### Warum ist das kritisch?
+
+Oracle Identity Manager wird für das zentrale **Identity & Access Management** (IAM) in Unternehmen eingesetzt. Eine Kompromittierung bedeutet:
+
+- Zugriff auf **alle Benutzerkonten** und Berechtigungen
+- Anlegen neuer Admin-Accounts
+- Manipulation von Zugriffsrechten
+- Potentiell Zugang zu allen angebundenen Systemen
+
+### DACH-Relevanz
+
+Oracle IAM-Produkte sind in großen DACH-Unternehmen und Behörden verbreitet, insbesondere:
+
+- Finanzdienstleister
+- Versicherungen
+- Öffentliche Verwaltung
+- Große Industrieunternehmen
+
+### Empfehlungen
+
+1. **Notfall-Patch sofort einspielen**
+2. Identity Manager Logs auf verdächtige Account-Erstellungen prüfen
+3. Alle Admin-Zugänge verifizieren
+4. Zugriff auf Identity Manager auf interne Netze beschränken
+5. Incident Response Team informieren`,
+    category: 'schwachstellen',
+    risk_level: 'kritisch',
+    image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800',
+    published_at: '2026-03-30T09:00:00Z',
+    reading_time: 4,
+    views: 210,
+    tags: ['Oracle', 'Identity Manager', 'IAM', 'CVE', 'CVSS 9.8', 'Notfall-Patch'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '47',
+    slug: 'supply-chain-angriff-pypi-telnyx-malware-wav',
+    title: 'Supply-Chain-Angriff: Malware in PyPI-Paket Telnyx versteckt sich in WAV-Datei',
+    excerpt: 'Angreifer haben das beliebte Python-Paket Telnyx auf PyPI kompromittiert. Credential-Stealing Malware wurde in einer WAV-Audio-Datei versteckt – eine neuartige Verschleierungstechnik.',
+    content: `## Kompromittiertes PyPI-Paket Telnyx
+
+Die Hackergruppe **TeamPCP** hat das Python-Paket \`telnyx\` auf dem Python Package Index (PyPI) kompromittiert und manipulierte Versionen hochgeladen, die Credential-Stealing Malware enthalten.
+
+### Die Angriffstechnik
+
+Besonders raffiniert: Die Malware ist in einer **WAV-Audio-Datei** versteckt – eine neuartige Verschleierungstechnik:
+
+- Schadcode ist als Audio-Daten getarnt
+- Wird beim Paket-Install extrahiert und ausgeführt
+- Umgeht viele automatische Security-Scanner
+- Stiehlt Zugangsdaten und API-Keys aus der Entwicklungsumgebung
+
+### Betroffene
+
+- Alle Entwickler die \`telnyx\` seit der Kompromittierung installiert/aktualisiert haben
+- CI/CD-Pipelines mit automatischem \`pip install\`
+- Docker-Images die das Paket verwenden
+
+### Empfohlene Maßnahmen
+
+1. Prüfen ob \`telnyx\` in euren Projekten verwendet wird
+2. Version gegen bekannte sichere Version abgleichen
+3. **Zugangsdaten rotieren** die auf betroffenen Systemen verwendet wurden
+4. API-Keys in CI/CD-Umgebungen erneuern
+5. \`pip audit\` für alle Python-Projekte ausführen
+6. Package-Pinning und Hash-Verification in \`requirements.txt\` einsetzen
+
+### Lehren
+
+Supply-Chain-Angriffe über Paket-Manager werden immer raffinierter. Die Verschleierung in Audio-Dateien zeigt, dass herkömmliche Erkennung nicht mehr ausreicht. Unternehmen sollten:
+
+- **Software Composition Analysis (SCA)** Tools einsetzen
+- Pakete vor Deployment in Sandbox prüfen
+- Private PyPI-Mirrors mit Curation verwenden`,
+    category: 'schwachstellen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800',
+    published_at: '2026-03-30T11:00:00Z',
+    reading_time: 5,
+    views: 180,
+    tags: ['Supply Chain', 'PyPI', 'Python', 'Malware', 'Credential Stealing'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '48',
+    slug: 'fake-vscode-security-alerts-github-malware',
+    title: 'Warnung: Gefälschte VS Code Security Alerts auf GitHub verbreiten Malware',
+    excerpt: 'Großangelegte Kampagne nutzt GitHub Discussions um gefälschte Visual Studio Code Sicherheitswarnungen zu verbreiten. Entwickler werden zum Download von Malware verleitet.',
+    content: `## Gefälschte VS Code Alerts auf GitHub
+
+Eine großangelegte Kampagne nutzt die **GitHub Discussions**-Funktion, um Entwickler mit gefälschten Visual Studio Code Sicherheitswarnungen zum Download von Malware zu verleiten.
+
+### So funktioniert der Angriff
+
+1. Angreifer posten in **Discussions-Bereichen** beliebter GitHub-Repositories
+2. Die Posts imitieren offizielle **VS Code Security Advisories**
+3. Dringende Sprache: "Kritische Sicherheitslücke in VS Code entdeckt"
+4. Link zu einem Fake-Update oder "Security Patch"
+5. Download enthält **Infostealer-Malware**
+
+### Warum ist das effektiv?
+
+- GitHub Discussions haben das gleiche Trust-Level wie Issues
+- Posts erscheinen unter dem Namen des Repository-Projekts
+- Entwickler vertrauen GitHub als Plattform
+- Die Warnungen sehen täuschend echt aus
+
+### Betroffene Repositories
+
+Die Kampagne zielt auf **populäre Open-Source-Projekte** ab – je mehr Stars, desto mehr potentielle Opfer. Betroffen sind Repositories aus:
+
+- JavaScript/TypeScript Ökosystem
+- Python-Frameworks
+- DevOps-Tools
+- KI/ML-Projekte
+
+### Schutzmaßnahmen
+
+1. **Nie** Software-Updates aus GitHub Discussions herunterladen
+2. VS Code Updates nur über den integrierten Update-Mechanismus
+3. Bei Security-Warnungen direkt auf die offizielle Seite des Herstellers gehen
+4. GitHub Discussions in eigenen Repos moderieren
+5. Verdächtige Posts an GitHub melden`,
+    category: 'phishing',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800',
+    published_at: '2026-03-30T13:00:00Z',
+    reading_time: 4,
+    views: 150,
+    tags: ['GitHub', 'VS Code', 'Malware', 'Social Engineering', 'Entwickler'],
+    author: 'CyberLage Redaktion',
+  },
+  {
+    id: '49',
+    slug: 'eu-kommission-aws-cloud-breach-untersuchung',
+    title: 'EU-Kommission untersucht Sicherheitsvorfall in eigener AWS-Cloud-Umgebung',
+    excerpt: 'Die Europäische Kommission bestätigt einen Sicherheitsvorfall in ihrer Amazon Cloud-Umgebung. Ein Bedrohungsakteur hatte sich Zugang verschafft. Untersuchung läuft.',
+    content: `## EU-Kommission: Breach in AWS-Cloud
+
+Die Europäische Kommission untersucht einen Sicherheitsvorfall, nachdem ein Bedrohungsakteur Zugang zu ihrer **Amazon Cloud-Umgebung** erlangt hat.
+
+### Was bekannt ist
+
+- Ein Angreifer konnte in die AWS-Umgebung der EU-Kommission eindringen
+- Der genaue Umfang der Kompromittierung wird noch untersucht
+- Es ist unklar, welche Daten betroffen sind
+- Die Kommission hat eine offizielle Untersuchung eingeleitet
+
+### Mögliche Auswirkungen
+
+Die EU-Kommission verarbeitet in ihren Cloud-Systemen:
+
+- **Vertrauliche EU-Dokumente** und Gesetzesentwürfe
+- Diplomatische Kommunikation
+- Interne Strategiepapiere
+- Daten von EU-Bürgern und -Unternehmen
+
+### Bedeutung für DACH
+
+- EU-Regulierungsdaten könnten kompromittiert sein
+- Vertrauensverlust in Cloud-Sicherheit öffentlicher Einrichtungen
+- Diskussion über **Datensouveränität** und europäische Cloud-Alternativen
+- DACH-Behörden sollten eigene Cloud-Konfigurationen überprüfen
+
+### Lehren
+
+1. Auch große Organisationen sind vor Cloud-Breaches nicht sicher
+2. **IAM-Konfigurationen** in AWS regelmäßig auditieren
+3. Cloud Security Posture Management (CSPM) einsetzen
+4. Prinzip der geringsten Berechtigung konsequent umsetzen
+5. Logging und Monitoring für alle Cloud-Aktivitäten aktivieren`,
+    category: 'datenpannen',
+    risk_level: 'hoch',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+    published_at: '2026-03-30T15:00:00Z',
+    reading_time: 4,
+    views: 120,
+    tags: ['EU-Kommission', 'AWS', 'Cloud', 'Datenpanne', 'Datensouveränität'],
+    author: 'CyberLage Redaktion',
+  },
+  {
     id: '1',
     slug: 'windchill-flexplm-zero-day-polizei-warnt-unternehmen',
     title: 'CVSS 10.0: Polizei klingelt um 4 Uhr morgens bei Admins – Zero-Day in Windchill & FlexPLM',
@@ -2034,6 +2280,28 @@ Bei Fragen bietet das BSI eine **Hotline und FAQ-Seite** für NIS2-Registrierung
 
 export const demoCVEs = [
   {
+    cve_id: 'CVE-2026-21992',
+    description: 'Oracle Identity Manager – Unauthentifizierte Remote Code Execution ermöglicht vollständige Übernahme des IAM-Systems.',
+    cvss_score: 9.8,
+    affected_software: 'Oracle Identity Manager, Web Services Manager',
+    vendor: 'Oracle',
+    patch_available: true,
+    workaround: false,
+    published_at: '2026-03-29',
+    advisory_url: 'https://www.securityweek.com/oracle-releases-emergency-patch-for-critical-identity-manager-vulnerability/',
+  },
+  {
+    cve_id: 'CVE-2026-22719',
+    description: 'VMware Aria Operations Command Injection – Aktiv ausgenutzt! Unauthentifizierte RCE während Migration.',
+    cvss_score: 8.1,
+    affected_software: 'VMware Aria Operations',
+    vendor: 'VMware',
+    patch_available: true,
+    workaround: true,
+    published_at: '2026-03-03',
+    advisory_url: 'https://www.bleepingcomputer.com/news/security/cisa-flags-vmware-aria-operations-rce-flaw-as-exploited-in-attacks/',
+  },
+  {
     cve_id: 'CVE-2026-0501',
     description: 'SAP S/4HANA SQL Injection – Niedrig privilegierte Angreifer können die vollständige Datenbank kompromittieren.',
     cvss_score: 9.9,
@@ -2102,24 +2370,24 @@ export const demoCVEs = [
 ]
 
 export const topThreats = [
-  { name: 'Ransomware-as-a-Service (RaaS)', level: 'kritisch', description: '1.345 Angriffe pro Woche auf deutsche Unternehmen – Tendenz steigend' },
-  { name: 'Zero-Day Exploits (CVSS 10.0)', level: 'kritisch', description: 'PTC Windchill/FlexPLM CVSS 10.0 – Polizei warnt persönlich' },
-  { name: 'GenAI-Datenabfluss', level: 'hoch', description: 'Jede 31. KI-Prompt leakt sensible Daten – 88% der Firmen betroffen' },
-  { name: 'Fortinet-Schwachstellen (aktiv ausgenutzt)', level: 'hoch', description: 'CVE-2025-64446 wird in freier Wildbahn aktiv ausgenutzt' },
-  { name: 'NIS2 Compliance-Risiko', level: 'mittel', description: 'Registrierungsfrist abgelaufen – 29.500 Unternehmen unter Druck' },
+  { name: 'VMware Aria Operations RCE (CVE-2026-22719)', level: 'kritisch', description: 'Aktiv ausgenutzt – CISA KEV, unauthentifizierte RCE, sofort patchen' },
+  { name: 'Oracle Identity Manager (CVE-2026-21992)', level: 'kritisch', description: 'CVSS 9.8 Notfall-Patch – IAM-Systeme im DACH-Raum gefährdet' },
+  { name: 'Supply-Chain-Angriffe auf Paket-Manager', level: 'hoch', description: 'PyPI Telnyx kompromittiert, Malware in WAV-Dateien versteckt' },
+  { name: 'EU-Kommission Cloud-Breach', level: 'hoch', description: 'AWS-Umgebung der EU-Kommission kompromittiert – Untersuchung läuft' },
+  { name: 'Fake VS Code Alerts auf GitHub', level: 'mittel', description: 'Großkampagne verbreitet Malware über GitHub Discussions' },
 ]
 
 export const breakingNews = [
-  'Chinesische Hacker tief in Telekom-Backbone eingenistet – Stealth-Zugriff bestätigt',
-  'HPE AOS-CX: CVSS 9.8 – Admin-Passwort-Reset ohne Authentifizierung möglich',
+  'VMware Aria Operations: RCE-Schwachstelle aktiv ausgenutzt – CISA warnt',
+  'Oracle Notfall-Patch: Identity Manager CVSS 9.8 – Sofort updaten!',
+  'Supply-Chain-Angriff: Malware in PyPI-Paket Telnyx in WAV-Datei versteckt',
+  'EU-Kommission untersucht Breach in eigener AWS-Cloud-Umgebung',
+  'Fake VS Code Security Alerts auf GitHub verbreiten Malware an Entwickler',
+  'Chinesische Hacker tief in Telekom-Backbone eingenistet',
+  'HPE AOS-CX: CVSS 9.8 – Admin-Passwort-Reset ohne Auth möglich',
   'Shadow AI: 223 Datenschutzverstöße pro Monat in Unternehmen',
-  'Deutschlandweite IT-Störung beim Zoll – Häfen lahmgelegt, 7 km LKW-Stau',
-  'CVSS 10.0: Polizei warnt Admins persönlich vor Windchill/FlexPLM Zero-Day',
-  'BfV + BSI warnen: Staatliche Akteure greifen Signal-Konten von Politikern an',
-  'Fortinet bestätigt aktive Ausnutzung von FortiWeb-Schwachstelle CVE-2025-64446',
-  'NIS2-Registrierungsfrist am 6. März abgelaufen – Bußgelder drohen',
-  'Microsoft Patch Tuesday März: 79 Lücken, 2 Zero-Days, Excel/Copilot-Lücke',
-  'SAP S/4HANA: SQL Injection mit CVSS 9.9 – Sofort patchen!',
+  'CVSS 10.0: Polizei warnt Admins vor Windchill/FlexPLM Zero-Day',
+  'BfV + BSI: Staatliche Akteure greifen Signal-Konten von Politikern an',
 ]
 
 export const categories = [
