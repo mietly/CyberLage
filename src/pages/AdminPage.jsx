@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Shield, Lock, LayoutDashboard, FileText, Mail, Cpu, BarChart3, Users, Eye, Bug, PlusCircle, Edit3, Trash2, Send, Sparkles, Link as LinkIcon, LogOut, Loader2, CheckCircle, AlertTriangle, Wand2 } from 'lucide-react';
 import { demoArticles, demoCVEs } from '../data/demoData';
 import { generateNewsletterHTML } from '../lib/newsletterTemplate';
 import { askClaude } from '../lib/claude';
+import { supabase, isSupabaseConfigured } from '../lib/supabase';
 
 const statCards = [
   { label: 'Artikel', value: '47', icon: FileText, color: 'text-[#C8A96E]', bg: 'border-[#C8A96E]/20' },
@@ -46,6 +47,19 @@ export default function AdminPage() {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  const [loginLoading, setLoginLoading] = useState(false);
+  const [authChecked, setAuthChecked] = useState(false);
+
+  // Check existing session on mount
+  useEffect(() => {
+    if (!isSupabaseConfigured()) { setAuthChecked(true); return; }
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user?.email === 'david@oberholzner.com') {
+        setIsAdmin(true);
+      }
+      setAuthChecked(true);
+    });
+  }, []);
   const [activeTab, setActiveTab] = useState('uebersicht');
   const [showEditor, setShowEditor] = useState(false);
   const [articleTitle, setArticleTitle] = useState('');
@@ -68,7 +82,52 @@ export default function AdminPage() {
   const [summaryUrl, setSummaryUrl] = useState('');
   const [showSummary, setShowSummary] = useState(false);
 
-  const handleLogin = (e) => { e.preventDefault(); if (loginEmail === 'david@oberholzner.com') { setIsAdmin(true); setLoginError(''); } else { setLoginError('Zugriff verweigert. Nur für autorisierte Administratoren.'); } };
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoginError('');
+    setLoginLoading(true);
+
+    if (loginEmail !== 'david@oberholzner.com') {
+      setLoginError('Zugriff verweigert. Nur für autorisierte Administratoren.');
+      setLoginLoading(false);
+      return;
+    }
+
+    if (isSupabaseConfigured()) {
+      const { error } = await supabase.auth.signInWithPassword({
+        email: loginEmail,
+        password: loginPassword,
+      });
+      if (error) {
+        // If user doesn't exist yet, create account
+        if (error.message.includes('Invalid login') || error.message.includes('invalid')) {
+          const { error: signUpError } = await supabase.auth.signUp({
+            email: loginEmail,
+            password: loginPassword,
+          });
+          if (signUpError) {
+            setLoginError(signUpError.message);
+            setLoginLoading(false);
+            return;
+          }
+        } else {
+          setLoginError(error.message);
+          setLoginLoading(false);
+          return;
+        }
+      }
+    }
+
+    setIsAdmin(true);
+    setLoginLoading(false);
+  };
+
+  const handleLogout = async () => {
+    if (isSupabaseConfigured()) {
+      await supabase.auth.signOut();
+    }
+    setIsAdmin(false);
+  };
 
   const updateThreat = (idx, field, value) => {
     setNlThreats((prev) => prev.map((t, i) => (i === idx ? { ...t, [field]: value } : t)));
@@ -204,7 +263,10 @@ export default function AdminPage() {
               <label htmlFor="admin-password" className="block text-sm font-medium text-[#7A7D83] mb-2">Passwort</label>
               <input id="admin-password" type="password" required value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder="Passwort" className="w-full bg-[#0A0C0F] border border-[#1E2228] rounded-none px-4 py-3 text-[#E8E6E0] placeholder-[#3E4148] focus:outline-none focus:border-[#C8A96E] focus:ring-1 focus:ring-[#C8A96E]" />
             </div>
-            <button type="submit" className="w-full bg-[#C8A96E] text-[#0A0C0F] font-mono uppercase tracking-wider rounded-none px-6 py-3 transition-colors cursor-pointer">Anmelden</button>
+            <button type="submit" disabled={loginLoading} className="w-full bg-[#C8A96E] text-[#0A0C0F] font-mono uppercase tracking-wider rounded-none px-6 py-3 transition-colors cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2">
+              {loginLoading && <Loader2 className="w-4 h-4 animate-spin" />}
+              {loginLoading ? 'Wird angemeldet...' : 'Anmelden'}
+            </button>
             <p className="text-xs font-mono text-[#3E4148] text-center">Demo: Verwende david@oberholzner.com mit beliebigem Passwort</p>
           </form>
         </div>
@@ -217,7 +279,7 @@ export default function AdminPage() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3"><Shield className="w-8 h-8 text-[#C8A96E]" /><div><h1 className="text-2xl font-display">Admin Dashboard</h1><p className="text-sm font-mono text-[#7A7D83]">Willkommen, David</p></div></div>
-          <button onClick={() => setIsAdmin(false)} className="flex items-center gap-2 text-[#7A7D83] hover:text-[#E8E6E0] text-sm font-mono transition-colors cursor-pointer"><LogOut className="w-4 h-4" />Abmelden</button>
+          <button onClick={handleLogout} className="flex items-center gap-2 text-[#7A7D83] hover:text-[#E8E6E0] text-sm font-mono transition-colors cursor-pointer"><LogOut className="w-4 h-4" />Abmelden</button>
         </div>
 
         <div className="flex gap-1 mb-8 bg-[#0F1215] rounded-none p-1 border border-[#1E2228]">

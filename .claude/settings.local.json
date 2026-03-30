@@ -20,7 +20,8 @@
       "Bash(git merge:*)",
       "Bash(git stash:*)",
       "WebFetch(domain:borncity.com)",
-      "WebFetch(domain:www.securityweek.com)"
+      "WebFetch(domain:www.securityweek.com)",
+      "Bash(curl:*)"
     ]
   }
 }
