@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Wartungsarbeiten – CyberLage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0A0C0F;
+        --surface: #0F1215;
+        --border: #1E2228;
+        --text: #E8E6E0;
+        --text-secondary: #7A7D83;
+        --text-muted: #3E4148;
+        --gold: #C8A96E;
+        --gold-dim: #9A7F4E;
+        --danger: #D97B5A;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { height: 100%; }
+      body {
+        font-family: 'DM Sans', system-ui, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-image:
+          radial-gradient(circle at 20% 10%, rgba(200,169,110,0.05), transparent 50%),
+          radial-gradient(circle at 80% 90%, rgba(217,123,90,0.04), transparent 50%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.5rem;
+      }
+      .card {
+        max-width: 640px;
+        width: 100%;
+        text-align: center;
+      }
+      .status-bar {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--danger);
+        border: 1px solid var(--border);
+        padding: 0.5rem 0.9rem;
+        margin-bottom: 2.5rem;
+        background: rgba(15,18,21,0.6);
+      }
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: var(--danger);
+        box-shadow: 0 0 0 0 rgba(217,123,90,0.6);
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(217,123,90,0.5); }
+        50% { opacity: 0.4; box-shadow: 0 0 0 8px rgba(217,123,90,0); }
+      }
+      .brand {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        font-family: 'DM Serif Display', Georgia, serif;
+        font-size: clamp(2.25rem, 5vw, 3.5rem);
+        font-weight: 400;
+        line-height: 1.1;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.02em;
+      }
+      h1 .accent {
+        display: block;
+        color: var(--gold);
+        font-style: italic;
+      }
+      .divider {
+        width: 60px;
+        height: 2px;
+        background: var(--gold);
+        margin: 2rem auto;
+      }
+      .lede {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+      }
+      .lede strong { color: var(--text); font-weight: 600; }
+      .meta {
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      .meta a {
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--gold-dim);
+        padding-bottom: 1px;
+        transition: color 0.2s ease;
+      }
+      .meta a:hover { color: var(--text); }
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border);
+      }
+      footer span { color: var(--gold-dim); }
+      @media (max-width: 480px) {
+        .status-bar { font-size: 10px; padding: 0.4rem 0.7rem; }
+        .meta { font-size: 10px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="status-bar">
+          <span class="dot"></span>
+          <span>System Maintenance</span>
+        </div>
+        <div class="brand">CyberLage.io</div>
+        <h1>
+          Wartungsarbeiten
+          <span class="accent">in Bearbeitung</span>
+        </h1>
+        <div class="divider"></div>
+        <p class="lede">
+          Wir schrauben gerade an der Lage – die Seite ist <strong>aktuell nicht erreichbar</strong>.
+          Unsere Redaktion und das Tech-Team arbeiten an Updates, neuen Features
+          und feineren Schliffen, damit du gleich wieder die schärfsten Security-News des DACH-Raums bekommst.
+        </p>
+        <p class="lede">
+          Vielen Dank für deine Geduld. Wir sind in Kürze zurück.
+        </p>
+        <div class="meta">
+          <div>Status &middot; Geplante Wartung</div>
+          <div>Kontakt &middot; <a href="mailto:info@cyberlage.io">info@cyberlage.io</a></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      &copy; CyberLage &middot; <span>Corelead Solutions</span>
+    </footer>
+  </body>
+</html>
